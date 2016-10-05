@@ -39,13 +39,23 @@ A non-exhaustive and non-ordered list of manifesto points for this library.
 
 Eventually this will be an npm module, a bower module and gem.
 
-For now, you're going to have to compile by hand: `sass assets/main.scss > main.css`. Hey, this is still massively alpha!
+```bash
+$ npm install loomcss --save-dev
+```
 
 # Usage
 
-Once installed, copy the `main.scss` file to your project. Make sure that the paths are pointing to the correct locations.
+Once installed, you will need to add the installation path to your own build system. This will probably be something like `node_modules/loomcss/assets`.
 
-This library is a basis for your own design system.
+Once you have made that folder available to your build you can access the Loom layers using:
+
+```scss
+@import 'loom/10-global-settings/misc';
+// etc
+```
+DON'T just link to `main.scss`! This will prevent you getting access to the interweaved layers of the ITCSS stack. Instead, copy [the list of imports](https://github.com/sonniesedge/loom/blob/master/assets/main.scss) from `main.scss` into your main project file.
+
+This library is a basis for your own design system and won't give you much visually out of the box! 
 
 # Organisation layers
 
