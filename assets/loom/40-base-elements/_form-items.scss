@@ -1,0 +1,34 @@
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input[type=date],
+input[type=datetime],
+input[type=month],
+input[type=password],
+input[type=search],
+input[type=week],
+input[type=time] {
+  border: $LOOM-border-width $LOOM-border-style get-color(input-border-color-default);
+  border-radius: $LOOM-border-radius;
+  color: get-color(input-color-default);
+  padding: get-spacing(xsmall);
+}
+
+input {
+  &::placeholder {
+    color: get-color(meta);
+  }
+}
+
+textarea {
+  border: $LOOM-border-width $LOOM-border-style get-color(input-border-color-default);
+  color: get-color(input-color-default);
+  padding: get-spacing(xsmall);
+}
+
+label {
+  font-weight: $LOOM-font-weight-bold;
+}

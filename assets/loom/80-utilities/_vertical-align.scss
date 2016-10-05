@@ -1,0 +1,18 @@
+$LOOM-vertical-align: (
+  baseline,
+  sub,
+  super,
+  text-top,
+  text-bottom,
+  middle,
+  top,
+  bottom,
+);
+
+@if $LOOM-use-utility-classes {
+  @each $item in $LOOM-vertical-align {
+    .u-vertical-align-#{$item} {
+      vertical-align: $item;
+    }
+  }
+}

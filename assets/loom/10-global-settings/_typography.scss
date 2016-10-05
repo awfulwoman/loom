@@ -1,0 +1,90 @@
+// --- FONT FAMILIES ---
+$LOOM-font-family-sans: sans !default;
+$LOOM-font-family-times: "Times New Roman" !default;
+$LOOM-font-family-arvo: Arvo !default;
+$LOOM-font-family-opensans: "Open sans" !default;
+
+$LOOM-fonts: (
+  'primary': (
+    'default': $LOOM-font-family-sans,
+    'webfont': $LOOM-font-family-opensans
+  ),
+  'secondary': (
+    'default': $LOOM-font-family-times,
+    'webfont': $LOOM-font-family-arvo
+  )
+) !default;
+
+// NOTE: the following class is used to denote loaded fonts.
+$LOOM-fonts-loaded: 'fonts-loaded' !default;
+
+// --- FONT WEIGHTS AND STYLES ---
+// NOTE: These are abstracted so that we may easily switch between keywords and numbers as a project demands.
+$LOOM-font-weight-bold: bold !default;
+$LOOM-font-weight-normal: normal !default;
+$LOOM-font-style-italic: italic !default;
+$LOOM-font-style-normal: normal !default;
+
+// --- FONT SIZES ---
+// NOTE: Fonts generally need to be a bit bigger on mobile devices. Therefore base font size here start out larger and are made small at higher breakpoints.
+// NOTE: All header fonts are set to the appropiate base size by default. You need to set up your font sizes manually. Examples are given below.
+// NOTE: Why enforce font sizes here? Because you should really be using fonts as defined in a design system.
+
+$LOOM-font-sizes: (
+  'default':   (
+    'small': ('font-size': 18px, 'line-height': 1.5),
+    'large': ('font-size': 16px, 'line-height': 1.5)
+  ),
+  'alpha':   (
+    'small': ('font-size': 36px, 'line-height': 1.5),
+    'large': ('font-size': 32px, 'line-height': 1.5)
+  ),
+  'beta':   (
+    'small': ('font-size': 30px, 'line-height': 1.5),
+    'large': ('font-size': 28px, 'line-height': 1.5)
+  ),
+  'gamma':   (
+    'small': ('font-size': 26px, 'line-height': 1.5),
+    'large': ('font-size': 24px, 'line-height': 1.5)
+  ),
+  'delta':   (
+    'small': ('font-size': 22px, 'line-height': 1.5),
+    'large': ('font-size': 20px, 'line-height': 1.5)
+  ),
+  'epsilon':   (
+    'small': ('font-size': 20px, 'line-height': 1.5),
+    'large': ('font-size': 18px, 'line-height': 1.5)
+  ),
+  'zeta':   (
+    'small': ('font-size': 18px, 'line-height': 1.5),
+    'large': ('font-size': 16px, 'line-height': 1.5)
+  )
+) !default;
+
+// --- FONT SIZE IMPLEMENTATIONS ---
+// NOTE: Sizes applied to base element headings
+$LOOM-h-element-sizes: (
+  'h1': 'alpha',
+  'h2': 'beta',
+  'h3': 'gamma',
+  'h4': 'delta',
+  'h5': 'epsilon',
+  'h6': 'zeta'
+) !default;
+
+// NOTE: If set to TRUE, base headings will receive the above values.
+$LOOM-generate-sizes-for-default-headings: true !default;
+
+// NOTE: The following sizes will be generated as object classes (`.o-alpha {}`).
+// NOTE: Objects be consumed directly with '@include font-size($name)';
+$LOOM-h-object-sizes: (
+  'alpha',
+  'beta',
+  'gamma',
+  'delta',
+  'epsilon',
+  'zeta'
+) !default;
+
+// NOTE: when does the typography become larger?
+$LOOM-typography-breakpoint: medium !default;

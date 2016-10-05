@@ -1,0 +1,9 @@
+@if $LOOM-use-utility-classes {
+  .u-font-weight-bold {
+    font-weight: $LOOM-font-weight-bold;
+  }
+
+  .u-font-weight-normal {
+    font-weight: $LOOM-font-weight-normal;
+  }
+}

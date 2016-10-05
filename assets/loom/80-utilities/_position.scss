@@ -1,0 +1,9 @@
+@if $LOOM-use-utility-classes {
+  .u-position-absolute {
+    position: absolute;
+  }
+
+  .u-position-relative {
+    position: relative;
+  }
+}

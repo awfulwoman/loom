@@ -1,0 +1,19 @@
+// LIST-RESET
+
+// Mixin
+// NOTE: Removes all padding, margin and list-style-type from a list.
+@mixin list-reset($list-reset-spacing: true) {
+  @if $list-reset-spacing {
+    margin: 0;
+    padding: 0;
+  }
+
+  list-style-type: none;
+}
+
+// Classes
+@if $LOOM-use-object-classes {
+  .o-list-reset {
+    @include list-reset();
+  }
+}

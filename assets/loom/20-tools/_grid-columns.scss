@@ -1,0 +1,23 @@
+/// Generate grid columns. The column widths will be calculated automatically.
+///
+/// @group 20-tools
+/// @parameter {number} $columns - The number of columns to generate.
+/// @parameter {string} $breakpoint - If defined, each column will have this breakpoint name appended at the end.
+@mixin grid-columns($columns, $breakpoint: null) {
+  @each $column-item in $columns {
+    @if ($columns == 1) {
+      .l-col-1-of-1#{$breakpoint} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+    } @else { // stylelint-disable-line
+      @for $i from 1 to ($column-item + 1) {
+        .l-col-#{$i}-of-#{$column-item}#{$breakpoint} {
+          flex-basis: ($i / $column-item) * 100%;
+          max-width: ($i / $column-item) * 100%;
+        }
+      }
+    }
+  }
+}

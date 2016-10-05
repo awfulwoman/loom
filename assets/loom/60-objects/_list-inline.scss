@@ -1,0 +1,17 @@
+// LIST-INLINE
+
+// Mixin
+// NOTE: Displays list elements inline to each other. For use on OL or UL.
+// NOTE: REQUIRES LIST-RESET
+@mixin list-inline() {
+  @include list-reset();
+
+  display: inline-block;
+}
+
+// Classes
+@if $LOOM-use-object-classes {
+  .o-list-inline {
+    @include list-inline();
+  }
+}

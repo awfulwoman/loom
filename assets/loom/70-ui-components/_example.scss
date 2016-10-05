@@ -1,0 +1,22 @@
+// .c-example {
+//   display: block;
+// }
+//
+// .c-example__header {
+//   @include fixed-ratio();
+// }
+//
+// .c-example__image {
+//   @include fixed-ratio__inner();
+// }
+//
+// .c-example__title {
+//   @include generic-heading();
+//   @include font-size(alpha);
+// }
+
+@include mq($from: large) {
+  body {
+    // background-color: pink !important;
+  }
+}

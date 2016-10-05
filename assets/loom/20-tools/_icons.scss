@@ -1,0 +1,8 @@
+/// Get an icon size from a name.
+///
+/// @group 20-tools
+/// @parameter {string} $icon-name - An icon size name, corresponding to a key in $icon-size-map
+/// @parameter {map} $icon-size-map - A map of icon names to sizes.
+@function get-icon-size($icon-name: default, $icon-size-map: $LOOM-icon-sizes) {
+  @return map-get($icon-size-map, $icon-name);
+}

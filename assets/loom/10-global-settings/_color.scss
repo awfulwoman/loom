@@ -1,0 +1,40 @@
+// NOTE: probably best not to use color names directly in a project, as they are things liable to change. Best to map them to a theme name. Using the colors-theme map will let you autogenerate classes based upon
+$LOOM-color-black: #000;
+$LOOM-color-white: #fff;
+$LOOM-color-gray: #e3e3e3;
+$LOOM-color-darkgray: #333;
+
+// Retrieve theme colours with get-color(name).
+$LOOM-colors-theme: (
+  'body-color':                           $LOOM-color-black,
+  'body-background-color':                $LOOM-color-white,
+  'link-color':                           initial,
+  'link-color-visited':                   initial,
+  'link-color-hover':                     initial,
+  'link-color-active':                    initial,
+  'button-color-default':                 $LOOM-color-black,
+  'button-background-color-default':      $LOOM-color-white,
+  'button-border-color-default':          $LOOM-color-black,
+  'meta-color':                           $LOOM-color-gray,
+  'input-color-default':                  $LOOM-color-black,
+  'input-background-color-default':       $LOOM-color-white,
+  'input-border-color-default':           $LOOM-color-darkgray
+) !default;
+
+// Go and read this presentation on sass maps - it's great! http://www.miriamsuzanne.com/pres/map-magic/
+
+// NOTE: Override this var to use your own colour list as the default one for use by the get-color() function.
+// NOTE: You could do something fancy, like merge your own list with the default one!
+// $LOOM-colors-list: map-merge($LOOM-colors-theme, $YOUR-COLOR-LIST);
+$LOOM-colors-list: $LOOM-colors-theme !default;
+
+//
+// thing-propertyActedOn-variantThatIsOptional-breakpointOrState
+//
+// margin-left-small
+//
+// padding-top-large
+//
+// button-background-primary
+//
+// text-align-center@small

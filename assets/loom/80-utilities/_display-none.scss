@@ -1,0 +1,13 @@
+@if $LOOM-use-utility-classes {
+  .u-display-none {
+    display: none;
+  }
+
+  @each $key, $value in $LOOM-display-none-breakpoints {
+    @include mq($key) {
+      .u-display-none\@#{$key} {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "loom",
+  "version": "1.0.0",
+  "description": "Weave your own pattern libraries.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "sassdoc": "^2.1.20",
+    "stylelint-config-standard": "^13.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonniesedge/loom.git"
+  },
+  "keywords": [
+    "css",
+    "library",
+    "framework",
+    "sass"
+  ],
+  "author": "Charlie Owen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sonniesedge/loom/issues"
+  },
+  "homepage": "https://github.com/sonniesedge/loom#readme",
+  "files": [
+    "assets"
+  ]
+}

@@ -1,0 +1,29 @@
+@mixin media() {
+  @include clearfix();
+
+  display: block;
+}
+
+@mixin media__primary($spacing: get-spacing(xsmall)) {
+  float: left;
+  margin-right: $spacing;
+}
+
+@mixin media__secondary() {
+  display: block;
+  overflow: hidden;
+}
+
+@if $LOOM-use-object-classes {
+  .o-media {
+    @include media();
+  }
+
+  .o-media__primary {
+    @include media__primary();
+  }
+
+  .o-media__secondary {
+    @include media__secondary();
+  }
+}

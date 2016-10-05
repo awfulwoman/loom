@@ -1,0 +1,75 @@
+@mixin button(
+  $button-color: get-color(button-color-default),
+  $button-background-color: get-color(button-background-color-default),
+  $button-border-color: get-color(button-border-color-default),
+  $button-border-thickness: 1px,
+  $button-border-radius: $LOOM-border-radius,
+  $button-background-color-hover: null,
+  $button-border-color-hover: null,
+  $button-color-hover: null,
+  $button-padding-horizontal: get-spacing(small),
+  $button-padding-vertical: get-spacing(xsmall),
+  $button-line-height: normal
+) {
+  background-color: $button-background-color;
+  border: $button-border-thickness solid $button-border-color;
+  border-radius: $button-border-radius;
+  color: $button-color;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  line-height: $button-line-height;
+  padding: $button-padding-vertical $button-padding-horizontal;
+  text-align: center;
+  text-decoration: none;
+  transition: get-transition(color), get-transition(background-color);
+  user-select: none;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    // NOTE: Oh, these are horribly ugly. So sorry. I could have made it a ternary operator, but that involved extra variable to store stuff. Look, I'm sorry, okay?
+    @if ($button-background-color-hover != null) {
+      background-color: $button-background-color-hover;
+    } @else { // stylelint-disable-line
+      background-color: darken($button-background-color, 20%);
+    }
+
+    @if ($button-border-color-hover != null) {
+      border-color: $button-border-color-hover;
+    } @else { // stylelint-disable-line
+      border-color: darken($button-border-color, 20%);
+    }
+
+    @if ($button-color-hover != null) {
+      color: $button-color-hover;
+    } @else { // stylelint-disable-line
+      color: darken($button-color, 20%);
+    }
+  }
+}
+
+@mixin button__inner() {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+@if $LOOM-use-object-classes {
+  .o-button {
+    @include button();
+  }
+
+  .o-button__label {
+    @include button__inner();
+  }
+
+  .o-button-icon {
+    @include button(
+      $button-border-radius: $LOOM-border-radius-circle,
+      $button-padding-horizontal: get-spacing(xsmall),
+      $button-padding-vertical: get-spacing(xsmall),
+      $button-line-height: 1
+    );
+  }
+}

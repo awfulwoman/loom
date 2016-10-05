@@ -1,0 +1,13 @@
+@mixin absolute-cover($distance: 0) {
+  bottom: $distance;
+  left: $distance;
+  position: absolute;
+  right: $distance;
+  top: $distance;
+}
+
+@if $LOOM-use-object-classes {
+  .o-absolute-cover {
+    @include absolute-cover();
+  }
+}

@@ -1,0 +1,8 @@
+/// Extract a color value from a map.
+///
+/// @group 20-tools
+/// @parameter {string} $color-name - The key for a spacing pair.
+/// @parameter {map} $color-list - A map of spacing key/value pairs to use. Defaults to $LOOM-colors-list.
+@function get-color($color-name, $color-list: $LOOM-colors-list) {
+  @return map-get($color-list, $color-name);
+}

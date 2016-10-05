@@ -1,0 +1,38 @@
+
+$LOOM-grid-gutter: get-spacing(xsmall) !default;
+
+.l-row {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -$LOOM-grid-gutter;
+  margin-right: -$LOOM-grid-gutter;
+}
+
+.l-row--reverse {
+  flex-direction: row-reverse;
+}
+
+.l-row__item {
+  padding-left: $LOOM-grid-gutter;
+  padding-right: $LOOM-grid-gutter;
+}
+
+@include grid-columns($LOOM-widths-columns);
+
+@if variable-exists(LOOM-grid-breakpoints) {
+  @each $grid-breakpoint-alias in $LOOM-grid-breakpoints {
+    $breakpoint-condition: map-get($LOOM-mq-breakpoints, $grid-breakpoint-alias);
+
+    @if ($breakpoint-condition) {
+      @include mq($from: $grid-breakpoint-alias) {
+        @each $i in $LOOM-widths-columns-responsive {
+          @include grid-columns($i, \@#{$grid-breakpoint-alias});
+        }
+      }
+    } @else { // stylelint-disable-line
+      @error "It looks like ‘#{$grid-breakpoint-alias}’ does not exist in $LOOM-grid-breakpoints.";
+    }
+  }
+}

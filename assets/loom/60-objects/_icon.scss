@@ -1,0 +1,24 @@
+@mixin icon($icon-font-size: 1em) {
+  $size: null;
+
+  @if (is-number($icon-font-size)) {
+    $size: $icon-font-size;
+  } @else { // stylelint-disable-line
+    $size: get-icon-size($icon-font-size);
+  }
+
+  color: inherit;
+  display: inline-block;
+  fill: currentColor;
+  font-size: $size;
+  height: 1em;
+  outline: none;
+  vertical-align: middle;
+  width: 1em;
+}
+
+@if $LOOM-use-object-classes {
+  .o-icon {
+    @include icon();
+  }
+}

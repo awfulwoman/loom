@@ -1,0 +1,9 @@
+html {
+  box-sizing: $LOOM-box-sizing;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

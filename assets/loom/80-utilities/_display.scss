@@ -1,0 +1,13 @@
+@if $LOOM-use-utility-classes {
+  .u-display-block {
+    display: block;
+  }
+
+  .u-display-inline {
+    display: inline;
+  }
+
+  .u-display-inline-block {
+    display: inline-block;
+  }
+}

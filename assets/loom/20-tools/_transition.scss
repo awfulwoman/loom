@@ -1,0 +1,10 @@
+/// Retrieve a CSS transition
+///
+/// @group 20-tools
+/// @parameter {string} $transition-property-name - Which property to animate. Defaults to "all".
+/// @parameter {time} $transition-duration - How long should the animation take.
+/// @parameter {string} $transition-timing-function - What timing/easing function should be used.
+/// @parameter {time} $transition-delay - What delay is at the start of the transition.
+@function get-transition($transition-property-name: all, $transition-duration: $LOOM-transition-duration, $transition-timing-function: $LOOM-transition-timing-function, $transition-delay: 0s) {
+  @return $transition-property-name $transition-duration $transition-timing-function $transition-delay;
+}

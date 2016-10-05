@@ -1,0 +1,27 @@
+@if $LOOM-use-utility-classes {
+  // Margins for each spacing unit and position.
+
+  // Margins for each breakpoint
+
+  .u-margin-none {
+    margin: 0;
+  }
+
+  @each $position in (left, top, right, bottom) {
+    .u-margin-#{$position}-none {
+      margin-#{$position}: 0;
+    }
+  }
+
+  @each $key, $value in $LOOM-spacing {
+    .u-margin-#{$key} {
+      margin: $value;
+    }
+
+    @each $position in (left, top, right, bottom) {
+      .u-margin-#{$position}-#{$key} {
+        margin-#{$position}: $value;
+      }
+    }
+  }
+}

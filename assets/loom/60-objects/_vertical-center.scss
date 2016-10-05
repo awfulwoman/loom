@@ -1,0 +1,12 @@
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Classes
+@if $LOOM-use-object-classes {
+  .o-vertical-center {
+    @include vertical-center();
+  }
+}

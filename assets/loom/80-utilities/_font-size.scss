@@ -1,0 +1,18 @@
+@if $LOOM-use-utility-classes {
+  // for each font size, generate a utility class.
+
+  @each $key, $name in $LOOM-font-sizes {
+    .u-font-size-#{$key} {
+      @include font-size($key, small);
+    }
+  }
+
+  // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
+  @include mq($from: $LOOM-typography-breakpoint) {
+    @each $key, $name in $LOOM-font-sizes {
+      .u-font-size-#{$key} {
+        @include font-size($key, large);
+      }
+    }
+  }
+}

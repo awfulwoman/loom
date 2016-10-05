@@ -1,0 +1,9 @@
+@if $LOOM-use-utility-classes {
+  .u-font-style-italic {
+    font-style: $LOOM-font-style-italic;
+  }
+
+  .u-font-style-normal {
+    font-style: $LOOM-font-style-normal;
+  }
+}

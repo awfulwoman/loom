@@ -1,0 +1,94 @@
+// SETTINGS
+// All global settings. Nothing visual.
+@import 'loom/10-global-settings/misc';
+@import 'loom/10-global-settings/typography';
+@import 'loom/10-global-settings/color';
+@import 'loom/10-global-settings/breakpoints';
+@import 'loom/10-global-settings/spacing';
+@import 'loom/10-global-settings/box-sizing';
+@import 'loom/10-global-settings/icons';
+
+// TOOLS
+// Mixins and functions. Nothing visual.
+@import 'loom/20-tools/misc';
+@import 'loom/20-tools/type-checking';
+@import 'loom/20-tools/typography';
+@import 'loom/20-tools/mq';
+@import 'loom/20-tools/spacing';
+@import 'loom/20-tools/color';
+@import 'loom/20-tools/transition';
+@import 'loom/20-tools/z-index';
+@import 'loom/20-tools/grid-columns';
+@import 'loom/20-tools/icons';
+
+// GENERIC
+// Far reaching, global styles. Normalize, resets.
+@import 'loom/30-generic/box-sizing';
+// @import 'loom/30-generic/reset';
+@import 'loom/30-generic/normalize';
+
+// BASE ELEMENTS
+// Unclassed elements. Basic spacing and sizing for raw HTML elements.
+// p {}
+@import 'loom/40-base-elements/images';
+@import 'loom/40-base-elements/typography';
+@import 'loom/40-base-elements/form-items';
+
+// LAYOUT
+// Grid systems and flex.
+// Should probably be used seperately from components (and objects/utilities, if they're being used for scaffolding). Ideally should be used as part of a wrapper element, as spacing and margins can conflict between layout and objects.
+// You can use all of these with your own classnames, as everything is available as a mixin.
+// .l-layout {}
+@import 'loom/50-layout/grid';
+
+// OBJECTS
+// SRP objects. Common code patterns. They do useful things that are repeated over and over.
+// Each object has a mixin so that these can be applied directly to a component, and they have an optional class, so that they can be used for scaffolding.
+// .o-object {}
+@import 'loom/60-objects/headings';
+@import 'loom/60-objects/list-reset';
+@import 'loom/60-objects/icon';
+@import 'loom/60-objects/button';
+// @import 'loom/60-objects/button--icon';
+@import 'loom/60-objects/absolute-center';
+@import 'loom/60-objects/absolute-cover';
+// @import 'loom/60-objects/break-long-words';
+@import 'loom/60-objects/clearfix';
+@import 'loom/60-objects/fixed-ratio';
+// @import 'loom/60-objects/truncate-with-ellipsis';
+@import 'loom/60-objects/vertical-center';
+@import 'loom/60-objects/media';
+@import 'loom/60-objects/hide-visually';
+@import 'loom/60-objects/container';
+@import 'loom/60-objects/list-inline';
+
+// UI COMPONENTS
+// Styled visual components. $LOOM doesn't try to provide these. These will be specific to your project.
+// Build components with help from @included objects and $LOOM predefined variables.
+// .c-component {}
+// @import 'loom/70-ui-components/your-components-here';
+@import 'loom/70-ui-components/example';
+
+// UTILITIES
+// If a component does not handle it's own spacing, font-styling, sizing, then they can use these utility classes.
+// They only represent a single CSS rule. Useful for quickly scaffolding interfaces by adding classes to HTML. However, only a temporary solution as readibility is compromised - should probably be merged into a UI-component.
+// However, if you're into atomic CSS, you can use and extend the utilities here.
+// Rule of thumb: if the ruleset consists of a single line, it probably belongs in here. Multiple lines are generally objects.
+// .u-utility {}
+@import 'loom/80-utilities/background-color';
+@import 'loom/80-utilities/vertical-align';
+@import 'loom/80-utilities/text-transform';
+@import 'loom/80-utilities/text-align';
+@import 'loom/80-utilities/position';
+@import 'loom/80-utilities/font-style';
+@import 'loom/80-utilities/display';
+@import 'loom/80-utilities/font-size';
+@import 'loom/80-utilities/display-none';
+@import 'loom/80-utilities/margin';
+@import 'loom/80-utilities/padding';
+@import 'loom/80-utilities/white-space';
+
+// TRUMPS
+// Real ultimate overrides. Real nasty stuff. The plutonium of selectors. Ideally, nothing should live here.
+// .t-trump {}
+// @import 'loom/90-trumps';

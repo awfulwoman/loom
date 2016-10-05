@@ -1,0 +1,33 @@
+@mixin fixed-ratio($ratio-percentage-a: 16, $ratio-percentage-b: 9) {
+  $calculated-ratio: percentage($ratio-percentage-b / $ratio-percentage-a);
+
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: $calculated-ratio;
+  }
+}
+
+@mixin fixed-ratio__inner {
+  @include absolute-cover;
+
+  display: block;
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+}
+
+@if $LOOM-use-object-classes {
+  .o-fixed-ratio {
+    @include fixed-ratio();
+  }
+
+  .o-fixed-ratio__inner {
+    @include fixed-ratio__inner();
+  }
+}

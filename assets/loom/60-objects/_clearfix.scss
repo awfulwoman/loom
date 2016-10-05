@@ -1,0 +1,13 @@
+@mixin clearfix() {
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+@if $LOOM-use-object-classes {
+  .o-clearfix {
+    @include clearfix();
+  }
+}

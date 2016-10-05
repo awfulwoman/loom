@@ -1,0 +1,94 @@
+html {
+  @include font-size(default, small);
+
+  @include mq($from: $LOOM-typography-breakpoint) {
+    @include font-size(default, large);
+  }
+
+  background: get-color(body-background-color);
+  color: get-color(body-color);
+  font-family: get-font-family(primary, base);
+  line-height: 1.5;
+
+  .#{$LOOM-fonts-loaded} & { // NOTE: make use of a font loading system here
+    font-family: get-font-family(primary, webfont);
+  }
+}
+
+// NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
+@include mq($from: $LOOM-typography-breakpoint) {
+  html {
+    @include font-size(default, large);
+  }
+}
+
+a {
+  color: get-color(link-color);
+  transition: get-transition(color);
+
+  &:visited {
+    color: get-color(link-color-visited);
+  }
+
+  &:hover,
+  &:focus {
+    color: get-color(link-color-hover);
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 0 0 get-spacing(small);
+}
+
+@if ($LOOM-generate-sizes-for-default-headings) {
+  // NOTE: Make all headings generic
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include generic-heading;
+  }
+
+  // NOTE: Give each base element heading a value as described in $LOOM-h-element-sizes.
+  @each $name, $value in $LOOM-h-element-sizes {
+    #{$name} {
+      @include font-size($value, small);
+    }
+  }
+
+  // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
+  @include mq($from: $LOOM-typography-breakpoint) {
+    @each $name, $value in $LOOM-h-element-sizes {
+      #{$name} {
+        @include font-size($value, large);
+      }
+    }
+  }
+} @else { // stylelint-disable-line
+  // NOTE: Just give each HTML heading the same size.
+  // NOTE: We make this the same because so that semantic values do not interfere with designs. Size must be imparted conciously.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include generic-heading($margin-size: 0, $font-weight: $LOOM-font-weight-normal);
+    @include font-size(default, small);
+  }
+
+  // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
+  @include mq($from: $LOOM-typography-breakpoint) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include font-size(default, large);
+    }
+  }
+}

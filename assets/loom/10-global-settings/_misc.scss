@@ -1,0 +1,70 @@
+/// Will object mixins have their own classes generated?
+///
+/// @group 10-global-settings
+/// @type boolean
+$LOOM-use-object-classes: true !default;
+
+/// Will utility modules have their own classes generated?
+///
+/// @group 10-global-settings
+/// @type boolean
+$LOOM-use-utility-classes: true !default;
+
+/// The default border-radius for various objects.
+///
+/// @group 10-global-settings
+/// @type number
+$LOOM-border-radius: 5px !default;
+
+/// The default border-radius for circular objects.
+///
+/// @group 10-global-settings
+/// @type number
+$LOOM-border-radius-circle: 50% !default;
+
+/// The default z-index layers used by the get-z() function.
+///
+/// @group 10-global-settings
+/// @see {function} get-z
+/// @type map
+$LOOM-z-layers: (
+  "top":          2,
+  "default":      1,
+  "below":        -1,
+) !default;
+
+/// The default list of breakpoints that is used to generate display-none classes.
+///
+/// @group 10-global-settings
+/// @type list
+$LOOM-display-none-breakpoints: (
+  small,
+  large
+) !default;
+
+/// The default time that all animations takes to complete.
+///
+/// @group 10-global-settings
+/// @type time
+$LOOM-transition-duration: 0.2s !default;
+
+/// The default timing/easing function that all animations will use.
+///
+/// @group 10-global-settings
+/// @type string
+$LOOM-transition-timing-function: ease-in-out !default;
+
+$LOOM-widths-columns: (12) !default;
+$LOOM-widths-columns-responsive: (12) !default;
+
+$LOOM-grid-breakpoints: (
+  'small',
+  'medium',
+  'large',
+  'xlarge'
+) !default;
+
+$LOOM-border-width: 1px !default;
+$LOOM-border-style: solid !default;
+
+$LOOM-single-column-width: 55rem !default;
