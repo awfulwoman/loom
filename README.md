@@ -53,9 +53,9 @@ Once you have made that folder available to your build you can access the Loom l
 @import 'loom/10-global-settings/misc';
 // etc
 ```
-DON'T just link to `main.scss`! This will prevent you getting access to the interweaved layers of the ITCSS stack. Instead, copy [the list of imports](https://github.com/sonniesedge/loom/blob/master/assets/main.scss) from `main.scss` into your main project file.
+DON'T just link to `main.scss`! This will prevent you getting access to the interweaved layers of the ITCSS stack. Instead, copy [the list of imports](https://github.com/sonniesedge/loom/blob/master/assets/main.scss) from `main.scss` into your main project file. Yes, it feels unusual, but you'll gain a lot of power by doing so.
 
-This library is a basis for your own design system and won't give you much visually out of the box! 
+This library is a basis for your own design system and won't give you much visually out of the box!
 
 # Organisation layers
 
