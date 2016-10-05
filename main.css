@@ -536,7 +536,7 @@ textarea {
 label {
   font-weight: bold; }
 
-.l-row {
+.l-grid {
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
@@ -544,10 +544,10 @@ label {
   margin-left: -0.5rem;
   margin-right: -0.5rem; }
 
-.l-row--reverse {
+.l-grid--reverse {
   flex-direction: row-reverse; }
 
-.l-row__item {
+.l-grid__item {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
 

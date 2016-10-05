@@ -1,6 +1,6 @@
 $LOOM-grid-gutter-value: get-spacing($LOOM-grid-gutter) !default;
 
-.l-row {
+.l-grid {
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
@@ -9,11 +9,11 @@ $LOOM-grid-gutter-value: get-spacing($LOOM-grid-gutter) !default;
   margin-right: -$LOOM-grid-gutter-value;
 }
 
-.l-row--reverse {
+.l-grid--reverse {
   flex-direction: row-reverse;
 }
 
-.l-row__item {
+.l-grid__item {
   padding-left: $LOOM-grid-gutter-value;
   padding-right: $LOOM-grid-gutter-value;
 }
