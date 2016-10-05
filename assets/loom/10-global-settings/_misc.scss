@@ -54,8 +54,9 @@ $LOOM-transition-duration: 0.2s !default;
 /// @type string
 $LOOM-transition-timing-function: ease-in-out !default;
 
-$LOOM-widths-columns: (12) !default;
-$LOOM-widths-columns-responsive: (12) !default;
+$LOOM-grid-columns: (12) !default;
+$LOOM-grid-columns-responsive: (12) !default;
+$LOOM-grid-gutter: xsmall !default; // NOTE: will be consumed by get-spacing()
 
 $LOOM-grid-breakpoints: (
   'small',

@@ -1,13 +1,12 @@
-
-$LOOM-grid-gutter: get-spacing(xsmall) !default;
+$LOOM-grid-gutter-value: get-spacing($LOOM-grid-gutter) !default;
 
 .l-row {
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: -$LOOM-grid-gutter;
-  margin-right: -$LOOM-grid-gutter;
+  margin-left: -$LOOM-grid-gutter-value;
+  margin-right: -$LOOM-grid-gutter-value;
 }
 
 .l-row--reverse {
@@ -15,11 +14,11 @@ $LOOM-grid-gutter: get-spacing(xsmall) !default;
 }
 
 .l-row__item {
-  padding-left: $LOOM-grid-gutter;
-  padding-right: $LOOM-grid-gutter;
+  padding-left: $LOOM-grid-gutter-value;
+  padding-right: $LOOM-grid-gutter-value;
 }
 
-@include grid-columns($LOOM-widths-columns);
+@include grid-columns($LOOM-grid-columns);
 
 @if variable-exists(LOOM-grid-breakpoints) {
   @each $grid-breakpoint-alias in $LOOM-grid-breakpoints {
@@ -27,7 +26,7 @@ $LOOM-grid-gutter: get-spacing(xsmall) !default;
 
     @if ($breakpoint-condition) {
       @include mq($from: $grid-breakpoint-alias) {
-        @each $i in $LOOM-widths-columns-responsive {
+        @each $i in $LOOM-grid-columns-responsive {
           @include grid-columns($i, \@#{$grid-breakpoint-alias});
         }
       }
