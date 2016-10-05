@@ -1,5 +1,5 @@
 {
-  "name": "loom",
+  "name": "loomcss",
   "version": "1.0.0",
   "description": "Weave your own pattern libraries.",
   "main": "index.js",
