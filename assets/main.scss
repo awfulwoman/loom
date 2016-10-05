@@ -24,7 +24,6 @@
 // GENERIC
 // Far reaching, global styles. Normalize, resets.
 @import 'loom/30-generic/box-sizing';
-// @import 'loom/30-generic/reset';
 @import 'loom/30-generic/normalize';
 
 // BASE ELEMENTS
@@ -49,13 +48,10 @@
 @import 'loom/60-objects/list-reset';
 @import 'loom/60-objects/icon';
 @import 'loom/60-objects/button';
-// @import 'loom/60-objects/button--icon';
 @import 'loom/60-objects/absolute-center';
 @import 'loom/60-objects/absolute-cover';
-// @import 'loom/60-objects/break-long-words';
 @import 'loom/60-objects/clearfix';
 @import 'loom/60-objects/fixed-ratio';
-// @import 'loom/60-objects/truncate-with-ellipsis';
 @import 'loom/60-objects/vertical-center';
 @import 'loom/60-objects/media';
 @import 'loom/60-objects/hide-visually';
