@@ -419,6 +419,7 @@ html {
   font-size: 1rem;
   background: #fff;
   color: #000;
+  font-family: sans-serif;
   line-height: 1.5; }
   @media (min-width: 41.11111em) {
     html {

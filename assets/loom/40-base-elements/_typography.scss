@@ -7,7 +7,7 @@ html {
 
   background: get-color(body-background-color);
   color: get-color(body-color);
-  font-family: get-font-family(primary, base);
+  font-family: get-font-family(primary, default);
   line-height: 1.5;
 
   .#{$LOOM-fonts-loaded} & { // NOTE: make use of a font loading system here
