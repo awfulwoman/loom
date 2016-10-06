@@ -18,22 +18,22 @@ It's highly modular, and lets you easily extend it with your own modules and cla
 
 # Manifesto
 
-A non-exhaustive and non-ordered list of manifesto points for this library.
+Loom's manifesto:
 
-- Loom is opinionated about Sass structure, but kinda indifferent to CSS output. We'd LOVE it if you used BEM, but you don't have to. Your final UI Components can be written however you wish.
-- It will provide objects to replace multiple lines of commonly-repeated code. However, it will not try to replace basic one-line CSS. This is a helper, not a complete abstraction layer.
-- Loom likes to avoid specificity wars. It likes good organisation, and good naming.
-- It's useful for quickly scaffolding and then fleshing out a design.
-- Atomic CSS is OOCSS that has gone too far and transcended the human. We're not trying for an Atomic CSS library (although we do offer utility classes), but to allow the easy use of atomic design systems (there's a big difference!).
-- Okay, so Loom really doesn't like [Atomic CSS](http://acss.io/), but it doesn't like everything being dumped into single nested classnames. So here's the sweetspot.
-- This will not tie you to a visual look, as Bootstrap might. It doesn't provide any kind of visual look!
-- You might find this more class-heavy than you're used to. This is because very few base elements have default styling. Conscious choice.
-- No nesting. Loom really doesn't like nesting. Nesting makes for horrible specificity problems.
-- No IDs. IDs make for even more horrible specificity problems. Just... no.
-- Specificity should come from source order, not selector specificity weight.
-- CSS decoupled from markup. Only the Base Elements layer touches HTML directly, and then only to lightly style it. Every other layer should interact with HTML via classes.
-- Highly modular. Don't like an object or mixin? Swap it out for your own.
-- Autoprefixing is handled by post-processing libraries.
+- Loom tries to make things *easier* for a developer.
+- Loom doesn't come with a "theme" or a prebuilt pattern library. Loom helps you to weave _your own_ pattern libraries.
+- Loom is a tool and isn't designed to "drop in and go". It is something to help professional designer/developers in their everyday tasks.
+- Loom loves design systems. THey're built into it from the core, with standardised ways of accessing global colours, spacing units and fonts.
+- Loom doesn't try and force you into the binary of choosing to write components or utility classes. It leaves that choice up to you.
+- Loom is opinionated about Sass structure, but kinda indifferent to CSS output. Loom would LOVE it if you used BEM, but you don't have to. Your final UI Components can be written however you wish.
+- Loom is modular. You can easily add your own modules into a layer and have them working alongside the prebuilt ones.
+- Loom loves best practise, and is quite opinionated on this, even if it doesn't force your hand. It loves the avoidance of nesting, styling of classes rather than base elements and the avoidance of specificity battles!
+  - No nesting. Loom really doesn't like nesting. Nesting makes for horrible specificity problems.
+  - No IDs. IDs make for even more horrible specificity problems. Just... no.
+  - Specificity should come from source order, not selector specificity weight.
+  - CSS decoupled from markup. Only the Base Elements layer touches HTML directly, and then only to lightly style it. Every other layer should interact with HTML via classes.
+- Loom knows when others do it better. Browser prefixes are (when necessary) best left to Autoprefixer, no?
+
 
 # Installation
 
