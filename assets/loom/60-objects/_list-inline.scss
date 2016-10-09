@@ -3,9 +3,19 @@
 // Mixin
 // NOTE: Displays list elements inline to each other. For use on OL or UL.
 // NOTE: REQUIRES LIST-RESET
-@mixin list-inline() {
-  @include list-reset();
+@mixin list-inline($nest-inline: false) {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 
+  @if $nest-inline {
+    & > li {
+      display: inline-block;
+    }
+  }
+}
+
+@mixin list-inline__item() {
   display: inline-block;
 }
 
@@ -13,5 +23,9 @@
 @if $LOOM-use-object-classes {
   .o-list-inline {
     @include list-inline();
+  }
+
+  .o-list-inline__item {
+    @include list-inline__item();
   }
 }
