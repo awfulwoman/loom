@@ -18,30 +18,32 @@ It's highly modular, and lets you easily extend it with your own modules and cla
 
 # Manifesto
 
-Loom's manifesto:
+Loom's manifesto and opinions:
 
 - Loom tries to make things *easier* for a developer.
 - Loom doesn't come with a "theme" or a prebuilt pattern library. Loom helps you to weave _your own_ pattern libraries.
 - Loom is a tool and isn't designed to "drop in and go". It is something to help professional designer/developers in their everyday tasks.
 - Loom loves design systems. THey're built into it from the core, with standardised ways of accessing global colours, spacing units and fonts.
 - Loom doesn't try and force you into the binary of choosing to write components or utility classes. It leaves that choice up to you.
-- Loom is opinionated about Sass structure, but kinda indifferent to CSS output. Loom would LOVE it if you used BEM, but you don't have to. Your final UI Components can be written however you wish.
+- Loom is opinionated about Sass structure, but kinda indifferent to CSS output. Loom would LOVE it if you used BEM, but you don't have to. Your final UI components can be written however you wish.
 - Loom is modular. You can easily add your own modules into a layer and have them working alongside the prebuilt ones.
 - Loom loves best practise, and is quite opinionated on this, even if it doesn't force your hand. It loves the avoidance of nesting, styling of classes rather than base elements and the avoidance of specificity battles!
   - No nesting. Loom really doesn't like nesting. Nesting makes for horrible specificity problems.
   - No IDs. IDs make for even more horrible specificity problems. Just... no.
   - Specificity should come from source order, not selector specificity weight.
   - CSS decoupled from markup. Only the Base Elements layer touches HTML directly, and then only to lightly style it. Every other layer should interact with HTML via classes.
+  - No `@extend`s. These so, so, so easily mess up the source order of a project. Because ITCSS, the core of this, is source order dependent, it's best to avoid.
 - Loom knows when others do it better. Browser prefixes are (when necessary) best left to Autoprefixer, no?
 
 
 # Installation
 
-Eventually this will be an npm module, a bower module and gem.
+Eventually this will be an npm module, a bower module and gem. For now it's installable via npm:
 
 ```bash
 $ npm install loomcss --save-dev
 ```
+Or go old-school and copy/paste the contents of the `assets` folder into your project. Hey, whatever works, right?
 
 # Usage
 
@@ -53,13 +55,13 @@ Once you have made that folder available to your build you can access the Loom l
 @import 'loom/10-global-settings/misc';
 // etc
 ```
-DON'T just link to `main.scss`! This will prevent you getting access to the interweaved layers of the ITCSS stack. Instead, copy [the list of imports](https://github.com/sonniesedge/loom/blob/master/assets/main.scss) from `main.scss` into your main project file. Yes, it feels unusual, but you'll gain a lot of power by doing so.
+Please DON'T just link to `main.scss`! This will prevent you getting access to the interweaved layers of the ITCSS stack (it's there as an example only). Instead, copy [the list of imports](https://github.com/sonniesedge/loom/blob/master/assets/main.scss) from `main.scss` into your main project file. Yes, it feels unusual, but you'll gain a lot of power by doing so.
 
 This library is a basis for your own design system and won't give you much visually out of the box!
 
 # Organisation layers
 
-The layers of this project descend in specificity and scope order, from 10 to 100, with those at the top (10) being extremely broad and of low specificity, and those at the bottom (100) being extremely specific and high specificity.
+The layers of this project descend in specificity and scope order, from 10 to 100, with those at the top (10) being extremely broad and of low specificity, and those at the bottom (100) being extremely specific and high specificity. You can add your own layers, but the default ones are as follows:
 
 ## 10 - Global settings
 Sass global variables. Should only contain those things used by multiple layers and modules.
