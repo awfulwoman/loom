@@ -5,13 +5,14 @@ require 'loom/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "loom"
-  spec.version       = loom::VERSION
+  spec.version       = Loom::VERSION
   spec.authors       = ["Charlie Owen"]
   spec.email         = ["charlie@sonniesedge.co.uk"]
 
   spec.summary       = %q{Weave your own pattern libraries}
-  spec.homepage      = "https://gitlab.com/sonniesedge/css-library"
-  spec.license       = "ISC"
+  spec.description   = %q{TODO: Loom is a Sass framework designed to help you build pattern libraries and design systems quickly and easily. Loom provides a solid base to build your own systems on top of.}
+  spec.homepage      = "https://github.com/sonniesedge/loom"
+  spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
