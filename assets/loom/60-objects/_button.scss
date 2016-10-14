@@ -2,7 +2,7 @@
   $button-color: get-color(button-color-default),
   $button-background-color: get-color(button-background-color-default),
   $button-border-color: get-color(button-border-color-default),
-  $button-border-thickness: 1px,
+  $button-border-thickness: $LOOM-border-width,
   $button-border-radius: $LOOM-border-radius,
   $button-background-color-hover: null,
   $button-border-color-hover: null,
