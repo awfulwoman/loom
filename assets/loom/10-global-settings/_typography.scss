@@ -25,6 +25,9 @@ $LOOM-font-weight-normal: normal !default;
 $LOOM-font-style-italic: italic !default;
 $LOOM-font-style-normal: normal !default;
 
+// LINE HEIGHT
+$LOOM-line-height-default: 1.5 !default;
+
 // --- FONT SIZES ---
 // NOTE: Fonts generally need to be a bit bigger on mobile devices. Therefore base font size here start out larger and are made small at higher breakpoints.
 // NOTE: All header fonts are set to the appropiate base size by default. You need to set up your font sizes manually. Examples are given below.
