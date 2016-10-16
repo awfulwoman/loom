@@ -984,9 +984,11 @@ label {
       padding-right: 3rem; } }
 
 .o-list-inline {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.o-list-inline__item {
   display: inline-block; }
 
 .o-background-color-body-color {
@@ -1028,60 +1030,6 @@ label {
 .o-background-color-input-border-color-default {
   background-color: #333; }
 
-.u-vertical-align-baseline {
-  vertical-align: baseline; }
-
-.u-vertical-align-sub {
-  vertical-align: sub; }
-
-.u-vertical-align-super {
-  vertical-align: super; }
-
-.u-vertical-align-text-top {
-  vertical-align: text-top; }
-
-.u-vertical-align-text-bottom {
-  vertical-align: text-bottom; }
-
-.u-vertical-align-middle {
-  vertical-align: middle; }
-
-.u-vertical-align-top {
-  vertical-align: top; }
-
-.u-vertical-align-bottom {
-  vertical-align: bottom; }
-
-.u-text-transform-uppercase {
-  text-transform: uppercase; }
-
-.u-text-transform-lowercase {
-  text-transform: lowercase; }
-
-.u-text-transform-capitalize {
-  text-transform: capitalize; }
-
-.u-text-align-left {
-  text-align: left; }
-
-.u-text-align-right {
-  text-align: right; }
-
-.u-text-align-center {
-  text-align: center; }
-
-.u-position-absolute {
-  position: absolute; }
-
-.u-position-relative {
-  position: relative; }
-
-.u-font-style-italic {
-  font-style: italic; }
-
-.u-font-style-normal {
-  font-style: normal; }
-
 .u-display-block {
   display: block; }
 
@@ -1091,6 +1039,15 @@ label {
 .u-display-inline-block {
   display: inline-block; }
 
+.u-display-none {
+  display: none; }
+
+@media (min-width: 17.77778em) {
+  .u-display-none\@small {
+    display: none; } }
+@media (min-width: 54.44444em) {
+  .u-display-none\@large {
+    display: none; } }
 .u-font-size-default {
   font-size: 18px;
   font-size: 1rem; }
@@ -1147,15 +1104,18 @@ label {
   .u-font-size-zeta {
     font-size: 16px;
     font-size: 1rem; } }
-.u-display-none {
-  display: none; }
+.u-font-style-italic {
+  font-style: italic; }
 
-@media (min-width: 17.77778em) {
-  .u-display-none\@small {
-    display: none; } }
-@media (min-width: 54.44444em) {
-  .u-display-none\@large {
-    display: none; } }
+.u-font-style-normal {
+  font-style: normal; }
+
+.u-font-weight-bold {
+  font-weight: bold; }
+
+.u-font-weight-normal {
+  font-weight: normal; }
+
 .u-margin-none {
   margin: 0; }
 
@@ -1336,6 +1296,54 @@ label {
 .u-padding-bottom-xlarge {
   padding-bottom: 4rem; }
 
+.u-position-absolute {
+  position: absolute; }
+
+.u-position-relative {
+  position: relative; }
+
+.u-text-align-left {
+  text-align: left; }
+
+.u-text-align-right {
+  text-align: right; }
+
+.u-text-align-center {
+  text-align: center; }
+
+.u-text-transform-uppercase {
+  text-transform: uppercase; }
+
+.u-text-transform-lowercase {
+  text-transform: lowercase; }
+
+.u-text-transform-capitalize {
+  text-transform: capitalize; }
+
+.u-vertical-align-baseline {
+  vertical-align: baseline; }
+
+.u-vertical-align-sub {
+  vertical-align: sub; }
+
+.u-vertical-align-super {
+  vertical-align: super; }
+
+.u-vertical-align-text-top {
+  vertical-align: text-top; }
+
+.u-vertical-align-text-bottom {
+  vertical-align: text-bottom; }
+
+.u-vertical-align-middle {
+  vertical-align: middle; }
+
+.u-vertical-align-top {
+  vertical-align: top; }
+
+.u-vertical-align-bottom {
+  vertical-align: bottom; }
+
 .u-white-space-normal {
   white-space: normal; }
 
@@ -1350,3 +1358,6 @@ label {
 
 .u-white-space-pre-line {
   white-space: pre-line; }
+
+.u-width-full {
+  width: 100%; }

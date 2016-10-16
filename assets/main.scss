@@ -1,5 +1,8 @@
 // SETTINGS
 // All global settings. Nothing visual.
+// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// (Hey, this is different from every other layer) - You settings need
+// to go above the things they're overriding.
 @import 'loom/10-global-settings/misc';
 @import 'loom/10-global-settings/typography';
 @import 'loom/10-global-settings/color';
@@ -7,6 +10,7 @@
 @import 'loom/10-global-settings/spacing';
 @import 'loom/10-global-settings/box-sizing';
 @import 'loom/10-global-settings/icons';
+// NOOOO! DON'T YOUR OWN SETTINGS AT THE END! :( SEE THE TEXT ABOVE!
 
 // TOOLS
 // Mixins and functions. Nothing visual.
@@ -20,11 +24,13 @@
 @import 'loom/20-tools/z-index';
 @import 'loom/20-tools/grid-columns';
 @import 'loom/20-tools/icons';
+// -----> ADD YOUR OWN TOOLS HERE! :D
 
 // GENERIC
 // Far reaching, global styles. Normalize, resets.
 @import 'loom/30-generic/box-sizing';
 @import 'loom/30-generic/normalize';
+// -----> ADD YOUR OWN GENERIC STYLES HERE! :D
 
 // BASE ELEMENTS
 // Unclassed elements. Basic spacing and sizing for raw HTML elements.
@@ -32,6 +38,7 @@
 @import 'loom/40-base-elements/images';
 @import 'loom/40-base-elements/typography';
 @import 'loom/40-base-elements/form-items';
+// -----> ADD YOUR OWN BASE ELEMENTS HERE! :D
 
 // LAYOUT
 // Grid systems and flex.
@@ -39,6 +46,7 @@
 // You can use all of these with your own classnames, as everything is available as a mixin.
 // .l-layout {}
 @import 'loom/50-layout/grid';
+// -----> ADD YOUR OWN LAYOUT ENGINES HERE! :D
 
 // OBJECTS
 // SRP objects. Common code patterns. They do useful things that are repeated over and over.
@@ -57,12 +65,14 @@
 @import 'loom/60-objects/hide-visually';
 @import 'loom/60-objects/container';
 @import 'loom/60-objects/list-inline';
+// -----> ADD YOUR OWN OBJECTS HERE! :D
 
 // UI COMPONENTS
 // Styled visual components. $LOOM doesn't try to provide these. These will be specific to your project.
 // Build components with help from @included objects and $LOOM predefined variables.
 // .c-component {}
 @import 'loom/70-ui-components/example';
+// -----> ADD YOUR OWN UI COMPONENTS HERE! :D
 
 // UTILITIES
 // If a component does not handle it's own spacing, font-styling, sizing, then they can use these utility classes.
@@ -71,19 +81,27 @@
 // Rule of thumb: if the ruleset consists of a single line, it probably belongs in here. Multiple lines are generally objects.
 // .u-utility {}
 @import 'loom/80-utilities/background-color';
-@import 'loom/80-utilities/vertical-align';
-@import 'loom/80-utilities/text-transform';
-@import 'loom/80-utilities/text-align';
-@import 'loom/80-utilities/position';
-@import 'loom/80-utilities/font-style';
+@import 'loom/80-utilities/border';
+@import 'loom/80-utilities/color';
 @import 'loom/80-utilities/display';
+@import 'loom/80-utilities/font-family';
 @import 'loom/80-utilities/font-size';
-@import 'loom/80-utilities/display-none';
+@import 'loom/80-utilities/font-style';
+@import 'loom/80-utilities/font-weight';
+@import 'loom/80-utilities/line-height';
 @import 'loom/80-utilities/margin';
 @import 'loom/80-utilities/padding';
+@import 'loom/80-utilities/position';
+@import 'loom/80-utilities/text-align';
+@import 'loom/80-utilities/text-transform';
+@import 'loom/80-utilities/vertical-align';
 @import 'loom/80-utilities/white-space';
+@import 'loom/80-utilities/width';
+// -----> ADD YOUR OWN UTILITIES HERE! :D
 
 // TRUMPS
-// Real ultimate overrides. Real nasty stuff. The plutonium of selectors. Ideally, nothing should live here.
+// Real ultimate overrides. Real nasty stuff. The plutonium of selectors.
+// Ideally, nothing should live here. (Sadly this is an imperfect world).
 // .t-trump {}
 // @import 'loom/90-trumps';
+// -----> ADD YOUR OWN TRUMPS HERE! :D

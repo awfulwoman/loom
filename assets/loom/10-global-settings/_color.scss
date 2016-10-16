@@ -21,6 +21,8 @@ $LOOM-colors-theme: (
   'input-border-color-default':           $LOOM-color-darkgray
 ) !default;
 
+// COLOURS SHOULD NEVER BE ACCESSED AS VALUES OR VARIABlES. ALL COLOURS SHOULD COME THROUGH get-color() FUNCTION. Hey, I should up a linting package in loomcss to deal with this...
+
 // Go and read this presentation on sass maps - it's great! http://www.miriamsuzanne.com/pres/map-magic/
 
 // NOTE: Override this var to use your own colour list as the default one for use by the get-color() function.
