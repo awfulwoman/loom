@@ -10,7 +10,7 @@ It's highly modular, and lets you easily extend it with your own modules and cla
 
 ```scss
 .c-fancy-button {
-  @include button(get-color(white), get-color(primary-background);
+  @include button(get-color(white), get-color(primary-background));
   @include font-size(large);
   padding: get-spacing(xsmall) get-spacing(small);
 }
