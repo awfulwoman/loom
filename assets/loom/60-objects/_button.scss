@@ -26,6 +26,10 @@
   user-select: none;
   vertical-align: middle;
 
+  &:visited {
+    color: $button-color;
+  }
+
   &:hover,
   &:focus {
     // NOTE: Oh, these are horribly ugly. So sorry. I could have made it a ternary operator, but that involved extra variable to store stuff. Look, I'm sorry, okay?
