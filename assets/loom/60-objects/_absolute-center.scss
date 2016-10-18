@@ -5,6 +5,8 @@
   transform: translate(-50%, -50%);
 }
 
-.o-absolute-center {
-  @include absolute-center;
+@if $LOOM-use-object-classes {
+  .o-absolute-center {
+    @include absolute-center;
+  }
 }
