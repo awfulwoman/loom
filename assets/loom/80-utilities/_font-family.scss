@@ -1,3 +1,14 @@
 @if $LOOM-use-utility-classes {
   // For each in the font-family list, generate a utility class here.
+  @each $key, $name in $LOOM-fonts {
+    .u-font-family-#{$key} {
+      font-family: get-font-family($key);
+
+      @if $LOOM-fonts-loaded {
+        .#{$LOOM-fonts-loaded} & {
+          font-family: get-font-family($key, webfont);
+        }
+      }
+    }
+  }
 }

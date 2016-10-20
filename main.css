@@ -426,7 +426,7 @@ html {
       font-size: 16px;
       font-size: 1rem; } }
   .fonts-loaded html {
-    font-family: "Open sans"; }
+    font-family: sans-serif; }
 
 @media (min-width: 41.11111em) {
   html {
@@ -450,7 +450,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Times New Roman";
+  font-family: serif;
   font-weight: bold;
   margin: 0 0 0.5rem;
   text-rendering: optimizeLegibility; }
@@ -460,7 +460,7 @@ h6 {
   h4, .fonts-loaded
   h5, .fonts-loaded
   h6 {
-    font-family: Arvo; }
+    font-family: serif; }
 
 h1 {
   font-size: 36px;
@@ -869,6 +869,8 @@ label {
   transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
   user-select: none;
   vertical-align: middle; }
+  .o-button:visited {
+    color: #000; }
   .o-button:hover, .o-button:focus {
     background-color: #cccccc;
     border-color: black;
@@ -894,6 +896,8 @@ label {
   transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
   user-select: none;
   vertical-align: middle; }
+  .o-button-icon:visited {
+    color: #000; }
   .o-button-icon:hover, .o-button-icon:focus {
     background-color: #cccccc;
     border-color: black;
@@ -1048,6 +1052,16 @@ label {
 @media (min-width: 54.44444em) {
   .u-display-none\@large {
     display: none; } }
+.u-font-family-primary {
+  font-family: sans-serif; }
+  .fonts-loaded .u-font-family-primary {
+    font-family: sans-serif; }
+
+.u-font-family-secondary {
+  font-family: serif; }
+  .fonts-loaded .u-font-family-secondary {
+    font-family: serif; }
+
 .u-font-size-default {
   font-size: 18px;
   font-size: 1rem; }

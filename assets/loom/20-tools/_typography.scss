@@ -1,23 +1,45 @@
-// NOTE: Extracts a font-family name from a font usage
-// NOTE: By default it will grab the "base" font. Specify "webfont" for the webfont version.
-@function get-font-family($font-name, $font-usage: base, $font-map: $LOOM-fonts) {
-  @return get-map-deep($font-map, $font-name, $font-usage);
+/// Extracts a font-family name from a font usage
+///
+/// By default it will grab the "default" font. Specify "webfont" for the webfont version.
+///
+/// @group 20-tools
+/// @requires $LOOM-fonts
+/// @example scss
+///   font-size: get-font-family(primary); // Get default version of font "primary"
+///   font-size: get-font-family(secondary, webfont); // Get webfont version of font "secondary"
+@function get-font-family($font-name, $font-variant: default, $font-map: $LOOM-fonts) {
+  @return get-map-deep($font-map, $font-name, $font-variant);
 }
 
-// NOTE: Extracts a font size from the global sizing map.
-// NOTE: By default it will grab the "small breakpoint" version of the font-size.
+/// Extract a font size from the global sizing map.
+///
+/// By default it will grab the "small breakpoint" version of the font-size.
+/// @group 20-tools
+/// @requires $LOOM-font-sizes
+/// @example scss
+///   font-size: get-font-size(alpha);  // Get default version of size "alpha"
+///   font-size: get-font-size(beta, large); // Get large version of size "beta"
 @function get-font-size($font-name, $font-size: small, $font-map: $LOOM-font-sizes) {
   @return get-map-deep($font-map, $font-name, $font-size, 'font-size');
 }
 
-// NOTE: Extracts a line-height from the global sizing map.
+/// Extract a line-height from the global sizing map.
+///
+/// By default it will grab the "small breakpoint" version of the line-height.
+/// @group 20-tools
+/// @requires $LOOM-font-sizes
 @function get-line-height($font-name, $font-size: small, $font-map: $LOOM-font-sizes) {
   @return get-map-deep($font-map, $font-name, $font-size, 'line-height');
 }
 
-// NOTE: Converts pixel values to REMs.
-// NOTE: Needs a base font size to convert pixels against. By default, this is the value of "base" at the "small breakpoint"
-@function convert-px-to-rem($pixel-size, $root-size: get-font-size(base, small)) {
+/// Gonverts pixel values to REMs
+///
+/// @parameter {number} $pixels - A font size in pixels
+/// @parameter {string} $browser-content - The base font size of the page at the current breakpoint. y default, this is the value of "base" at the "small breakpoint"
+///
+/// @group 20-tools
+/// @returns {Number} Value in REMs
+@function convert-px-to-rem($pixel-size, $root-size: get-font-size(default, small)) {
   @return ($pixel-size / $root-size) * 1rem;
 }
 
@@ -32,8 +54,10 @@
   @return ($pixels / $browser-context) + 0em; // stylelint-disable-line length-zero-no-unit
 }
 
-// NOTE: Generates a font-size ruleset.
-// NOTE: By default it will grab the "small breakpoint" version of the font-size.
+/// Generates a font-size ruleset.
+///
+/// By default it will grab the "small breakpoint" version of the font-size.
+/// @group 20-tools
 @mixin font-size($size-name, $size-browser-context: small ) {
   $font-size: null;
 
@@ -47,8 +71,8 @@
 
   $font-size-context: get-font-size(default, $size-browser-context);
 
-  font-size: $font-size; // NOTE: size in pixels (fallback)
-  font-size: convert-px-to-rem($font-size, $font-size-context); // NOTE: size in REMs  // stylelint-disable-line declaration-block-no-duplicate-properties
+  font-size: $font-size; // NOTE: Fallback to size in pixels
+  font-size: convert-px-to-rem($font-size, $font-size-context); // stylelint-disable-line declaration-block-no-duplicate-properties
 }
 
 /// Output styling for a generic heading.
@@ -62,12 +86,15 @@
   $margin-size: xsmall,
   $font: secondary,
   $font-weight: $LOOM-font-weight-bold
-  ) {
+) {
   font-family: get-font-family($font, default);
   font-weight: $font-weight;
+
   @if $margin-size == 0 or $margin-size == none {
     margin: 0;
-  } @else {
+  }
+
+  @else {
     margin: 0 0 get-spacing($margin-size);
   }
 

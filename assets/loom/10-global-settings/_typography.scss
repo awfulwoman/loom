@@ -1,38 +1,83 @@
-// --- FONT FAMILIES ---
+/// Font family sans
+///
+/// @group 10-global-settings
+/// @type string
 $LOOM-font-family-sans: sans-serif !default;
-$LOOM-font-family-times: "Times New Roman" !default;
-$LOOM-font-family-arvo: Arvo !default;
-$LOOM-font-family-opensans: "Open sans" !default;
 
+/// Font family serif
+///
+/// @group 10-global-settings
+/// @type string
+$LOOM-font-family-serif: serif !default;
+
+/// Defines the font stacks to be used in your site.
+/// Each font stack has a default and a webfont version.
+///
+/// Fonts are called using get-font-family().
+///
+/// @group 10-global-settings
+/// @type map
 $LOOM-fonts: (
   'primary': (
     'default': $LOOM-font-family-sans,
-    'webfont': $LOOM-font-family-opensans
+    'webfont': $LOOM-font-family-sans
   ),
   'secondary': (
-    'default': $LOOM-font-family-times,
-    'webfont': $LOOM-font-family-arvo
+    'default': $LOOM-font-family-serif,
+    'webfont': $LOOM-font-family-serif
   )
 ) !default;
 
-// NOTE: the following class is used to denote loaded fonts.
+/// The classname name to use to place loaded webfonts behind.
+///
+/// If set to 'false' webfont strategies in Loom will be disabled.
+///
+/// @group 10-global-settings
+/// @type string | boolean
+/// @link https://fontfaceobserver.com/ See examples of how to use with Fontfaceobserver
 $LOOM-fonts-loaded: 'fonts-loaded' !default;
 
 // --- FONT WEIGHTS AND STYLES ---
 // NOTE: These are abstracted so that we may easily switch between keywords and numbers as a project demands.
+
+/// Set the default bold weight value
+///
+/// @group 10-global-settings
+/// @type string
 $LOOM-font-weight-bold: bold !default;
+
+/// Set the default normal weight value
+///
+/// @group 10-global-settings
+/// @type string
 $LOOM-font-weight-normal: normal !default;
+
+/// Set the default italic style value
+///
+/// @group 10-global-settings
+/// @type string
 $LOOM-font-style-italic: italic !default;
+
+/// Set the default normal style value
+///
+/// @group 10-global-settings
+/// @type string
 $LOOM-font-style-normal: normal !default;
 
-// LINE HEIGHT
+/// Set the default line-height.
+///
+/// @group 10-global-settings
+/// @type number
 $LOOM-line-height-default: 1.5 !default;
 
-// --- FONT SIZES ---
-// NOTE: Fonts generally need to be a bit bigger on mobile devices. Therefore base font size here start out larger and are made small at higher breakpoints.
-// NOTE: All header fonts are set to the appropiate base size by default. You need to set up your font sizes manually. Examples are given below.
-// NOTE: Why enforce font sizes here? Because you should really be using fonts as defined in a design system.
-
+/// Defines the font sizes to be used in your site.
+/// Each font size has a small and a large version,
+/// as generally fonts need to be slightly large on mobile devices.
+///
+/// Fonts are called using get-font-size().
+///
+/// @group 10-global-settings
+/// @type map
 $LOOM-font-sizes: (
   'default':   (
     'small': ('font-size': 18px, 'line-height': 1.5),
@@ -64,8 +109,10 @@ $LOOM-font-sizes: (
   )
 ) !default;
 
-// --- FONT SIZE IMPLEMENTATIONS ---
-// NOTE: Sizes applied to base element headings
+/// Sizes that are applied to base HTML element headings
+///
+/// @group 10-global-settings
+/// @type map
 $LOOM-h-element-sizes: (
   'h1': 'alpha',
   'h2': 'beta',
@@ -75,11 +122,18 @@ $LOOM-h-element-sizes: (
   'h6': 'zeta'
 ) !default;
 
-// NOTE: If set to TRUE, base headings will receive the above values.
+/// If set to TRUE, base headings will receive default sizes and will appear as "traditional" headings. If FALSE, base headings will receive the same sizing as body text.
+///
+/// @group 10-global-settings
+/// @type boolean
 $LOOM-generate-sizes-for-default-headings: true !default;
 
-// NOTE: The following sizes will be generated as object classes (`.o-alpha {}`).
-// NOTE: Objects be consumed directly with '@include font-size($name)';
+/// If this list is defined, the following sizes will be generated as object classes (`.o-alpha {}`).
+///
+/// Objects be also consumed directly with '@include font-size($name)';
+///
+/// @group 10-global-settings
+/// @type list
 $LOOM-h-object-sizes: (
   'alpha',
   'beta',
@@ -89,5 +143,8 @@ $LOOM-h-object-sizes: (
   'zeta'
 ) !default;
 
-// NOTE: when does the typography become larger?
+/// At what breakpoint does the typography switch from "small", to "large" font-size?
+///
+/// @group 10-global-settings
+/// @type boolean
 $LOOM-typography-breakpoint: medium !default;
