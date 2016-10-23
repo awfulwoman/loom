@@ -6,3 +6,14 @@
 @function get-color($color-name, $color-list: $LOOM-colors-list) {
   @return map-get($color-list, $color-name);
 }
+
+// function that takes two colours maps - the users and a default main one, and then merges them. would have to assign result to a
+
+@function merge-color-list($newmap, $oldmap: $LOOM-colors-theme) {
+  @return map-merge($oldmap, $newmap);
+}
+
+// a mixin that can be called
+@mixin extend-colors($newmap, $oldmap: $LOOM-colors-theme) {
+  $oldmap: merge-color-list($newmap, $oldmap);
+}
