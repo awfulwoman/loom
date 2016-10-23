@@ -1,8 +1,8 @@
 // NOTE: probably best not to use color names directly in a project, as they are things liable to change. Best to map them to a theme name. Using the colors-theme map will let you autogenerate classes based upon
-$LOOM-color-black: #000;
-$LOOM-color-white: #fff;
-$LOOM-color-gray: #e3e3e3;
-$LOOM-color-darkgray: #333;
+$LOOM-color-black: #000 !default;
+$LOOM-color-white: #fff !default;
+$LOOM-color-gray: #e3e3e3 !default;
+$LOOM-color-darkgray: #333 !default;
 
 // Retrieve theme colours with get-color(name).
 $LOOM-colors-theme: (
