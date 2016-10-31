@@ -10,14 +10,18 @@ $LOOM-font-family-sans: sans-serif !default;
 /// @type string
 $LOOM-font-family-serif: serif !default;
 
-/// Defines the font stacks to be used in your site.
+/// The default global font stack for your site.
 /// Each font stack has a default and a webfont version.
 ///
 /// Fonts are called using get-font-family().
 ///
 /// @group 10-global-settings
 /// @type map
-$LOOM-fonts: (
+/// @example scss - Get fonts example
+///   .class {
+///     font-family: font-family(sans);
+///   }
+$LOOM-font-list: (
   'primary': (
     'default': $LOOM-font-family-sans,
     'webfont': $LOOM-font-family-sans
@@ -27,6 +31,11 @@ $LOOM-fonts: (
     'webfont': $LOOM-font-family-serif
   )
 ) !default;
+
+/// Use your own font map as the default global font list for use by the get-font-family() function.
+///
+/// @group 10-global-settings
+$LOOM-fonts: $LOOM-font-list !default;
 
 /// The classname name to use to place loaded webfonts behind.
 ///

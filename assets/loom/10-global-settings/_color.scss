@@ -1,42 +1,79 @@
-// NOTE: probably best not to use color names directly in a project, as they are things liable to change. Best to map them to a theme name. Using the colors-theme map will let you autogenerate classes based upon
-$LOOM-color-black: #000 !default;
-$LOOM-color-white: #fff !default;
-$LOOM-color-gray: #e3e3e3 !default;
-$LOOM-color-darkgray: #333 !default;
-
-// Retrieve theme colours with get-color(name).
+/// The central, default, global color list.
+///
+/// Retrieve theme colours defined here with get-color(name).
+///
+/// @group 10-global-settings
+/// @type map
+/// @example scss - Using a colour map
+///   $LOOM-colors-theme: (
+///     'brand-primary': #ed3d68,
+///     'brand-secondary': #30bbba,
+///     'white': #fff,
+///     'black': #000,
+///     'meta': #e4e4e4
+///   )
+/// @example scss - Using a colour map with predfined variables
+///   $color-pink: #ed3d68;
+///   $color-green: #30bbba;
+///   $color-light-gray: #e4e4e4
+///
+///   $LOOM-colors-theme: (
+///     'brand-primary': $color-pink,
+///     'brand-secondary': $color-green,
+///     'white': #fff,
+///     'black': #000,
+///     'meta': $color-light-gray
+///   )
 $LOOM-colors-theme: (
-  'body-color':                           $LOOM-color-black,
-  'body-background-color':                $LOOM-color-white,
-  'link-color':                           initial,
-  'link-color-visited':                   initial,
-  'link-color-hover':                     initial,
-  'link-color-active':                    initial,
-  'button-color-default':                 $LOOM-color-black,
-  'button-background-color-default':      $LOOM-color-white,
-  'button-border-color-default':          $LOOM-color-black,
-  'meta-color':                           $LOOM-color-gray,
-  'input-color-default':                  $LOOM-color-black,
-  'input-background-color-default':       $LOOM-color-white,
-  'input-border-color-default':           $LOOM-color-darkgray
+  'black': #000,
+  'white': #fff
 ) !default;
 
-// COLOURS SHOULD NEVER BE ACCESSED AS VALUES OR VARIABlES. ALL COLOURS SHOULD COME THROUGH get-color() FUNCTION. Hey, I should up a linting package in loomcss to deal with this...
-
-// Go and read this presentation on sass maps - it's great! http://www.miriamsuzanne.com/pres/map-magic/
-
-// NOTE: Override this var to use your own colour list as the default one for use by the get-color() function.
-// NOTE: You could do something fancy, like merge your own list with the default one!
-// $LOOM-colors-list: map-merge($LOOM-colors-theme, $YOUR-COLOR-LIST);
+/// Use your own colour map as the default global color list for use by the get-color() function.
+///
+/// @group 10-global-settings
 $LOOM-colors-list: $LOOM-colors-theme !default;
 
+// LOOM COLORS
 //
-// thing-propertyActedOn-variantThatIsOptional-breakpointOrState
-//
-// margin-left-small
-//
-// padding-top-large
-//
-// button-background-primary
-//
-// text-align-center@small
+// Okay, so you should always use get-color() when building your own system. However, Loom needs some "safe" colour variables to work with, as the colours defined in $LOOM-colors-list could be overridden by the end-user. These colours are used as to provide "default" defaults for several objects and mixins.
+
+/// Default color - black
+///
+/// Provide a default colour for some Loom objects.
+///
+/// @access private
+/// @group 10-global-settings
+$LOOM-color-black: #000 !default;
+
+/// Default color - white
+///
+/// Provide a default colour for some Loom objects.
+///
+/// @access private
+/// @group 10-global-settings
+$LOOM-color-white: #fff !default;
+
+/// Default color - medium gray
+///
+/// Provide a default colour for some Loom objects.
+///
+/// @access private
+/// @group 10-global-settings
+$LOOM-color-medium-gray: #999595 !default;
+
+/// Default color - dark gray
+///
+/// Provide a default colour for some Loom objects.
+///
+/// @access private
+/// @group 10-global-settings
+$LOOM-color-dark-gray: #444 !default;
+
+/// Default color - light gray
+///
+/// Provide a default colour for some Loom objects.
+///
+/// @access private
+/// @group 10-global-settings
+$LOOM-color-light-gray: #e5e5e5 !default;

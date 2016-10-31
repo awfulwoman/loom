@@ -432,14 +432,14 @@ html {
   html {
     font-size: 16px;
     font-size: 1rem; } }
+
 a {
-  color: initial;
+  color: #999595;
   transition: color 0.2s ease-in-out 0s; }
   a:visited {
-    color: initial; }
+    color: #444; }
   a:hover, a:focus {
-    color: initial;
-    text-decoration: none; }
+    color: #000; }
 
 p {
   margin: 0 0 1rem; }
@@ -490,26 +490,22 @@ h6 {
   h1 {
     font-size: 32px;
     font-size: 2rem; }
-
   h2 {
     font-size: 28px;
     font-size: 1.75rem; }
-
   h3 {
     font-size: 24px;
     font-size: 1.5rem; }
-
   h4 {
     font-size: 20px;
     font-size: 1.25rem; }
-
   h5 {
     font-size: 18px;
     font-size: 1.125rem; }
-
   h6 {
     font-size: 16px;
     font-size: 1rem; } }
+
 input[type=text],
 input[type=url],
 input[type=tel],
@@ -523,14 +519,17 @@ input[type=password],
 input[type=search],
 input[type=week],
 input[type=time] {
-  border: 1px solid #333;
+  border: 1px solid #999595;
   border-radius: 5px;
-  color: #000;
+  color: #444;
   padding: 0.5rem; }
 
+input::placeholder {
+  color: #999595; }
+
 textarea {
-  border: 1px solid #333;
-  color: #000;
+  border: 1px solid #999595;
+  color: #444;
   padding: 0.5rem; }
 
 label {
@@ -603,194 +602,154 @@ label {
   .l-col-1-of-12\@small {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
-
   .l-col-2-of-12\@small {
     flex-basis: 16.66667%;
     max-width: 16.66667%; }
-
   .l-col-3-of-12\@small {
     flex-basis: 25%;
     max-width: 25%; }
-
   .l-col-4-of-12\@small {
     flex-basis: 33.33333%;
     max-width: 33.33333%; }
-
   .l-col-5-of-12\@small {
     flex-basis: 41.66667%;
     max-width: 41.66667%; }
-
   .l-col-6-of-12\@small {
     flex-basis: 50%;
     max-width: 50%; }
-
   .l-col-7-of-12\@small {
     flex-basis: 58.33333%;
     max-width: 58.33333%; }
-
   .l-col-8-of-12\@small {
     flex-basis: 66.66667%;
     max-width: 66.66667%; }
-
   .l-col-9-of-12\@small {
     flex-basis: 75%;
     max-width: 75%; }
-
   .l-col-10-of-12\@small {
     flex-basis: 83.33333%;
     max-width: 83.33333%; }
-
   .l-col-11-of-12\@small {
     flex-basis: 91.66667%;
     max-width: 91.66667%; }
-
   .l-col-12-of-12\@small {
     flex-basis: 100%;
     max-width: 100%; } }
+
 @media (min-width: 41.11111em) {
   .l-col-1-of-12\@medium {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
-
   .l-col-2-of-12\@medium {
     flex-basis: 16.66667%;
     max-width: 16.66667%; }
-
   .l-col-3-of-12\@medium {
     flex-basis: 25%;
     max-width: 25%; }
-
   .l-col-4-of-12\@medium {
     flex-basis: 33.33333%;
     max-width: 33.33333%; }
-
   .l-col-5-of-12\@medium {
     flex-basis: 41.66667%;
     max-width: 41.66667%; }
-
   .l-col-6-of-12\@medium {
     flex-basis: 50%;
     max-width: 50%; }
-
   .l-col-7-of-12\@medium {
     flex-basis: 58.33333%;
     max-width: 58.33333%; }
-
   .l-col-8-of-12\@medium {
     flex-basis: 66.66667%;
     max-width: 66.66667%; }
-
   .l-col-9-of-12\@medium {
     flex-basis: 75%;
     max-width: 75%; }
-
   .l-col-10-of-12\@medium {
     flex-basis: 83.33333%;
     max-width: 83.33333%; }
-
   .l-col-11-of-12\@medium {
     flex-basis: 91.66667%;
     max-width: 91.66667%; }
-
   .l-col-12-of-12\@medium {
     flex-basis: 100%;
     max-width: 100%; } }
+
 @media (min-width: 54.44444em) {
   .l-col-1-of-12\@large {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
-
   .l-col-2-of-12\@large {
     flex-basis: 16.66667%;
     max-width: 16.66667%; }
-
   .l-col-3-of-12\@large {
     flex-basis: 25%;
     max-width: 25%; }
-
   .l-col-4-of-12\@large {
     flex-basis: 33.33333%;
     max-width: 33.33333%; }
-
   .l-col-5-of-12\@large {
     flex-basis: 41.66667%;
     max-width: 41.66667%; }
-
   .l-col-6-of-12\@large {
     flex-basis: 50%;
     max-width: 50%; }
-
   .l-col-7-of-12\@large {
     flex-basis: 58.33333%;
     max-width: 58.33333%; }
-
   .l-col-8-of-12\@large {
     flex-basis: 66.66667%;
     max-width: 66.66667%; }
-
   .l-col-9-of-12\@large {
     flex-basis: 75%;
     max-width: 75%; }
-
   .l-col-10-of-12\@large {
     flex-basis: 83.33333%;
     max-width: 83.33333%; }
-
   .l-col-11-of-12\@large {
     flex-basis: 91.66667%;
     max-width: 91.66667%; }
-
   .l-col-12-of-12\@large {
     flex-basis: 100%;
     max-width: 100%; } }
+
 @media (min-width: 72.22222em) {
   .l-col-1-of-12\@xlarge {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
-
   .l-col-2-of-12\@xlarge {
     flex-basis: 16.66667%;
     max-width: 16.66667%; }
-
   .l-col-3-of-12\@xlarge {
     flex-basis: 25%;
     max-width: 25%; }
-
   .l-col-4-of-12\@xlarge {
     flex-basis: 33.33333%;
     max-width: 33.33333%; }
-
   .l-col-5-of-12\@xlarge {
     flex-basis: 41.66667%;
     max-width: 41.66667%; }
-
   .l-col-6-of-12\@xlarge {
     flex-basis: 50%;
     max-width: 50%; }
-
   .l-col-7-of-12\@xlarge {
     flex-basis: 58.33333%;
     max-width: 58.33333%; }
-
   .l-col-8-of-12\@xlarge {
     flex-basis: 66.66667%;
     max-width: 66.66667%; }
-
   .l-col-9-of-12\@xlarge {
     flex-basis: 75%;
     max-width: 75%; }
-
   .l-col-10-of-12\@xlarge {
     flex-basis: 83.33333%;
     max-width: 83.33333%; }
-
   .l-col-11-of-12\@xlarge {
     flex-basis: 91.66667%;
     max-width: 91.66667%; }
-
   .l-col-12-of-12\@xlarge {
     flex-basis: 100%;
     max-width: 100%; } }
+
 .o-h-alpha {
   font-size: 36px;
   font-size: 2rem; }
@@ -819,26 +778,22 @@ label {
   .o-h-alpha {
     font-size: 36px;
     font-size: 2rem; }
-
   .o-h-beta {
     font-size: 30px;
     font-size: 1.66667rem; }
-
   .o-h-gamma {
     font-size: 26px;
     font-size: 1.44444rem; }
-
   .o-h-delta {
     font-size: 22px;
     font-size: 1.22222rem; }
-
   .o-h-epsilon {
     font-size: 20px;
     font-size: 1.11111rem; }
-
   .o-h-zeta {
     font-size: 18px;
     font-size: 1rem; } }
+
 .o-list-reset {
   margin: 0;
   padding: 0;
@@ -855,10 +810,10 @@ label {
   width: 1em; }
 
 .o-button {
-  background-color: #fff;
-  border: 1px solid #000;
+  background-color: #e5e5e5;
+  border: 1px solid transparent;
   border-radius: 5px;
-  color: #000;
+  color: #444;
   cursor: pointer;
   display: inline-block;
   font: inherit;
@@ -870,11 +825,11 @@ label {
   user-select: none;
   vertical-align: middle; }
   .o-button:visited {
-    color: #000; }
+    color: #444; }
   .o-button:hover, .o-button:focus {
-    background-color: #cccccc;
-    border-color: black;
-    color: black; }
+    background-color: #b2b2b2;
+    border-color: transparent;
+    color: #111111; }
 
 .o-button__label {
   display: inline-block;
@@ -882,10 +837,10 @@ label {
   vertical-align: middle; }
 
 .o-button-icon {
-  background-color: #fff;
-  border: 1px solid #000;
+  background-color: #e5e5e5;
+  border: 1px solid transparent;
   border-radius: 50%;
-  color: #000;
+  color: #444;
   cursor: pointer;
   display: inline-block;
   font: inherit;
@@ -897,11 +852,11 @@ label {
   user-select: none;
   vertical-align: middle; }
   .o-button-icon:visited {
-    color: #000; }
+    color: #444; }
   .o-button-icon:hover, .o-button-icon:focus {
-    background-color: #cccccc;
-    border-color: black;
-    color: black; }
+    background-color: #b2b2b2;
+    border-color: transparent;
+    color: #111111; }
 
 .o-absolute-center {
   left: 50%;
@@ -995,44 +950,11 @@ label {
 .o-list-inline__item {
   display: inline-block; }
 
-.o-background-color-body-color {
+.o-background-color-black {
   background-color: #000; }
 
-.o-background-color-body-background-color {
+.o-background-color-white {
   background-color: #fff; }
-
-.o-background-color-link-color {
-  background-color: initial; }
-
-.o-background-color-link-color-visited {
-  background-color: initial; }
-
-.o-background-color-link-color-hover {
-  background-color: initial; }
-
-.o-background-color-link-color-active {
-  background-color: initial; }
-
-.o-background-color-button-color-default {
-  background-color: #000; }
-
-.o-background-color-button-background-color-default {
-  background-color: #fff; }
-
-.o-background-color-button-border-color-default {
-  background-color: #000; }
-
-.o-background-color-meta-color {
-  background-color: #e3e3e3; }
-
-.o-background-color-input-color-default {
-  background-color: #000; }
-
-.o-background-color-input-background-color-default {
-  background-color: #fff; }
-
-.o-background-color-input-border-color-default {
-  background-color: #333; }
 
 .u-display-block {
   display: block; }
@@ -1049,9 +971,11 @@ label {
 @media (min-width: 17.77778em) {
   .u-display-none\@small {
     display: none; } }
+
 @media (min-width: 54.44444em) {
   .u-display-none\@large {
     display: none; } }
+
 .u-font-family-primary {
   font-family: sans-serif; }
   .fonts-loaded .u-font-family-primary {
@@ -1094,30 +1018,25 @@ label {
   .u-font-size-default {
     font-size: 16px;
     font-size: 1rem; }
-
   .u-font-size-alpha {
     font-size: 32px;
     font-size: 2rem; }
-
   .u-font-size-beta {
     font-size: 28px;
     font-size: 1.75rem; }
-
   .u-font-size-gamma {
     font-size: 24px;
     font-size: 1.5rem; }
-
   .u-font-size-delta {
     font-size: 20px;
     font-size: 1.25rem; }
-
   .u-font-size-epsilon {
     font-size: 18px;
     font-size: 1.125rem; }
-
   .u-font-size-zeta {
     font-size: 16px;
     font-size: 1rem; } }
+
 .u-font-style-italic {
   font-style: italic; }
 

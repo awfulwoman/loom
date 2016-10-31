@@ -1,3 +1,9 @@
+$LOOM-html-color: $LOOM-color-black !default;
+$LOOM-html-background-color: $LOOM-color-white !default;
+$LOOM-a-color: $LOOM-color-medium-gray !default;
+$LOOM-a-color-visited: $LOOM-color-dark-gray !default;
+$LOOM-a-color-hover: $LOOM-color-black !default;
+
 html {
   @include font-size(default, small);
 
@@ -5,8 +11,8 @@ html {
     @include font-size(default, large);
   }
 
-  background: get-color(body-background-color);
-  color: get-color(body-color);
+  background: $LOOM-html-background-color;
+  color: $LOOM-html-color;
   font-family: get-font-family(primary, default);
   line-height: $LOOM-line-height-default;
 
@@ -23,17 +29,16 @@ html {
 }
 
 a {
-  color: get-color(link-color);
+  color: $LOOM-a-color;
   transition: get-transition(color);
 
   &:visited {
-    color: get-color(link-color-visited);
+    color: $LOOM-a-color-visited;
   }
 
   &:hover,
   &:focus {
-    color: get-color(link-color-hover);
-    text-decoration: none;
+    color: $LOOM-a-color-hover;
   }
 }
 
@@ -42,7 +47,7 @@ p {
 }
 
 @if ($LOOM-generate-sizes-for-default-headings) {
-  // NOTE: Make all headings generic
+  // NOTE: Make all headings use a sizing heirarchy.
   h1,
   h2,
   h3,
