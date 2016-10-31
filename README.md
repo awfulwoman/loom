@@ -1,16 +1,14 @@
 # Loom
 
-Loom gives you a way to build your own atomic design systems. Organised using ITCSS, and uses BEM as a naming convention, it aims to give you a quick way of scaffolding sites, and then give you a way of building your own atomic components.
+Loom lets you easily build your own design systems. Organised around [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) it gives you a quick way of scaffolding sites, and then a more nuanced way of developing your own components.
 
-Loom tries to find that sweet spot between [Atomic CSS](http://acss.io/) and manually written, appended-to-the-end-of-one-huge-css-file CSS.
-
-It's highly modular, and lets you easily extend it with your own modules and classes.
+Highly modular, Loom lets you easily extend it with your own modules and classes.
 
 # Example
 
 ```scss
 .c-fancy-button {
-  @include button(get-color(white), get-color(primary-background));
+  @include button(get-color(white), get-color(primary-brand));
   @include font-size(large);
   padding: get-spacing(xsmall) get-spacing(small);
 }
@@ -23,18 +21,18 @@ Loom's manifesto and opinions:
 - Loom tries to make things *easier* for a developer.
 - Loom doesn't come with a "theme" or a prebuilt pattern library. Loom helps you to weave _your own_ pattern libraries.
 - Loom is a tool and isn't designed to "drop in and go". It is something to help professional designer/developers in their everyday tasks.
-- Loom loves design systems. They're built into it from the core, with standardised ways of accessing global colours, spacing units and fonts.
-- Loom doesn't try and force you into the binary of choosing to write components or utility classes. It leaves that choice up to you.
-- Loom is opinionated about Sass structure, but kinda indifferent to CSS output. Loom would LOVE it if you used BEM, but you don't have to. Your final UI components can be written however you wish.
-- Loom is modular. You can easily add your own modules into a layer and make them work alongside the prebuilt ones.
-- Loom loves best practise, and is quite opinionated on this, even if it doesn't force your hand. It loves the avoidance of nesting, styling of classes rather than base elements and the avoidance of specificity battles!
-  - No nesting. Loom really doesn't like nesting. Nesting makes for horrible specificity problems.
-  - No IDs. IDs make for even more horrible specificity problems. Just... no.
-  - Specificity should come from source order, not selector specificity weight.
-  - CSS decoupled from HTML. Only the Base Elements layer touches HTML directly, and then only to lightly style it. Every other layer should interact with HTML via classes.
-  - No `@extend`s. These so, so, so easily mess up the source order of a project. Because ITCSS, the core of this, is source order dependent, it's best to avoid any use of `@extend`.
-- Loom knows when others do it better. Browser prefixes are (when necessary) best left to Autoprefixer, no?
-
+- Loom is very opinionated about:
+  - Being an integral part of a design system. Therefore in Loom all colour, spacing and font values originate from centralised settings and are accessed only via getter functions.
+  - Keeping styling separate from structure. Loom only provides minimal styling to HTML elements and leaves everything else up to classes.
+  - Keeping specificity low. Loom is structured around ITCSS, so a selectors specificity should come from its source order, and nothing else. That also means:
+    - No `@extend`s. These so, so, so easily mess up the source order of a project. Because ITCSS, the core of this, is source order dependent, it's best to avoid any use of `@extend`.
+    - No nesting. Loom really doesn't like nesting. Nesting makes for horrible specificity problems.
+    - No IDs. IDs make for even more horrible specificity problems. Just... no.
+  - Being modular. If you don't like the way something works in Loom, you can remove it or use your own module instead.
+- Loom doesn't care about:
+  - How you name your CSS selectors. Yes, it's opinionated about Sass structure, but kinda indifferent to your CSS output.
+  - Wether you want to use atomic or utility classes.
+  - Vendor prefixes - let's leave that up to Autoprefixer.
 
 # Installation
 
@@ -135,6 +133,25 @@ By default this project uses BEM notation for the optional CSS selectors.
 You can specify fonts via the `$LOOM-fonts`. By default there is a `primary` and a `secondary` font. The default usage is secondary for headings and primary for everything else.
 
 Each of these has a `base` and a `webfont` variant. These are for use with a font-observer system, that will add the class specified in `$LOOM-fonts-loaded` to the HTML element, allowing webfonts to be used without FOIC occurring.
+
+# Naming conventions
+The naming convention for internal variables and classes is as follows:
+
+```
+object-property-variant-state
+```
+
+- `object` is the thing being operated on.
+- `property` is the aspect of object that is being altered.
+- `variant` is a version of the object.
+- `state` is a state change, such as being active, or a breakpoint.
+
+So examples of this might be:
+
+- `.margin-left-small {}` Object = margin; property = left; variant = small;
+- `$padding-top-large` Object = padding; property = top; variant = large;
+- `.button-background-primary {}` Object = button; property = background; variant = primary;
+- `$button-background-color-hover` Object = button; property = background-color; state = hover; (note that background-color is one word. Hyphens are used to match the CSS property naming convention).
 
 # Developing
 Always looking for fellow conspirators.
