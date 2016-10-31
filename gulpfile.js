@@ -7,11 +7,7 @@ var sassdoc = require('sassdoc');
 gulp.task('sass', function () {
   return gulp.src('./assets/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
-});
-
-gulp.task('sass:watch', function () {
-  gulp.watch('./assets/loom/**/*.scss', ['sass']);
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('sassdoc', function () {
@@ -20,3 +16,9 @@ gulp.task('sassdoc', function () {
       dest: 'public/docs'
     }));
 });
+
+gulp.task('watch', function() {
+  gulp.watch('./assets/loom/**/*.scss', ['sass', 'sassdoc']);
+});
+
+gulp.task('default', ['watch']);
