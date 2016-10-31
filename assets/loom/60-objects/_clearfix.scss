@@ -1,3 +1,5 @@
+$LOOM-use-object-classes-clearfix: $LOOM-use-object-classes !default;
+
 @mixin clearfix() {
   &::after {
     clear: both;

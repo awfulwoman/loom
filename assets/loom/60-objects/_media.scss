@@ -1,3 +1,5 @@
+$LOOM-use-object-classes-media: $LOOM-use-object-classes !default;
+
 @mixin media() {
   @include clearfix();
 
@@ -14,7 +16,7 @@
   overflow: hidden;
 }
 
-@if $LOOM-use-object-classes {
+@if $LOOM-use-object-classes-media {
   .o-media {
     @include media();
   }

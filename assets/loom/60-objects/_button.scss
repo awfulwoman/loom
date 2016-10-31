@@ -1,3 +1,5 @@
+$LOOM-use-object-classes-button: $LOOM-use-object-classes !default;
+
 $LOOM-button-background-color: $LOOM-color-light-gray !default;
 $LOOM-button-border-color: transparent !default;
 $LOOM-button-color: $LOOM-color-dark-gray !default;
@@ -66,7 +68,7 @@ $LOOM-button-line-height: normal !default;
   vertical-align: middle;
 }
 
-@if $LOOM-use-object-classes {
+@if $LOOM-use-object-classes-button {
   .o-button {
     @include button();
   }

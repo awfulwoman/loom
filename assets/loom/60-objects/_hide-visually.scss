@@ -1,3 +1,5 @@
+$LOOM-use-object-classes-hide-visually: $LOOM-use-object-classes !default;
+
 @mixin hide-visually() {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -10,7 +12,7 @@
 }
 
 // Classes
-@if $LOOM-use-object-classes {
+@if $LOOM-use-object-classes-hide-visually {
   .o-hide-visually {
     @include hide-visually();
   }

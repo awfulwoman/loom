@@ -1,3 +1,5 @@
+$LOOM-use-object-classes-fixed-ratio: $LOOM-use-object-classes !default;
+
 @mixin fixed-ratio($ratio-percentage-a: 16, $ratio-percentage-b: 9) {
   $calculated-ratio: percentage($ratio-percentage-b / $ratio-percentage-a);
 
@@ -22,7 +24,7 @@
   width: 100%;
 }
 
-@if $LOOM-use-object-classes {
+@if $LOOM-use-object-classes-fixed-ratio {
   .o-fixed-ratio {
     @include fixed-ratio();
   }

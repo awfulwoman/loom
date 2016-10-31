@@ -1,3 +1,5 @@
+$LOOM-use-object-classes-absolute-center: $LOOM-use-object-classes !default;
+
 @mixin absolute-center {
   left: 50%;
   position: absolute;
@@ -5,7 +7,7 @@
   transform: translate(-50%, -50%);
 }
 
-@if $LOOM-use-object-classes {
+@if $LOOM-use-object-classes-absolute-center {
   .o-absolute-center {
     @include absolute-center;
   }

@@ -1,8 +1,10 @@
+$LOOM-use-object-classes-headings: $LOOM-use-object-classes !default;
+
 // NOTE: These are one of the only project objects not to define mixins in the source file. To consume header objects, use `@include font-size()`.
 
 // NOTE: The default heading list, `$LOOM-h-object-sizes`, is defined in `10-global-settings/typography`
 
-@if ($LOOM-use-object-classes) {
+@if ($LOOM-use-object-classes-headings) {
   $heading-list: $LOOM-h-object-sizes;
 
   @each $name in $heading-list {
