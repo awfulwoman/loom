@@ -1,3 +1,8 @@
+$LOOM-input-color: $LOOM-color-dark-gray !default;
+$LOOM-input-placeholder-color: $LOOM-color-medium-gray !default;
+$LOOM-input-border-color: $LOOM-color-medium-gray !default;
+$LOOM-input-padding: get-spacing(xsmall);
+
 input[type=text],
 input[type=url],
 input[type=tel],
@@ -11,22 +16,22 @@ input[type=password],
 input[type=search],
 input[type=week],
 input[type=time] {
-  border: $LOOM-border-width $LOOM-border-style get-color(input-border-color-default);
+  border: $LOOM-border-width $LOOM-border-style $LOOM-input-border-color;
   border-radius: $LOOM-border-radius;
-  color: get-color(input-color-default);
-  padding: get-spacing(xsmall);
+  color: $LOOM-input-color;
+  padding: $LOOM-input-padding;
 }
 
 input {
   &::placeholder {
-    color: get-color(meta);
+    color: $LOOM-input-placeholder-color;
   }
 }
 
 textarea {
-  border: $LOOM-border-width $LOOM-border-style get-color(input-border-color-default);
-  color: get-color(input-color-default);
-  padding: get-spacing(xsmall);
+  border: $LOOM-border-width $LOOM-border-style $LOOM-input-border-color;
+  color: $LOOM-input-color;
+  padding: $LOOM-input-padding;
 }
 
 label {

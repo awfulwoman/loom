@@ -1,5 +1,5 @@
 @if $LOOM-use-utility-classes {
-  @each $color-name, $color-value in $LOOM-colors-theme {
+  @each $color-name, $color-value in $LOOM-colors-list {
     .o-background-color-#{$color-name} {
       background-color: $color-value;
     }
