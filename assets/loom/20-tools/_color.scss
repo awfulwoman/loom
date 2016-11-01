@@ -5,11 +5,18 @@
 /// @parameter {map} $color-list - A map of spacing key/value pairs to use. Defaults to $LOOM-colors-list.
 @function get-color($color-name, $color-list: $LOOM-colors-list) {
   $color-name: inspect($color-name);  // Force value to a string, as if a key value happens to match a CSS colour value, it will be imported as a Sass colour, not a string, causing an error in map-get().
-  $output: map-get($color-list, $color-name);
 
-  @if type-of($output) != color {
-    @error $color-name " could not be found in the global colour list.";
+  @if map-has-key($color-list, $color-name) {
+    $output: map-get($color-list, $color-name);
+
+    @if type-of($output) != color {
+      @error $color-name " could not be found in the global colour list.";
+    }
+
+    @return $output;
   }
 
-  @return $output;
+  @else {
+    @return null;
+  }
 }

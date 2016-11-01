@@ -4,5 +4,13 @@
 /// @parameter {string} $icon-name - An icon size name, corresponding to a key in $icon-size-map
 /// @parameter {map} $icon-size-map - A map of icon names to sizes.
 @function get-icon-size($icon-name: default, $icon-size-map: $LOOM-icon-sizes) {
-  @return map-get($icon-size-map, $icon-name);
+  @if map-has-key($icon-size-map, $icon-name) {
+    @return map-get($icon-size-map, $icon-name);
+  }
+
+  @else {
+    @warn "#{$icon-name} not found in get-icon-size";
+
+    @return null;
+  }
 }

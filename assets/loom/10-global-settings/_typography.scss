@@ -119,7 +119,7 @@ $LOOM-h-element-sizes: (
   'h6': 'zeta'
 ) !default;
 
-/// If set to TRUE, base headings will receive default sizes and will appear as "traditional" headings. If FALSE, base headings will receive the same sizing as body text.
+/// If set to TRUE, base headings will receive default sizes and will appear as "traditional" headings. If FALSE, base headings will receive the same sizing and styling as the body text.
 ///
 /// @group 10-global-settings
 /// @type boolean
@@ -140,10 +140,14 @@ $LOOM-h-object-sizes: (
   'zeta'
 ) !default;
 
-/// At what breakpoint does the typography switch from "small", to "large" font-size?
+/// At what breakpoint does the typography switch from fonts sizes appropiate
+/// for smaller devices to font sizes appropiate for larger devices?
+///
+/// Must match one of the breakpoints in $LOOM-mq-breakpoints.
 ///
 /// @group 10-global-settings
 /// @type boolean
+/// @see $LOOM-mq-breakpoints
 $LOOM-typography-breakpoint: medium !default;
 
 /// Default value for when primary base fonts are called.
@@ -177,3 +181,15 @@ $LOOM-font-family-seconday-default: serif !default;
 /// @group 10-global-settings
 /// @access private
 $LOOM-font-family-seconday-webfont: serif !default;
+
+/// Default base font size, small screen devices.
+///
+/// Intended to be overridden by user choices.
+/// @group 10-global-settings
+$LOOM-font-size-on-smaller-screens: 18px;
+
+/// Default font size, large screen devices.
+///
+/// Intended to be overridden by user choices.
+/// @group 10-global-settings
+$LOOM-font-size-on-larger-screens: 16px;

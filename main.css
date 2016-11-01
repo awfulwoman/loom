@@ -415,12 +415,12 @@ img {
   max-width: 100%; }
 
 html {
-  font-size: 18px;
-  font-size: 1rem;
   background: #fff;
   color: #000;
   font-family: sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-size: 18px;
+  font-size: 1rem; }
   .fonts-loaded html {
     font-family: sans-serif; }
 

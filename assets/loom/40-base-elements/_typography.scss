@@ -18,23 +18,39 @@ $LOOM-a-color-visited: $LOOM-color-dark-gray !default;
 /// @group 40-base-elements
 $LOOM-a-color-hover: $LOOM-color-black !default;
 
-html {
-  @include font-size(default, small);
+/// Check to see if a "default" font is available in the global font LOOM-font-list
+/// @group 40-base-elements
+$LOOM-font-size-default-available: if(get-font-size(default), true, false) !default;
 
+html {
   background: $LOOM-html-background-color;
   color: $LOOM-html-color;
   font-family: $LOOM-font-family-primary-default;
   line-height: $LOOM-line-height;
+
+  @if $LOOM-font-size-default-available {
+    @include font-size(default, small);
+  }
+
+  @else {
+    font-size: $LOOM-font-size-on-smaller-screens;
+  }
 
   .#{$LOOM-fonts-loaded} & { // NOTE: make use of a font loading system here
     font-family: $LOOM-font-family-primary-webfont;
   }
 }
 
-// NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
+// At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
 @include mq($from: $LOOM-typography-breakpoint) {
   html {
-    @include font-size(default, large);
+    @if $LOOM-font-size-default-available {
+      @include font-size(default, large);
+    }
+
+    @else {
+      font-size: $LOOM-font-size-on-larger-screens;
+    }
   }
 }
 
@@ -53,11 +69,11 @@ a {
 }
 
 p {
-  margin: 0 0 get-spacing(small);
+  margin: 0 0 $LOOM-spacing-vertical;
 }
 
 @if ($LOOM-generate-sizes-for-default-headings) {
-  // NOTE: Make all headings use a sizing heirarchy.
+  // Make all headings use a sizing heirarchy.
   h1,
   h2,
   h3,
@@ -67,14 +83,14 @@ p {
     @include generic-heading;
   }
 
-  // NOTE: Give each base element heading a value as described in $LOOM-h-element-sizes.
+  // Give each base element heading a value as described in $LOOM-h-element-sizes.
   @each $name, $value in $LOOM-h-element-sizes {
     #{$name} {
       @include font-size($value, small);
     }
   }
 
-  // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
+  // At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
   @include mq($from: $LOOM-typography-breakpoint) {
     @each $name, $value in $LOOM-h-element-sizes {
       #{$name} {
@@ -83,8 +99,8 @@ p {
     }
   }
 } @else { // stylelint-disable-line
-  // NOTE: Just give each HTML heading the same size.
-  // NOTE: We make this the same because so that semantic values do not interfere with designs. Size must be imparted conciously.
+  // Just give each HTML heading the same size.
+  // We equalise the sizes so that semantic values do not interfere with designs. Sizes must be imparted conciously.
   h1,
   h2,
   h3,
@@ -92,7 +108,14 @@ p {
   h5,
   h6 {
     @include generic-heading($margin-size: 0, $font-weight: $LOOM-font-weight-normal);
-    @include font-size(default, small);
+
+    @if $LOOM-font-size-default-available {
+      @include font-size(default, small);
+    }
+
+    @else {
+      font-size: $LOOM-font-size-on-smaller-screens;
+    }
   }
 
   // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
@@ -103,7 +126,13 @@ p {
     h4,
     h5,
     h6 {
-      @include font-size(default, large);
+      @if $LOOM-font-size-default-available {
+        @include font-size(default, large);
+      }
+
+      @else {
+        font-size: $LOOM-font-size-on-larger-screens;
+      }
     }
   }
 }

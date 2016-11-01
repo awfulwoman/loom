@@ -4,9 +4,13 @@
 /// @parameter {string} $layer - The name of a layer in $LOOM-z-layers
 /// @parameter {map} $z-layers - A map of z-index layers/integer values.
 @function get-z($layer, $z-layers: $LOOM-z-layers) {
-  @if not map-has-key($z-layers, $layer) {
-    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  @if map-has-key($z-layers, $layer) {
+    @return map-get($z-layers, $layer);
   }
 
-  @return map-get($z-layers, $layer);
+  @else {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+
+    @return null;
+  }
 }

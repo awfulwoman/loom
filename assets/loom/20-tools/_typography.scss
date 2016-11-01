@@ -8,7 +8,15 @@
 ///   font-size: get-font-family(primary); // Get default version of font "primary"
 ///   font-size: get-font-family(secondary, webfont); // Get webfont version of font "secondary"
 @function get-font-family($font-name, $font-variant: default, $font-map: $LOOM-fonts) {
-  @return get-map-deep($font-map, $font-name, $font-variant);
+  @if map-has-key($font-map, $font-name) {
+    @return get-map-deep($font-map, $font-name, $font-variant);
+  }
+
+  @else {
+    @warn "No matching font found for `#{$font-name}` in global font map.";
+
+    @return null;
+  }
 }
 
 /// Extract a font size from the global sizing map.
@@ -20,7 +28,15 @@
 ///   font-size: get-font-size(alpha);  // Get default version of size "alpha"
 ///   font-size: get-font-size(beta, large); // Get large version of size "beta"
 @function get-font-size($font-name, $font-size: small, $font-map: $LOOM-font-sizes) {
-  @return get-map-deep($font-map, $font-name, $font-size, 'font-size');
+  @if map-has-key($font-map, $font-name) {
+    @return get-map-deep($font-map, $font-name, $font-size, 'font-size');
+  }
+
+  @else {
+    @warn "No matching font found for `#{$font-name}` in global font map.";
+
+    @return null;
+  }
 }
 
 /// Extract a line-height from the global sizing map.
@@ -29,7 +45,15 @@
 /// @group 20-tools
 /// @requires $LOOM-font-sizes
 @function get-line-height($font-name, $font-size: small, $font-map: $LOOM-font-sizes) {
-  @return get-map-deep($font-map, $font-name, $font-size, 'line-height');
+  @if map-has-key($font-map, $font-name) {
+    @return get-map-deep($font-map, $font-name, $font-size, 'line-height');
+  }
+
+  @else {
+    @warn "No matching font found for `#{$font-name}` in global font map.";
+
+    @return null;
+  }
 }
 
 /// Gonverts pixel values to REMs
