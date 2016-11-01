@@ -956,6 +956,12 @@ label {
 .o-background-color-white {
   background-color: #fff; }
 
+.o-color-black {
+  color: #000; }
+
+.o-color-white {
+  color: #fff; }
+
 .u-display-block {
   display: block; }
 

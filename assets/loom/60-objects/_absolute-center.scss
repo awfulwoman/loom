@@ -1,3 +1,7 @@
+/// Toggle absolute-center class generation.
+///
+/// By default uses global setting.
+/// @group 60-objects
 $LOOM-use-object-classes-absolute-center: $LOOM-use-object-classes !default;
 
 @mixin absolute-center {

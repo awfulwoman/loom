@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle display class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-display: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-display {
   .u-display-block {
     display: block;
   }

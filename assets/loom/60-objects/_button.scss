@@ -1,3 +1,7 @@
+/// Toggle button class generation.
+///
+/// By default uses global setting.
+/// @group 60-objects
 $LOOM-use-object-classes-button: $LOOM-use-object-classes !default;
 
 $LOOM-button-background-color: $LOOM-color-light-gray !default;

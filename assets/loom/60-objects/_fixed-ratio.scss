@@ -1,3 +1,7 @@
+/// Toggle fixed-ratio class generation.
+///
+/// By default uses global setting.
+/// @group 60-objects
 $LOOM-use-object-classes-fixed-ratio: $LOOM-use-object-classes !default;
 
 @mixin fixed-ratio($ratio-percentage-a: 16, $ratio-percentage-b: 9) {

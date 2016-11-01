@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle position class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-position: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-position {
   .u-position-absolute {
     position: absolute;
   }

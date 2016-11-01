@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle width class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-width: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-width {
   .u-width-full {
     width: 100%;
   }

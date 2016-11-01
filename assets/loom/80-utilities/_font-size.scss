@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle font-size class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-font-size: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-font-size {
   // for each font size, generate a utility class.
 
   @each $key, $name in $LOOM-font-sizes {

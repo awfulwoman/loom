@@ -1,3 +1,7 @@
+/// Toggle clearfix class generation.
+///
+/// By default uses global setting.
+/// @group 60-objects
 $LOOM-use-object-classes-clearfix: $LOOM-use-object-classes !default;
 
 @mixin clearfix() {

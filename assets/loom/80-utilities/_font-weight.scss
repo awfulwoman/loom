@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle font-weight class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-font-weight: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-font-weight {
   .u-font-weight-bold {
     font-weight: $LOOM-font-weight-bold;
   }

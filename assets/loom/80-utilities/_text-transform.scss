@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle text-transform class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-text-transform: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-text-transform {
   .u-text-transform-uppercase {
     text-transform: uppercase;
   }

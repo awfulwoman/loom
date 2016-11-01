@@ -1,3 +1,7 @@
+/// Toggle hide-visually class generation.
+///
+/// By default uses global setting.
+/// @group 60-objects
 $LOOM-use-object-classes-hide-visually: $LOOM-use-object-classes !default;
 
 @mixin hide-visually() {

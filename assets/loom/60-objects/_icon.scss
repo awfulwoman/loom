@@ -1,3 +1,7 @@
+/// Toggle icon class generation.
+///
+/// By default uses global setting.
+/// @group 60-objects
 $LOOM-use-object-classes-icon: $LOOM-use-object-classes !default;
 
 @mixin icon($icon-font-size: 1em) {

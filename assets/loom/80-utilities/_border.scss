@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle border class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-border: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-border {
   // nothing yet
   // all  colours as border colours. Mix with an array of possible border-styles and possible border-widths
 }

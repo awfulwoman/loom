@@ -1,3 +1,7 @@
+/// Toggle headings class generation.
+///
+/// By default uses global setting.
+/// @group 60-objects
 $LOOM-use-object-classes-headings: $LOOM-use-object-classes !default;
 
 // NOTE: These are one of the only project objects not to define mixins in the source file. To consume header objects, use `@include font-size()`.

@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle text-align class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-text-align: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-text-align {
   .u-text-align-left {
     text-align: left;
   }

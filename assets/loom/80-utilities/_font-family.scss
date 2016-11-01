@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle font-family class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-font-family: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-font-family {
   // For each in the font-family list, generate a utility class here.
   @each $key, $name in $LOOM-fonts {
     .u-font-family-#{$key} {

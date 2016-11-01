@@ -1,4 +1,10 @@
-@if $LOOM-use-utility-classes {
+/// Toggle background-color class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-background-color: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-background-color {
   @each $color-name, $color-value in $LOOM-colors-list {
     .o-background-color-#{$color-name} {
       background-color: $color-value;

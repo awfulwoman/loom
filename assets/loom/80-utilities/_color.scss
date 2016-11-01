@@ -1,4 +1,13 @@
-@if $LOOM-use-utility-classes {
-  // Perhaps use a colour map instead of variable names.
-  // can then loop through each and use something like `get-color(primary)`
+/// Toggle color class generation.
+///
+/// By default uses global setting.
+/// @group 80-utilities
+$LOOM-use-utility-classes-color: $LOOM-use-utility-classes !default;
+
+@if $LOOM-use-utility-classes-color {
+  @each $color-name, $color-value in $LOOM-colors-list {
+    .o-color-#{$color-name} {
+      color: $color-value;
+    }
+  }
 }
