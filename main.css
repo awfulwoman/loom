@@ -415,12 +415,12 @@ img {
   max-width: 100%; }
 
 html {
-  font-size: 18px;
-  font-size: 1rem;
   background: #fff;
   color: #000;
   font-family: sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-size: 18px;
+  font-size: 1rem; }
   .fonts-loaded html {
     font-family: sans-serif; }
 
@@ -772,22 +772,22 @@ label {
 
 @media (min-width: 41.11111em) {
   .o-h-alpha {
-    font-size: 36px;
+    font-size: 32px;
     font-size: 2rem; }
   .o-h-beta {
-    font-size: 30px;
-    font-size: 1.66667rem; }
+    font-size: 28px;
+    font-size: 1.75rem; }
   .o-h-gamma {
-    font-size: 26px;
-    font-size: 1.44444rem; }
+    font-size: 24px;
+    font-size: 1.5rem; }
   .o-h-delta {
-    font-size: 22px;
-    font-size: 1.22222rem; }
-  .o-h-epsilon {
     font-size: 20px;
-    font-size: 1.11111rem; }
-  .o-h-zeta {
+    font-size: 1.25rem; }
+  .o-h-epsilon {
     font-size: 18px;
+    font-size: 1.125rem; }
+  .o-h-zeta {
+    font-size: 16px;
     font-size: 1rem; } }
 
 .o-list-reset {

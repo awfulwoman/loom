@@ -54,10 +54,21 @@ $LOOM-transition-duration: 0.2s !default;
 /// @type string
 $LOOM-transition-timing-function: ease-in-out !default;
 
+/// Default numbe of columns inside a grid container.
+/// @group 10-global-settings
 $LOOM-grid-columns: (12) !default;
+
+/// Default numbe of columns inside a grid container when combined with breakpoints.
+/// @group 10-global-settings
 $LOOM-grid-columns-responsive: (12) !default;
+
+/// Default gutter size for grid elements.
+/// @group 10-global-settings
 $LOOM-grid-gutter: xsmall !default; // NOTE: will be consumed by get-spacing()
 
+/// Breakpoints defined here will be used to generate breakpoints in the grid system.
+///
+/// @group 10-global-settings
 $LOOM-grid-breakpoints: (
   'small',
   'medium',
@@ -65,7 +76,14 @@ $LOOM-grid-breakpoints: (
   'xlarge'
 ) !default;
 
+/// Default border width.
+/// @group 10-global-settings
 $LOOM-border-width: 1px !default;
+
+/// Default border style
+/// @group 10-global-settings
 $LOOM-border-style: solid !default;
 
+/// Default width of single-column content
+/// @group 10-global-settings
 $LOOM-single-column-width: 55rem !default;

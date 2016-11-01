@@ -1,8 +1,20 @@
-// SPACING UNITS
-$LOOM-spacing: (
+/// Global list of sizing units
+///
+/// @group 10-global-settings
+$LOOM-spacing-list: (
   'xsmall':     0.5rem,
   'small':      1rem,
   'default':    2rem,
   'large':      3rem,
   'xlarge':     4rem
 ) !default;
+
+/// Change this to your own list if you wish. This is used by many functions as a default.
+/// @group 10-global-settings
+$LOOM-spacing: $LOOM-spacing-list !default;
+
+/// Default vertical spacing value.
+///
+/// Intended to be overridden by user choices.
+/// @group 10-global-settings
+$LOOM-spacing-vertical: 1rem !default;

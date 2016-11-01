@@ -4,5 +4,11 @@
 /// @parameter {string} $spacing-name - The key for a spacing pair. Defaults to "default".
 /// @parameter {map} $spacing-list - A map of spacing key/value pairs to use. Defaults to $LOOM-spacing.
 @function get-spacing($spacing-name: default, $spacing-list: $LOOM-spacing) {
-  @return map-get($LOOM-spacing, $spacing-name);
+  @if map-has-key($spacing-list, $spacing-name) {
+    @return map-get($LOOM-spacing, $spacing-name);
+  }
+
+  @else {
+    @return null;
+  }
 }
