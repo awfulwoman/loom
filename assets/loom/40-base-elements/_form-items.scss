@@ -1,6 +1,17 @@
+/// Default color for inputs
+/// @group 40-base-elements
 $LOOM-input-color: $LOOM-color-dark-gray !default;
+
+/// Default color for inputs (placeholder text)
+/// @group 40-base-elements
 $LOOM-input-placeholder-color: $LOOM-color-medium-gray !default;
+
+/// Default color for borders
+/// @group 40-base-elements
 $LOOM-input-border-color: $LOOM-color-medium-gray !default;
+
+/// Default padding for texty inputs
+/// @group 40-base-elements
 $LOOM-input-padding: get-spacing(xsmall);
 
 input[type=text],

@@ -421,10 +421,6 @@ html {
   color: #000;
   font-family: sans-serif;
   line-height: 1.5; }
-  @media (min-width: 41.11111em) {
-    html {
-      font-size: 16px;
-      font-size: 1rem; } }
   .fonts-loaded html {
     font-family: sans-serif; }
 

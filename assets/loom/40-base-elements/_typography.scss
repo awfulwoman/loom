@@ -1,23 +1,33 @@
+/// Default color for the html root
+/// @group 40-base-elements
 $LOOM-html-color: $LOOM-color-black !default;
+
+/// Default background color for the html root
+/// @group 40-base-elements
 $LOOM-html-background-color: $LOOM-color-white !default;
+
+/// Default color for links
+/// @group 40-base-elements
 $LOOM-a-color: $LOOM-color-medium-gray !default;
+
+/// Default color for links (visited)
+/// @group 40-base-elements
 $LOOM-a-color-visited: $LOOM-color-dark-gray !default;
+
+/// Default color for links (hover)
+/// @group 40-base-elements
 $LOOM-a-color-hover: $LOOM-color-black !default;
 
 html {
   @include font-size(default, small);
 
-  @include mq($from: $LOOM-typography-breakpoint) {
-    @include font-size(default, large);
-  }
-
   background: $LOOM-html-background-color;
   color: $LOOM-html-color;
-  font-family: get-font-family(primary, default);
-  line-height: $LOOM-line-height-default;
+  font-family: $LOOM-font-family-primary-default;
+  line-height: $LOOM-line-height;
 
   .#{$LOOM-fonts-loaded} & { // NOTE: make use of a font loading system here
-    font-family: get-font-family(primary, webfont);
+    font-family: $LOOM-font-family-primary-webfont;
   }
 }
 

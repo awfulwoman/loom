@@ -1,15 +1,3 @@
-/// Font family sans
-///
-/// @group 10-global-settings
-/// @type string
-$LOOM-font-family-sans: sans-serif !default;
-
-/// Font family serif
-///
-/// @group 10-global-settings
-/// @type string
-$LOOM-font-family-serif: serif !default;
-
 /// The default global font stack for your site.
 /// Each font stack has a default and a webfont version.
 ///
@@ -19,16 +7,16 @@ $LOOM-font-family-serif: serif !default;
 /// @type map
 /// @example scss - Get fonts example
 ///   .class {
-///     font-family: font-family(sans);
+///     font-family: get-font-family(primary);
 ///   }
 $LOOM-font-list: (
   'primary': (
-    'default': $LOOM-font-family-sans,
-    'webfont': $LOOM-font-family-sans
+    'default': sans-serif,
+    'webfont': sans-serif
   ),
   'secondary': (
-    'default': $LOOM-font-family-serif,
-    'webfont': $LOOM-font-family-serif
+    'default': serif,
+    'webfont': serif
   )
 ) !default;
 
@@ -77,7 +65,7 @@ $LOOM-font-style-normal: normal !default;
 ///
 /// @group 10-global-settings
 /// @type number
-$LOOM-line-height-default: 1.5 !default;
+$LOOM-line-height: 1.5 !default;
 
 /// Defines the font sizes to be used in your site.
 /// Each font size has a small and a large version,
@@ -157,3 +145,35 @@ $LOOM-h-object-sizes: (
 /// @group 10-global-settings
 /// @type boolean
 $LOOM-typography-breakpoint: medium !default;
+
+/// Default value for when primary base fonts are called.
+///
+/// Intended to be overriden by user choices.
+///
+/// @group 10-global-settings
+/// @access private
+$LOOM-font-family-primary-default: sans-serif !default;
+
+/// Default value for when primary web fonts are called.
+///
+/// Intended to be overriden by user choices.
+///
+/// @group 10-global-settings
+/// @access private
+$LOOM-font-family-primary-webfont: sans-serif !default;
+
+/// Default value for when secondary base fonts are called.
+///
+/// Intended to be overriden by user choices.
+///
+/// @group 10-global-settings
+/// @access private
+$LOOM-font-family-seconday-default: serif !default;
+
+/// Default value for when secondary web fonts are called.
+///
+/// Intended to be overriden by user choices.
+///
+/// @group 10-global-settings
+/// @access private
+$LOOM-font-family-seconday-webfont: serif !default;
