@@ -9,7 +9,7 @@ $LOOM-use-utility-classes-font-size: $LOOM-use-utility-classes !default;
 
   @each $key, $name in $LOOM-font-sizes {
     .u-font-size-#{$key} {
-      @include font-size($key, small);
+      @include font-size($key, smaller-viewport);
     }
   }
 
@@ -17,7 +17,7 @@ $LOOM-use-utility-classes-font-size: $LOOM-use-utility-classes !default;
   @include mq($from: $LOOM-typography-breakpoint) {
     @each $key, $name in $LOOM-font-sizes {
       .u-font-size-#{$key} {
-        @include font-size($key, large);
+        @include font-size($key, larger-viewport);
       }
     }
   }

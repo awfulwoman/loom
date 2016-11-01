@@ -13,7 +13,7 @@ $LOOM-use-object-classes-headings: $LOOM-use-object-classes !default;
 
   @each $name in $heading-list {
     .o-h-#{$name} {
-      @include font-size($name, small);
+      @include font-size($name, smaller-viewport);
     }
   }
 
@@ -21,7 +21,7 @@ $LOOM-use-object-classes-headings: $LOOM-use-object-classes !default;
   @include mq($from: $LOOM-typography-breakpoint) {
     @each $name in $heading-list {
       .o-h-#{$name} {
-        @include font-size($name, small);
+        @include font-size($name, larger-viewport);
       }
     }
   }

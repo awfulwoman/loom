@@ -68,8 +68,11 @@ $LOOM-font-style-normal: normal !default;
 $LOOM-line-height: 1.5 !default;
 
 /// Defines the font sizes to be used in your site.
-/// Each font size has a small and a large version,
+/// Each font size has a smaller-viewport and a larger-viewport version,
 /// as generally fonts need to be slightly large on mobile devices.
+///
+/// There should always ideally be an "default" font that defines the base size
+/// for the site.
 ///
 /// Fonts are called using get-font-size().
 ///
@@ -77,32 +80,32 @@ $LOOM-line-height: 1.5 !default;
 /// @type map
 $LOOM-font-sizes: (
   'default':   (
-    'small': ('font-size': 18px, 'line-height': 1.5),
-    'large': ('font-size': 16px, 'line-height': 1.5)
+    'smaller-viewport': ('font-size': 18px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 16px, 'line-height': 1.5)
   ),
   'alpha':   (
-    'small': ('font-size': 36px, 'line-height': 1.5),
-    'large': ('font-size': 32px, 'line-height': 1.5)
+    'smaller-viewport': ('font-size': 36px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 32px, 'line-height': 1.5)
   ),
   'beta':   (
-    'small': ('font-size': 30px, 'line-height': 1.5),
-    'large': ('font-size': 28px, 'line-height': 1.5)
+    'smaller-viewport': ('font-size': 30px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 28px, 'line-height': 1.5)
   ),
   'gamma':   (
-    'small': ('font-size': 26px, 'line-height': 1.5),
-    'large': ('font-size': 24px, 'line-height': 1.5)
+    'smaller-viewport': ('font-size': 26px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 24px, 'line-height': 1.5)
   ),
   'delta':   (
-    'small': ('font-size': 22px, 'line-height': 1.5),
-    'large': ('font-size': 20px, 'line-height': 1.5)
+    'smaller-viewport': ('font-size': 22px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 20px, 'line-height': 1.5)
   ),
   'epsilon':   (
-    'small': ('font-size': 20px, 'line-height': 1.5),
-    'large': ('font-size': 18px, 'line-height': 1.5)
+    'smaller-viewport': ('font-size': 20px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 18px, 'line-height': 1.5)
   ),
   'zeta':   (
-    'small': ('font-size': 18px, 'line-height': 1.5),
-    'large': ('font-size': 16px, 'line-height': 1.5)
+    'smaller-viewport': ('font-size': 18px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 16px, 'line-height': 1.5)
   )
 ) !default;
 
@@ -119,13 +122,16 @@ $LOOM-h-element-sizes: (
   'h6': 'zeta'
 ) !default;
 
-/// If set to TRUE, base headings will receive default sizes and will appear as "traditional" headings. If FALSE, base headings will receive the same sizing and styling as the body text.
+/// If set to TRUE, base headings will receive default sizes and will appear
+/// as "traditional" headings. If FALSE, base headings will receive the same
+/// sizing and styling as the body text.
 ///
 /// @group 10-global-settings
 /// @type boolean
 $LOOM-generate-sizes-for-default-headings: true !default;
 
-/// If this list is defined, the following sizes will be generated as object classes (`.o-alpha {}`).
+/// If this list is defined, the following sizes will be generated as object
+/// classes (`.o-alpha {}`).
 ///
 /// Objects be also consumed directly with '@include font-size($name)';
 ///
@@ -186,10 +192,10 @@ $LOOM-font-family-seconday-webfont: serif !default;
 ///
 /// Intended to be overridden by user choices.
 /// @group 10-global-settings
-$LOOM-font-size-on-smaller-screens: 18px;
+$LOOM-font-size-on-smaller-screens: 18px !default;
 
 /// Default font size, large screen devices.
 ///
 /// Intended to be overridden by user choices.
 /// @group 10-global-settings
-$LOOM-font-size-on-larger-screens: 16px;
+$LOOM-font-size-on-larger-screens: 16px !default;

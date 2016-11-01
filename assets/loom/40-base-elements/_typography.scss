@@ -29,7 +29,7 @@ html {
   line-height: $LOOM-line-height;
 
   @if $LOOM-font-size-default-available {
-    @include font-size(default, small);
+    @include font-size(default, smaller-viewport);
   }
 
   @else {
@@ -45,7 +45,7 @@ html {
 @include mq($from: $LOOM-typography-breakpoint) {
   html {
     @if $LOOM-font-size-default-available {
-      @include font-size(default, large);
+      @include font-size(default, larger-viewport);
     }
 
     @else {
@@ -86,7 +86,7 @@ p {
   // Give each base element heading a value as described in $LOOM-h-element-sizes.
   @each $name, $value in $LOOM-h-element-sizes {
     #{$name} {
-      @include font-size($value, small);
+      @include font-size($value, smaller-viewport);
     }
   }
 
@@ -94,7 +94,7 @@ p {
   @include mq($from: $LOOM-typography-breakpoint) {
     @each $name, $value in $LOOM-h-element-sizes {
       #{$name} {
-        @include font-size($value, large);
+        @include font-size($value, larger-viewport);
       }
     }
   }
@@ -110,7 +110,7 @@ p {
     @include generic-heading($margin-size: 0, $font-weight: $LOOM-font-weight-normal);
 
     @if $LOOM-font-size-default-available {
-      @include font-size(default, small);
+      @include font-size(default, smaller-viewport);
     }
 
     @else {
@@ -127,7 +127,7 @@ p {
     h5,
     h6 {
       @if $LOOM-font-size-default-available {
-        @include font-size(default, large);
+        @include font-size(default, larger-viewport);
       }
 
       @else {
