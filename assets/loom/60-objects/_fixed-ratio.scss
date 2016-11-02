@@ -19,12 +19,15 @@ $LOOM-use-object-classes-fixed-ratio: $LOOM-use-object-classes !default;
   }
 }
 
-@mixin fixed-ratio__inner {
-  @include absolute-cover;
-
+@mixin fixed-ratio__inner($distance: 0) {
+  bottom: $distance;
   display: block;
   height: auto;
+  left: $distance;
   min-height: 100%;
+  position: absolute;
+  right: $distance;
+  top: $distance;
   width: 100%;
 }
 
