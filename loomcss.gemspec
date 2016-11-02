@@ -5,7 +5,7 @@ require 'loomcss/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "loomcss"
-  spec.version       = loomcss::VERSION
+  spec.version       = Loomcss::VERSION
   spec.authors       = ["Charlie Owen"]
   spec.email         = ["charlie@sonniesedge.co.uk"]
 
