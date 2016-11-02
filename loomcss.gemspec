@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Weave your own pattern libraries}
   spec.description   = %q{TODO: LoomCSS is a Sass framework designed to help you build pattern libraries and design systems quickly and easily. LoomCSS provides a solid base to build your own systems on top of.}
-  spec.homepage      = "https://github.com/sonniesedge/loomcss"
+  spec.homepage      = "https://github.com/sonniesedge/loom"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
