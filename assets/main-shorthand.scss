@@ -1,36 +1,44 @@
+/*
+IMPORTANT - PLEASE READ
+This method of importing Loom is a bit quicker, and looks nicer in your
+application. It also retains all the power of the full import, as long as you
+disable/enable modules via Sass variables, and only import your own modules
+underneath existing Loom modules.
+*/
+
 // SETTINGS
-// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
 @import 'loom/10-global-settings';
-// No, don't add them here.
+// Don't add settings here! Settings need to be imported BEFORE the Loom modules!
 
 // TOOLS
 @import 'loom/20-tools';
-// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
 
 // GENERIC
 @import 'loom/30-generic';
-// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
 
 // BASE ELEMENTS
 @import 'loom/40-base-elements';
-// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
 
 // LAYOUT
 @import 'loom/50-layout';
-// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
 
 // OBJECTS
 @import 'loom/60-objects';
-// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
 
 // UI COMPONENTS
 @import 'loom/70-ui-components';
-// ----->  ADD YOUR OWN COMPONENTS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
 
 // UTILITIES
 @import 'loom/80-utilities';
-// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
 
 // TRUMPS
 @import 'loom/90-trumps';
-// ----->  ADD YOUR OWN SETTINGS HERE! :D
+// ----->  ADD YOUR OWN MODULES HERE! :D
