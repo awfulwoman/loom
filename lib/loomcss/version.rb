@@ -1,3 +1,3 @@
-module Loom
+module Loomcss
   VERSION = "0.1"
 end
