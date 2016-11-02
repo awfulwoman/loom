@@ -1,8 +1,6 @@
 // SETTINGS
 // All global settings. Nothing visual.
 // ----->  ADD YOUR OWN SETTINGS HERE! :D
-// (Hey, this is different from every other layer) - You settings need
-// to go above the things they're overriding.
 @import 'loom/10-global-settings/misc';
 @import 'loom/10-global-settings/typography';
 @import 'loom/10-global-settings/color';
@@ -10,7 +8,10 @@
 @import 'loom/10-global-settings/spacing';
 @import 'loom/10-global-settings/box-sizing';
 @import 'loom/10-global-settings/icons';
-// NOOOO! DON'T YOUR OWN SETTINGS AT THE END! :( SEE THE TEXT ABOVE!
+// NOOOO! DON'T ADD YOUR OWN SETTINGS AT THE END! :( SEE THE TEXT ABOVE!
+// Why is this is different from every other layer? Because Sass is special,
+// and allows overrides to be set before the variables they override are
+// actually defined.
 
 // TOOLS
 // Mixins and functions. Nothing visual.
