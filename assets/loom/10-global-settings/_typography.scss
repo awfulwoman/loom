@@ -1,5 +1,5 @@
 /// The default global font stack for your site.
-/// Each font stack has a default and a webfont version.
+/// Each font stack is REQUIRED to have a default and a webfont value.
 ///
 /// Fonts are called using get-font-family().
 ///
@@ -9,7 +9,7 @@
 ///   .class {
 ///     font-family: get-font-family(primary);
 ///   }
-$LOOM-font-list: (
+$LOOM-font-family-map-default: (
   'primary': (
     'default': sans-serif,
     'webfont': sans-serif
@@ -20,10 +20,23 @@ $LOOM-font-list: (
   )
 ) !default;
 
-/// Use your own font map as the default global font list for use by the get-font-family() function.
+/// Tell loom which font is used for base body text by default. It should
+/// match one of the values in $LOOM-fonts.
+/// @group 10-global-settings
+/// @require $LOOM-fonts
+$LOOM-font-family-body: primary !default;
+
+/// Tell loom which font is used for headings by default. It should match one
+/// of the values in $LOOM-fonts.
+/// @group 10-global-settings
+/// @require $LOOM-fonts
+$LOOM-font-family-header: secondary !default;
+
+/// Use your own font map as the default global font list for use by the
+/// get-font-family() function.
 ///
 /// @group 10-global-settings
-$LOOM-fonts: $LOOM-font-list !default;
+$LOOM-fonts: $LOOM-font-family-map-default !default;
 
 /// The classname name to use to place loaded webfonts behind.
 ///
@@ -33,33 +46,6 @@ $LOOM-fonts: $LOOM-font-list !default;
 /// @type string | boolean
 /// @link https://fontfaceobserver.com/ See examples of how to use with Fontfaceobserver
 $LOOM-fonts-loaded: 'fonts-loaded' !default;
-
-// --- FONT WEIGHTS AND STYLES ---
-// NOTE: These are abstracted so that we may easily switch between keywords and numbers as a project demands.
-
-/// Set the default bold weight value
-///
-/// @group 10-global-settings
-/// @type string
-$LOOM-font-weight-bold: bold !default;
-
-/// Set the default normal weight value
-///
-/// @group 10-global-settings
-/// @type string
-$LOOM-font-weight-normal: normal !default;
-
-/// Set the default italic style value
-///
-/// @group 10-global-settings
-/// @type string
-$LOOM-font-style-italic: italic !default;
-
-/// Set the default normal style value
-///
-/// @group 10-global-settings
-/// @type string
-$LOOM-font-style-normal: normal !default;
 
 /// Set the default line-height.
 ///
@@ -79,37 +65,46 @@ $LOOM-line-height: 1.5 !default;
 /// @group 10-global-settings
 /// @type map
 $LOOM-font-sizes: (
-  'default':   (
+  'default': (
     'smaller-viewport': ('font-size': 18px, 'line-height': 1.5),
     'larger-viewport': ('font-size': 16px, 'line-height': 1.5)
   ),
-  'alpha':   (
+  'alpha': (
     'smaller-viewport': ('font-size': 36px, 'line-height': 1.5),
     'larger-viewport': ('font-size': 32px, 'line-height': 1.5)
   ),
-  'beta':   (
+  'beta': (
     'smaller-viewport': ('font-size': 30px, 'line-height': 1.5),
     'larger-viewport': ('font-size': 28px, 'line-height': 1.5)
   ),
-  'gamma':   (
+  'gamma': (
     'smaller-viewport': ('font-size': 26px, 'line-height': 1.5),
     'larger-viewport': ('font-size': 24px, 'line-height': 1.5)
   ),
-  'delta':   (
+  'delta': (
+    'smaller-viewport': ('font-size': 24px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 22px, 'line-height': 1.5)
+  ),
+  'epsilon': (
     'smaller-viewport': ('font-size': 22px, 'line-height': 1.5),
     'larger-viewport': ('font-size': 20px, 'line-height': 1.5)
   ),
-  'epsilon':   (
+  'zeta': (
     'smaller-viewport': ('font-size': 20px, 'line-height': 1.5),
     'larger-viewport': ('font-size': 18px, 'line-height': 1.5)
   ),
-  'zeta':   (
-    'smaller-viewport': ('font-size': 18px, 'line-height': 1.5),
-    'larger-viewport': ('font-size': 16px, 'line-height': 1.5)
+  'sub': (
+    'smaller-viewport': ('font-size': 14px, 'line-height': 1.5),
+    'larger-viewport': ('font-size': 12px, 'line-height': 1.5)
   )
 ) !default;
 
-/// Sizes that are applied to base HTML element headings
+/// Tell loom which font size is the default size.
+/// @group 10-global-settings
+/// @require $LOOM-font-sizes
+$LOOM-font-size-base: default !default;
+
+/// Base HTML headings receive the following sizes.
 ///
 /// @group 10-global-settings
 /// @type map
@@ -152,50 +147,36 @@ $LOOM-h-object-sizes: (
 /// Must match one of the breakpoints in $LOOM-mq-breakpoints.
 ///
 /// @group 10-global-settings
-/// @type boolean
+/// @type string
 /// @see $LOOM-mq-breakpoints
 $LOOM-typography-breakpoint: medium !default;
 
-/// Default value for when primary base fonts are called.
-///
-/// Intended to be overriden by user choices.
-///
-/// @group 10-global-settings
-/// @access private
-$LOOM-font-family-primary-default: sans-serif !default;
-
-/// Default value for when primary web fonts are called.
-///
-/// Intended to be overriden by user choices.
-///
-/// @group 10-global-settings
-/// @access private
-$LOOM-font-family-primary-webfont: sans-serif !default;
-
-/// Default value for when secondary base fonts are called.
-///
-/// Intended to be overriden by user choices.
-///
-/// @group 10-global-settings
-/// @access private
-$LOOM-font-family-seconday-default: serif !default;
-
-/// Default value for when secondary web fonts are called.
-///
-/// Intended to be overriden by user choices.
-///
-/// @group 10-global-settings
-/// @access private
-$LOOM-font-family-seconday-webfont: serif !default;
-
-/// Default base font size, small screen devices.
+/// The default vertical spacing value in typography.
 ///
 /// Intended to be overridden by user choices.
 /// @group 10-global-settings
-$LOOM-font-size-on-smaller-screens: 18px !default;
+$LOOM-typography-vertical-spacing: 0.5rem !default;
 
-/// Default font size, large screen devices.
+/// Set the default bold weight value
 ///
-/// Intended to be overridden by user choices.
 /// @group 10-global-settings
-$LOOM-font-size-on-larger-screens: 16px !default;
+/// @type string
+$LOOM-font-weight-bold: bold !default;
+
+/// Set the default normal weight value
+///
+/// @group 10-global-settings
+/// @type string
+$LOOM-font-weight-normal: normal !default;
+
+/// Set the default italic style value
+///
+/// @group 10-global-settings
+/// @type string
+$LOOM-font-style-italic: italic !default;
+
+/// Set the default normal style value
+///
+/// @group 10-global-settings
+/// @type string
+$LOOM-font-style-normal: normal !default;

@@ -13,6 +13,10 @@ $LOOM-grid-gutter-value: get-spacing($LOOM-grid-gutter) !default;
   flex-direction: row-reverse;
 }
 
+.l-grid--align-items-center {
+  align-items: center;
+}
+
 .l-grid__item {
   padding-left: $LOOM-grid-gutter-value;
   padding-right: $LOOM-grid-gutter-value;

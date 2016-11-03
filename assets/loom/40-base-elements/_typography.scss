@@ -6,70 +6,34 @@ $LOOM-html-color: $LOOM-color-black !default;
 /// @group 40-base-elements
 $LOOM-html-background-color: $LOOM-color-white !default;
 
-/// Default color for links
-/// @group 40-base-elements
-$LOOM-a-color: $LOOM-color-medium-gray !default;
-
-/// Default color for links (visited)
-/// @group 40-base-elements
-$LOOM-a-color-visited: $LOOM-color-dark-gray !default;
-
-/// Default color for links (hover)
-/// @group 40-base-elements
-$LOOM-a-color-hover: $LOOM-color-black !default;
-
-/// Check to see if a "default" font is available in the global font LOOM-font-list
-/// @group 40-base-elements
-$LOOM-font-size-default-available: if(get-font-size(default), true, false) !default;
-
 html {
   background: $LOOM-html-background-color;
   color: $LOOM-html-color;
-  font-family: $LOOM-font-family-primary-default;
+  font-family: get-font-family($LOOM-font-family-body);
   line-height: $LOOM-line-height;
 
-  @if $LOOM-font-size-default-available {
-    @include font-size(default, smaller-viewport);
-  }
+  @include font-size($LOOM-font-size-base, smaller-viewport);
 
-  @else {
-    font-size: $LOOM-font-size-on-smaller-screens;
-  }
-
-  .#{$LOOM-fonts-loaded} & { // NOTE: make use of a font loading system here
-    font-family: $LOOM-font-family-primary-webfont;
+  @if $LOOM-fonts-loaded {
+    .#{$LOOM-fonts-loaded} & { // NOTE: make use of a font loading system here
+      font-family: get-font-family($LOOM-font-family-body, webfont);
+    }
   }
 }
 
 // At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
 @include mq($from: $LOOM-typography-breakpoint) {
   html {
-    @if $LOOM-font-size-default-available {
-      @include font-size(default, larger-viewport);
-    }
-
-    @else {
-      font-size: $LOOM-font-size-on-larger-screens;
-    }
+    @include font-size($LOOM-font-size-base, larger-viewport);
   }
 }
 
 a {
-  color: $LOOM-a-color;
   transition: get-transition(color);
-
-  &:visited {
-    color: $LOOM-a-color-visited;
-  }
-
-  &:hover,
-  &:focus {
-    color: $LOOM-a-color-hover;
-  }
 }
 
 p {
-  margin: 0 0 $LOOM-spacing-vertical;
+  margin: 0 0 $LOOM-typography-vertical-spacing;
 }
 
 @if ($LOOM-generate-sizes-for-default-headings) {
@@ -108,14 +72,7 @@ p {
   h5,
   h6 {
     @include generic-heading($margin-size: 0, $font-weight: $LOOM-font-weight-normal);
-
-    @if $LOOM-font-size-default-available {
-      @include font-size(default, smaller-viewport);
-    }
-
-    @else {
-      font-size: $LOOM-font-size-on-smaller-screens;
-    }
+    @include font-size($LOOM-font-size-base, smaller-viewport);
   }
 
   // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
@@ -126,13 +83,7 @@ p {
     h4,
     h5,
     h6 {
-      @if $LOOM-font-size-default-available {
-        @include font-size(default, larger-viewport);
-      }
-
-      @else {
-        font-size: $LOOM-font-size-on-larger-screens;
-      }
+      @include font-size($LOOM-font-size-base, larger-viewport);
     }
   }
 }

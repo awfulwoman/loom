@@ -7,7 +7,7 @@ $LOOM-use-object-classes-container: $LOOM-use-object-classes !default;
 @mixin container(
   $max-width: $LOOM-single-column-width,
   $padding-horizontal: get-spacing(default),
-  $padding-horizontal-large: get-spacing(large),
+  $padding-horizontal-large: get-spacing(default),
   $margin-vertical: get-spacing(default),
   $breakpoint-switch: medium
 ) {

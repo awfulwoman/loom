@@ -1,0 +1,17 @@
+
+// Perform some basic integrity checks to ensure critical defaults are valid.
+@if not map-has-key($LOOM-fonts, $LOOM-font-family-body) {
+  @warn "The default spacing value of "#{$LOOM-font-family-body}", defined in $LOOM-font-family-body, can not found in $LOOM-fonts!";
+}
+
+@if not map-has-key($LOOM-fonts, $LOOM-font-family-header) {
+  @warn "The default spacing value of "#{$LOOM-font-family-header}", defined in $LOOM-font-family-header, can not found in $LOOM-fonts!";
+}
+
+@if not map-has-key($LOOM-font-sizes, $LOOM-font-size-base) {
+  @warn "The default spacing value of "#{$LOOM-font-size-base}", defined in $LOOM-font-size-base, can not found in $LOOM-font-sizes!";
+}
+
+@if not map-has-key($LOOM-spacing, $LOOM-spacing-default) {
+  @warn "The default spacing value of "#{$LOOM-spacing-default}", defined in $LOOM-spacing-default, can not found in $LOOM-spacing!";
+}

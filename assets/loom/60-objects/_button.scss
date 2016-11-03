@@ -4,13 +4,45 @@
 /// @group 60-objects
 $LOOM-use-object-classes-button: $LOOM-use-object-classes !default;
 
+/// Default background-color for buttons
+/// @group 60-objects
 $LOOM-button-background-color: $LOOM-color-light-gray !default;
+
+/// Default border-color for buttons
+/// @group 60-objects
 $LOOM-button-border-color: transparent !default;
+
+/// Default color for buttons
+/// @group 60-objects
 $LOOM-button-color: $LOOM-color-dark-gray !default;
+
+/// Default horizontal padding for buttons
+/// @group 60-objects
 $LOOM-button-padding-horizontal: get-spacing(small) !default;
+
+/// Default horizontal padding for buttons
+/// @group 60-objects
 $LOOM-button-padding-vertical: get-spacing(xsmall) !default;
+
+/// Default line-height for buttons
+/// @group 60-objects
 $LOOM-button-line-height: normal !default;
 
+/// This mixin creates a button, along with some basic styles.
+///
+/// It has several arguments, each with basic defaults, that can be used to
+/// customise the button to your needs.
+///
+/// By default the hover state of a button is a slight darkening of the
+/// background-color, color and border-color. If this is not appropiate then
+/// all the hover colours can be overridden.
+///
+/// The defaults for the arguments (the default defaults) can be overridden on
+/// a project basis, so that new buttons can be generated without supplying
+/// project-specific arguments each time.
+///
+/// @group 60-objects
+/// @require $LOOM-button-background-color
 @mixin button(
   $color: $LOOM-button-color,
   $background-color: $LOOM-button-background-color,
@@ -66,11 +98,19 @@ $LOOM-button-line-height: normal !default;
   }
 }
 
+/// An optional wrapper for the text inside a button.
+///
+/// Wrapping the text with this mixin allows icons to be inserted alongside the
+/// text and for them to align sensibly.
+///
+/// @group 60-objects
 @mixin button__inner() {
   display: inline-block;
   position: relative;
   vertical-align: middle;
 }
+
+// Optional class implementations of the above mixins.
 
 @if $LOOM-use-object-classes-button {
   .o-button {

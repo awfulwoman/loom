@@ -1,5 +1,14 @@
+/// Global list of icon sizes.
+/// @group 10-global-settings
 $LOOM-icon-sizes: (
   'small': 0.5em,
   'default': 1em,
   'large': 2em
 ) !default;
+
+/// Which icon size is to be used as the default.
+///
+/// Must match one of the keys in $LOOM-icon-sizes;
+///
+/// @group 10-global-settings
+$LOOM-icon-size-default: default !default;
