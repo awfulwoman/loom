@@ -5,7 +5,7 @@
 $LOOM-use-utility-classes-color: $LOOM-use-utility-classes !default;
 
 @if $LOOM-use-utility-classes-color {
-  @each $color-name, $color-value in $LOOM-colors-list {
+  @each $color-name, $color-value in $LOOM-colors {
     .o-color-#{$color-name} {
       color: $color-value;
     }

@@ -18,11 +18,11 @@ $LOOM-button-color: $LOOM-color-dark-gray !default;
 
 /// Default horizontal padding for buttons
 /// @group 60-objects
-$LOOM-button-padding-horizontal: get-spacing(small) !default;
+$LOOM-button-padding-horizontal: 1rem !default;
 
 /// Default horizontal padding for buttons
 /// @group 60-objects
-$LOOM-button-padding-vertical: get-spacing(xsmall) !default;
+$LOOM-button-padding-vertical: 0.5rem !default;
 
 /// Default line-height for buttons
 /// @group 60-objects

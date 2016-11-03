@@ -5,7 +5,7 @@
 /// @group 10-global-settings
 /// @type map
 /// @example scss - Using a colour map
-///   $LOOM-colors-theme: (
+///   $LOOM-colors-map-default: (
 ///     'brand-primary': #ed3d68,
 ///     'brand-secondary': #30bbba,
 ///     'white': #fff,
@@ -17,14 +17,14 @@
 ///   $color-green: #30bbba;
 ///   $color-light-gray: #e4e4e4
 ///
-///   $LOOM-colors-theme: (
+///   $LOOM-colors-map-default: (
 ///     'brand-primary': $color-pink,
 ///     'brand-secondary': $color-green,
 ///     'white': #fff,
 ///     'black': #000,
 ///     'meta': $color-light-gray
 ///   )
-$LOOM-colors-theme: (
+$LOOM-colors-map-default: (
   'black': #000,
   'white': #fff
 ) !default;
@@ -32,11 +32,11 @@ $LOOM-colors-theme: (
 /// Use your own colour map as the default global color list for use by the get-color() function.
 ///
 /// @group 10-global-settings
-$LOOM-colors-list: $LOOM-colors-theme !default;
+$LOOM-colors: $LOOM-colors-map-default !default;
 
 // LOOM COLORS
 //
-// Okay, so you should always use get-color() when building your own system. However, Loom needs some "safe" colour variables to work with, as the colours defined in $LOOM-colors-list could be overridden by the end-user. These colours are used as to provide "default" defaults for several objects and mixins.
+// Okay, okay, so you should always use get-color() when building your own system. However, Loom needs some "safe" colour variables to work with, as the colours defined in $LOOM-colors could be overridden by the end-user. These colours are used as to provide "default" defaults for several objects and mixins.
 
 /// Default color - black
 ///
