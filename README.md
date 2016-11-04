@@ -50,12 +50,38 @@ Once installed, you will need to add the installation path to your own build sys
 Once you have made that folder available to your build you can access the Loom layers using:
 
 ```scss
-@import 'loom/10-global-settings/misc';
-// etc
-```
-Please DON'T just link to `main.scss`! This will prevent you getting access to the interweaved layers of the ITCSS stack (it's there as an example only). Instead, copy [the list of imports](https://github.com/sonniesedge/loom/blob/master/assets/main.scss) from `main.scss` into your main project file. Yes, it feels unusual, but you'll gain a lot of power by doing so.
+// ----->  ADD YOUR OWN MODULES ABOVE HERE!
+@import 'loom/10-global-settings';
 
-This library is a basis for your own design system and won't give you much visually out of the box!
+@import 'loom/20-tools';
+// ----->  ADD YOUR OWN MODULES BELOW HERE!
+
+@import 'loom/30-generic';
+// ----->  ADD YOUR OWN MODULES BELOW HERE!
+
+@import 'loom/40-base-elements';
+// ----->  ADD YOUR OWN MODULES BELOW HERE!
+
+@import 'loom/50-layout';
+// ----->  ADD YOUR OWN MODULES BELOW HERE!
+
+@import 'loom/60-objects';
+// ----->  ADD YOUR OWN MODULES BELOW HERE!
+
+@import 'loom/70-ui-components';
+// ----->  ADD YOUR OWN MODULES BELOW HERE!
+
+@import 'loom/80-utilities';
+// ----->  ADD YOUR OWN MODULES BELOW HERE!
+
+@import 'loom/90-trumps';
+// ----->  ADD YOUR OWN MODULES BELOW HERE!
+```
+Please DON'T just link to `main.scss`! This will prevent you getting access to the interweaved layers of the ITCSS stack (it's there as an example only). Instead, copy [the list of imports](https://github.com/sonniesedge/loom/blob/master/assets/main.scss) from `main.scss` into your main project file. Yes, it feels a bit unusual, but you'll gain a lot of power by doing so.
+
+Add you own modules underneath the Loom layers (with the exception of the settings layer - to override Loom variables your own settings module must be placed *above* the Loom module.) If you require even more fine-grained control then you can copy and paste the imports from the layer import partials to your own Sass file.
+
+Please remember that this framework is a basis for your own design system and won't give you much to see visually out of the box!
 
 # Organisation layers
 
