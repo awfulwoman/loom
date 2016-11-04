@@ -59,12 +59,14 @@ $LOOM-transition-timing-function: ease-in-out !default;
 $LOOM-grid-columns: (12) !default;
 
 /// Default numbe of columns inside a grid container when combined with breakpoints.
+///
+/// By default this is the same as $LOOM-grid-columns.
 /// @group 10-global-settings
-$LOOM-grid-columns-responsive: (12) !default;
+$LOOM-grid-columns-responsive: $LOOM-grid-columns !default;
 
 /// Default gutter size for grid elements.
 /// @group 10-global-settings
-$LOOM-grid-gutter: xsmall !default; // NOTE: will be consumed by get-spacing()
+$LOOM-grid-gutter: 0.5rem !default;
 
 /// Breakpoints defined here will be used to generate breakpoints in the grid system.
 ///

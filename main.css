@@ -430,15 +430,10 @@ html {
     font-size: 1rem; } }
 
 a {
-  color: #999595;
   transition: color 0.2s ease-in-out 0s; }
-  a:visited {
-    color: #444; }
-  a:hover, a:focus {
-    color: #000; }
 
 p {
-  margin: 0 0 1rem; }
+  margin: 0 0 0.5rem; }
 
 h1,
 h2,
@@ -448,8 +443,8 @@ h5,
 h6 {
   font-family: serif;
   font-weight: bold;
-  margin: 0 0 0.5rem;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  margin: 0 0; }
   .fonts-loaded h1, .fonts-loaded
   h2, .fonts-loaded
   h3, .fonts-loaded
@@ -471,16 +466,16 @@ h3 {
   font-size: 1.44444rem; }
 
 h4 {
+  font-size: 24px;
+  font-size: 1.33333rem; }
+
+h5 {
   font-size: 22px;
   font-size: 1.22222rem; }
 
-h5 {
+h6 {
   font-size: 20px;
   font-size: 1.11111rem; }
-
-h6 {
-  font-size: 18px;
-  font-size: 1rem; }
 
 @media (min-width: 41.11111em) {
   h1 {
@@ -493,14 +488,14 @@ h6 {
     font-size: 24px;
     font-size: 1.5rem; }
   h4 {
+    font-size: 22px;
+    font-size: 1.375rem; }
+  h5 {
     font-size: 20px;
     font-size: 1.25rem; }
-  h5 {
-    font-size: 18px;
-    font-size: 1.125rem; }
   h6 {
-    font-size: 16px;
-    font-size: 1rem; } }
+    font-size: 18px;
+    font-size: 1.125rem; } }
 
 input[type=text],
 input[type=url],
@@ -536,15 +531,14 @@ label {
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem; }
+  margin-left: -;
+  margin-right: -; }
 
 .l-grid--reverse {
   flex-direction: row-reverse; }
 
-.l-grid__item {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem; }
+.l-grid--align-items-center {
+  align-items: center; }
 
 .l-col-1-of-12 {
   flex-basis: 8.33333%;
@@ -759,16 +753,16 @@ label {
   font-size: 1.44444rem; }
 
 .o-h-delta {
+  font-size: 24px;
+  font-size: 1.33333rem; }
+
+.o-h-epsilon {
   font-size: 22px;
   font-size: 1.22222rem; }
 
-.o-h-epsilon {
+.o-h-zeta {
   font-size: 20px;
   font-size: 1.11111rem; }
-
-.o-h-zeta {
-  font-size: 18px;
-  font-size: 1rem; }
 
 @media (min-width: 41.11111em) {
   .o-h-alpha {
@@ -781,14 +775,14 @@ label {
     font-size: 24px;
     font-size: 1.5rem; }
   .o-h-delta {
+    font-size: 22px;
+    font-size: 1.375rem; }
+  .o-h-epsilon {
     font-size: 20px;
     font-size: 1.25rem; }
-  .o-h-epsilon {
-    font-size: 18px;
-    font-size: 1.125rem; }
   .o-h-zeta {
-    font-size: 16px;
-    font-size: 1rem; } }
+    font-size: 18px;
+    font-size: 1.125rem; } }
 
 .o-list-reset {
   margin: 0;
@@ -935,8 +929,8 @@ label {
   width: 100%; }
   @media (min-width: 41.11111em) {
     .o-container {
-      padding-left: 3rem;
-      padding-right: 3rem; } }
+      padding-left: 2rem;
+      padding-right: 2rem; } }
 
 .o-list-inline {
   list-style-type: none;
@@ -1005,16 +999,20 @@ label {
   font-size: 1.44444rem; }
 
 .u-font-size-delta {
+  font-size: 24px;
+  font-size: 1.33333rem; }
+
+.u-font-size-epsilon {
   font-size: 22px;
   font-size: 1.22222rem; }
 
-.u-font-size-epsilon {
+.u-font-size-zeta {
   font-size: 20px;
   font-size: 1.11111rem; }
 
-.u-font-size-zeta {
-  font-size: 18px;
-  font-size: 1rem; }
+.u-font-size-sub {
+  font-size: 14px;
+  font-size: 0.77778rem; }
 
 @media (min-width: 41.11111em) {
   .u-font-size-default {
@@ -1030,14 +1028,17 @@ label {
     font-size: 24px;
     font-size: 1.5rem; }
   .u-font-size-delta {
+    font-size: 22px;
+    font-size: 1.375rem; }
+  .u-font-size-epsilon {
     font-size: 20px;
     font-size: 1.25rem; }
-  .u-font-size-epsilon {
+  .u-font-size-zeta {
     font-size: 18px;
     font-size: 1.125rem; }
-  .u-font-size-zeta {
-    font-size: 16px;
-    font-size: 1rem; } }
+  .u-font-size-sub {
+    font-size: 12px;
+    font-size: 0.75rem; } }
 
 .u-font-style-italic {
   font-style: italic; }

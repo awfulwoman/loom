@@ -25,6 +25,7 @@
 @import 'loom/20-tools/z-index';
 @import 'loom/20-tools/grid-columns';
 @import 'loom/20-tools/icons';
+@import 'loom/20-tools/integrity-tests'; // import last, as it tests previous partials
 // -----> ADD YOUR OWN TOOLS HERE! :D
 
 // GENERIC

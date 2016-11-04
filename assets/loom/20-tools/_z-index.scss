@@ -9,7 +9,7 @@
   }
 
   @else {
-    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+    @warn "No layer found for `#{$layer}` in the global $z-layers map. Property omitted.";
 
     @return null;
   }

@@ -2,8 +2,8 @@
 ///
 /// @group 20-tools
 /// @parameter {string} $color-name - The key name for a colour key/value pair.
-/// @parameter {map} $color-list - A map of spacing key/value pairs to use. Defaults to $LOOM-colors-list.
-@function get-color($color-name, $color-list: $LOOM-colors-list) {
+/// @parameter {map} $color-list - A map of spacing key/value pairs to use. Defaults to $LOOM-colors.
+@function get-color($color-name, $color-list: $LOOM-colors) {
   $color-name: inspect($color-name);  // Force value to a string, as if a key value happens to match a CSS colour value, it will be imported as a Sass colour, not a string, causing an error in map-get().
 
   @if map-has-key($color-list, $color-name) {

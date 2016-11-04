@@ -63,7 +63,7 @@
 ///
 /// @group 20-tools
 /// @returns {Number} Value in REMs
-@function convert-px-to-rem($pixel-size, $root-size: get-font-size(default, smaller-viewport)) {
+@function convert-px-to-rem($pixel-size, $root-size: get-font-size($LOOM-font-size-base, smaller-viewport)) {
   @return ($pixel-size / $root-size) * 1rem;
 }
 
@@ -74,14 +74,18 @@
 ///
 /// @group 20-tools
 /// @returns {Number} Value in EMs
-@function convert-px-to-em($pixels, $browser-context: get-font-size(default, smaller-viewport)) {
+@function convert-px-to-em($pixels, $browser-context: get-font-size($LOOM-font-size-base, smaller-viewport)) {
   @return ($pixels / $browser-context) + 0em; // stylelint-disable-line length-zero-no-unit
 }
 
 /// Generates a font-size ruleset.
 ///
-/// By default it will grab the "small breakpoint" version of the font-size.
+/// Does not include margins or font weights. Set those yourself, or with
+/// generic-heading() or similar mixins.
+///
+/// By default it will grab the "smaller viewport" version of the font-size.
 /// @group 20-tools
+/// @see generic-heading
 @mixin font-size($size-name, $size-browser-context: smaller-viewport ) {
   $font-size: null;
 
@@ -93,7 +97,7 @@
     $font-size: $size-name;
   }
 
-  $font-size-context: get-font-size(default, $size-browser-context);
+  $font-size-context: get-font-size($LOOM-font-size-base, $size-browser-context);
 
   font-size: $font-size; // NOTE: Fallback to size in pixels
   font-size: convert-px-to-rem($font-size, $font-size-context); // stylelint-disable-line declaration-block-no-duplicate-properties
@@ -101,18 +105,24 @@
 
 /// Output styling for a generic heading.
 ///
+/// A heading typically has some margin below it and is in bolder text.
+///
+/// Combine with the font-size() mixin to get sizing.
+///
 /// @group 20-tools
 /// @example scss
 ///   .o-h1 {
 ///     @include generic-heading();
 ///   }
-@mixin generic-heading(
-  $margin-size: xsmall,
-  $font: secondary,
-  $font-weight: $LOOM-font-weight-bold
+@mixin generic-heading (
+  $margin-size: $LOOM-typography-vertical-spacing,
+  $font: $LOOM-font-family-header,
+  $font-weight: $LOOM-font-weight-bold,
+  $use-webfont: if($LOOM-fonts-loaded, true, false)
 ) {
-  font-family: get-font-family($font, default);
+  font-family: get-font-family($font);
   font-weight: $font-weight;
+  text-rendering: optimizeLegibility;
 
   @if $margin-size == 0 or $margin-size == none {
     margin: 0;
@@ -122,9 +132,9 @@
     margin: 0 0 get-spacing($margin-size);
   }
 
-  text-rendering: optimizeLegibility;
-
-  .#{$LOOM-fonts-loaded} & {
-    font-family: get-font-family($font, webfont);
+  @if $use-webfont {
+    .#{$LOOM-fonts-loaded} & {
+      font-family: get-font-family($font, webfont);
+    }
   }
 }
