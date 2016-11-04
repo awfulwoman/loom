@@ -1,3 +1,13 @@
+/*
+IMPORTANT - PLEASE READ
+Individual modules for Loom are imported via a partial named after the group.
+This avoids the long import list that would occur if we were to import each
+module individually.
+
+If you wish to have even more fine-grained control over the imports then copy
+and paste the contents of each layers importer into the list below, changing
+the path as appropiate.
+*/
 html {
   box-sizing: border-box; }
 
@@ -410,6 +420,35 @@ template {
 [hidden] {
   display: none; }
 
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input[type=date],
+input[type=datetime],
+input[type=month],
+input[type=password],
+input[type=search],
+input[type=week],
+input[type=time] {
+  border: 1px solid #999595;
+  border-radius: 5px;
+  color: #444;
+  padding: 0.5rem; }
+
+input::placeholder {
+  color: #999595; }
+
+textarea {
+  border: 1px solid #999595;
+  color: #444;
+  padding: 0.5rem; }
+
+label {
+  font-weight: bold; }
+
 img {
   height: auto;
   max-width: 100%; }
@@ -496,35 +535,6 @@ h6 {
   h6 {
     font-size: 18px;
     font-size: 1.125rem; } }
-
-input[type=text],
-input[type=url],
-input[type=tel],
-input[type=number],
-input[type=color],
-input[type=email],
-input[type=date],
-input[type=datetime],
-input[type=month],
-input[type=password],
-input[type=search],
-input[type=week],
-input[type=time] {
-  border: 1px solid #999595;
-  border-radius: 5px;
-  color: #444;
-  padding: 0.5rem; }
-
-input::placeholder {
-  color: #999595; }
-
-textarea {
-  border: 1px solid #999595;
-  color: #444;
-  padding: 0.5rem; }
-
-label {
-  font-weight: bold; }
 
 .l-grid {
   display: flex;
