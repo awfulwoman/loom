@@ -8,7 +8,7 @@ $LOOM-container-padding: get-spacing(default) !default;
 $LOOM-container-padding-larger:get-spacing(default) !default;
 $LOOM-container-margin: get-spacing(default) !default;
 $LOOM-container-breakpoint: medium !default;
-$LOOM-container-transition: get-transition(padding);
+$LOOM-container-transition: get-transition(padding) !default;
 
 @mixin container(
   $max-width: $LOOM-single-column-width,
