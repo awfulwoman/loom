@@ -1,4 +1,4 @@
-$LOOM-grid-gutter-value: get-spacing($LOOM-grid-gutter) !default;
+$LOOM-grid-gutter-value: $LOOM-grid-gutter !default;
 
 .l-grid {
   display: flex;
@@ -20,6 +20,7 @@ $LOOM-grid-gutter-value: get-spacing($LOOM-grid-gutter) !default;
 .l-grid__item {
   padding-left: $LOOM-grid-gutter-value;
   padding-right: $LOOM-grid-gutter-value;
+  width: 100%;
 }
 
 @include grid-columns($LOOM-grid-columns);

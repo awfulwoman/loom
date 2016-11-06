@@ -36,7 +36,13 @@ $LOOM-colors: $LOOM-colors-map-default !default;
 
 // LOOM COLORS
 //
-// Okay, okay, so you should always use get-color() when building your own system. However, Loom needs some "safe" colour variables to work with, as the colours defined in $LOOM-colors could be overridden by the end-user. These colours are used as to provide "default" defaults for several objects and mixins.
+// Okay, okay, so you should always use get-color() when building your own
+// system. However, Loom needs some "safe" colour variables to work with, as
+// the colours defined in $LOOM-colors could be overridden by the end-user.
+// These colours are used as to provide "default" defaults for several objects
+// and mixins.
+// The end goal is to remove all references to colours in Loom, except for
+// _maybe_ black and white.
 
 /// Default color - black
 ///

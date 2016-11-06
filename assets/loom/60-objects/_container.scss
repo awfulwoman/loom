@@ -4,12 +4,18 @@
 /// @group 60-objects
 $LOOM-use-object-classes-container: $LOOM-use-object-classes !default;
 
+$LOOM-container-padding: get-spacing(default) !default;
+$LOOM-container-padding-larger:get-spacing(default) !default;
+$LOOM-container-margin: get-spacing(default) !default;
+$LOOM-container-breakpoint: medium !default;
+$LOOM-container-transition: get-transition(padding);
+
 @mixin container(
   $max-width: $LOOM-single-column-width,
-  $padding-horizontal: get-spacing(default),
-  $padding-horizontal-large: get-spacing(default),
-  $margin-vertical: get-spacing(default),
-  $breakpoint-switch: medium
+  $padding-horizontal: $LOOM-container-padding,
+  $padding-horizontal-large: $LOOM-container-padding-larger,
+  $margin-vertical: $LOOM-container-margin,
+  $breakpoint-switch: $LOOM-container-breakpoint
 ) {
   display: block;
   margin-bottom: $margin-vertical;
@@ -18,7 +24,7 @@ $LOOM-use-object-classes-container: $LOOM-use-object-classes !default;
   max-width: $max-width;
   padding-left: $padding-horizontal;
   padding-right: $padding-horizontal;
-  transition: get-transition(padding);
+  transition: $LOOM-container-transition;
   width: 100%;
 
   @include mq($from: $breakpoint-switch) {

@@ -460,7 +460,7 @@ html {
   line-height: 1.5;
   font-size: 18px;
   font-size: 1rem; }
-  .fonts-loaded html {
+  html.fonts-loaded {
     font-family: sans-serif; }
 
 @media (min-width: 41.11111em) {
@@ -541,14 +541,19 @@ h6 {
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: -;
-  margin-right: -; }
+  margin-left: -0.5rem;
+  margin-right: -0.5rem; }
 
 .l-grid--reverse {
   flex-direction: row-reverse; }
 
 .l-grid--align-items-center {
   align-items: center; }
+
+.l-grid__item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%; }
 
 .l-col-1-of-12 {
   flex-basis: 8.33333%;

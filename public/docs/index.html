@@ -107,19 +107,22 @@ $LOOM-colors-map-default: (
   $color-name: inspect($color-name);  // Force value to a string, as if a key value happens to match a CSS colour value, it will be imported as a Sass colour, not a string, causing an error in map-get().
 
   @if map-has-key($color-list, $color-name) {
+
     $output: map-get($color-list, $color-name);
 
     @if type-of($output) != color {
-      @error $color-name &quot; could not be found in the global colour list.&quot;;
+      @error &quot;#{$color-name} could not be found in the global colour list.&quot;;
     }
 
     @return $output;
   }
 
   @else {
+    @warn &quot;#{$color} is not in the global colour map.&quot;;
+
     @return null;
   }
- }" data-collapsed="@function get-color($color-name, $color-list) { ... }"><code>@function get-color($color-name, $color-list) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Extract a color value from a map.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color-name</code></th><td data-label="desc"><p>The key name for a colour key/value pair.</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color-list</code></th><td data-label="desc"><p>A map of spacing key/value pairs to use. Defaults to $LOOM-colors.</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table></section><section class="main__item container item" id="20-tools-function-get-icon-size"><h3 class="item__heading"><a class="item__name" href="#function-get-icon-size">get-icon-size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function get-icon-size($icon-name, $icon-size-map) { 
+ }" data-collapsed="@function get-color($color-name, $color-list) { ... }"><code>@function get-color($color-name, $color-list) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Extract a color value from a map.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color-name</code></th><td data-label="desc"><p>The key name for a colour key/value pair.</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color-list</code></th><td data-label="desc"><p>A map of spacing key/value pairs to use. Defaults to $LOOM-colors.</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>#{$color-name} could not be found in the global colour list.</p></li></ul></section><section class="main__item container item" id="20-tools-function-get-icon-size"><h3 class="item__heading"><a class="item__name" href="#function-get-icon-size">get-icon-size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function get-icon-size($icon-name, $icon-size-map) { 
   @if map-has-key($icon-size-map, $icon-name) {
     @return map-get($icon-size-map, $icon-name);
   }

@@ -7,16 +7,19 @@
   $color-name: inspect($color-name);  // Force value to a string, as if a key value happens to match a CSS colour value, it will be imported as a Sass colour, not a string, causing an error in map-get().
 
   @if map-has-key($color-list, $color-name) {
+
     $output: map-get($color-list, $color-name);
 
     @if type-of($output) != color {
-      @error $color-name " could not be found in the global colour list.";
+      @error "#{$color-name} could not be found in the global colour list.";
     }
 
     @return $output;
   }
 
   @else {
+    @warn "#{$color} is not in the global colour map.";
+
     @return null;
   }
 }

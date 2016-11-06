@@ -15,7 +15,7 @@ html {
   @include font-size($LOOM-font-size-base, smaller-viewport);
 
   @if $LOOM-fonts-loaded {
-    .#{$LOOM-fonts-loaded} & { // NOTE: make use of a font loading system here
+    &.#{$LOOM-fonts-loaded} { // NOTE: make use of a font loading system here
       font-family: get-font-family($LOOM-font-family-body, webfont);
     }
   }
