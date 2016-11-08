@@ -6,6 +6,18 @@ $LOOM-html-color: $LOOM-color-black !default;
 /// @group 40-base-elements
 $LOOM-html-background-color: $LOOM-color-white !default;
 
+/// Default link color
+/// @group 40-base-elements
+$LOOM-a-color: initial !default;
+
+/// Default link color, visited
+/// @group 40-base-elements
+$LOOM-a-color-visited: initial !default;
+
+/// Default link color, hover and focus
+/// @group 40-base-elements
+$LOOM-a-color-hoverfocus: initial !default;
+
 html {
   background: $LOOM-html-background-color;
   color: $LOOM-html-color;
@@ -29,7 +41,17 @@ html {
 }
 
 a {
+  color: $LOOM-a-color;
   transition: get-transition(color);
+
+  &:visited {
+    color: $LOOM-a-color-visited;
+  }
+
+  &:hover,
+  &:focus {
+    color: $LOOM-a-color-hoverfocus;
+  }
 }
 
 p {

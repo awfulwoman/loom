@@ -9,31 +9,38 @@ and paste the contents of each layers importer into the list below, changing
 the path as appropiate.
 */
 
-// ----->  ADD YOUR OWN MODULES ABOVE HERE! :D
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/10-global-settings';
-// Importing your own settings after this layer won't work - they have to be imported
-// *before*. For all other layers you should import your modules afterwards.
+// ----->  ADD YOUR OWN GLOBAL SETTINGS ABOVE HERE! :D
 
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/20-tools';
-// ----->  ADD YOUR OWN MODULES BELOW HERE! :D
+// ----->  ADD YOUR OWN TOOLS BELOW HERE! :D
 
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/30-generic';
 // ----->  ADD YOUR OWN MODULES BELOW HERE! :D
 
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/40-base-elements';
 // ----->  ADD YOUR OWN MODULES BELOW HERE!
 
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/50-layout';
 // ----->  ADD YOUR OWN MODULES BELOW HERE!
 
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/60-objects';
 // ----->  ADD YOUR OWN MODULES BELOW HERE!
 
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/70-ui-components';
 // ----->  ADD YOUR OWN MODULES BELOW HERE!
 
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/80-utilities';
 // ----->  ADD YOUR OWN MODULES BELOW HERE!
 
+// ----->  Overrides of this layer's Loom variables go above here! :D
 @import 'loom/90-trumps';
 // ----->  ADD YOUR OWN MODULES BELOW HERE!

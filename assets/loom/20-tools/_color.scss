@@ -18,7 +18,7 @@
   }
 
   @else {
-    @warn "#{$color} is not in the global colour map.";
+    @warn "#{$color-name} is not in the global colour map.";
 
     @return null;
   }

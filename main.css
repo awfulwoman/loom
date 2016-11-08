@@ -469,7 +469,12 @@ html {
     font-size: 1rem; } }
 
 a {
+  color: initial;
   transition: color 0.2s ease-in-out 0s; }
+  a:visited {
+    color: initial; }
+  a:hover, a:focus {
+    color: initial; }
 
 p {
   margin: 0 0 0.5rem; }
