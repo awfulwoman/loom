@@ -28,9 +28,9 @@ $LOOM-border-radius-circle: 50% !default;
 /// @see {function} get-z
 /// @type map
 $LOOM-z-layers: (
-  "top":          2,
-  "default":      1,
-  "below":        -1,
+  'top':          2,
+  'default':      1,
+  'below':        -1,
 ) !default;
 
 /// The default list of breakpoints that is used to generate display-none classes.
@@ -38,8 +38,8 @@ $LOOM-z-layers: (
 /// @group 10-global-settings
 /// @type list
 $LOOM-display-none-breakpoints: (
-  small,
-  large
+  'small',
+  'large'
 ) !default;
 
 /// The default time that all animations takes to complete.
