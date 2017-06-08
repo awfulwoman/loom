@@ -31,7 +31,7 @@ Loom's manifesto and opinions:
   - Being modular. If you don't like the way something works in Loom, you can remove it or use your own module instead.
 - Loom doesn't care about:
   - How you name your CSS selectors. Yes, it's opinionated about Sass structure, but kinda indifferent to your CSS output.
-  - Wether you want to use atomic or utility classes.
+  - Whether you want to use atomic or utility classes.
   - Vendor prefixes - let's leave that up to Autoprefixer.
 
 # Installation
