@@ -1,0 +1,17 @@
+$LOOM-use-utility-classes-show: $LOOM-use-utility-classes !default;
+
+
+// Classes
+@if $LOOM-use-utility-classes-show {
+  .u-show {
+
+  }
+
+  .u-show-inline {
+
+  }
+
+  .u-show-inline-block {
+
+  }
+}

@@ -2,9 +2,9 @@
 ///
 /// By default uses global setting.
 /// @group 80-utilities
-$LOOM-use-utility-classes-font-weight: $LOOM-use-utility-classes !default;
+$LOOM-use-scaffolding-classes-font-weight: $LOOM-use-scaffolding-classes !default;
 
-@if $LOOM-use-utility-classes-font-weight {
+@if $LOOM-use-scaffolding-classes-font-weight {
   .u-font-weight-bold {
     font-weight: $LOOM-font-weight-bold;
   }

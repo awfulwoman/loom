@@ -10,6 +10,18 @@ $LOOM-use-object-classes: true !default;
 /// @type boolean
 $LOOM-use-utility-classes: true !default;
 
+/// Will scaffolding modules have their own classes generated?
+///
+/// @group 10-global-settings
+/// @type boolean
+$LOOM-use-scaffolding-classes: true !default;
+
+/// Will layout modules have their own classes generated?
+///
+/// @group 10-global-settings
+/// @type boolean
+$LOOM-use-layout-classes: true !default;
+
 /// The default border-radius for various objects.
 ///
 /// @group 10-global-settings

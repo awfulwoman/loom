@@ -4,11 +4,7 @@
 /// @group 60-objects
 $LOOM-use-object-classes-vertical-center: $LOOM-use-object-classes !default;
 
-@mixin vertical-center {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
+
 
 // Classes
 @if $LOOM-use-object-classes-vertical-center {

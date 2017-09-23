@@ -2,7 +2,7 @@
 ///
 /// By default uses global setting.
 /// @group 80-utilities
-$LOOM-use-utility-classes-vertical-align: $LOOM-use-utility-classes !default;
+$LOOM-use-scaffolding-classes-vertical-align: $LOOM-use-scaffolding-classes !default;
 
 /// List of possible vertical-align values
 /// @group 80-utilities
@@ -17,7 +17,7 @@ $LOOM-vertical-align: (
   bottom,
 );
 
-@if $LOOM-use-utility-classes-vertical-align {
+@if $LOOM-use-scaffolding-classes-vertical-align {
   @each $item in $LOOM-vertical-align {
     .u-vertical-align-#{$item} {
       vertical-align: $item;

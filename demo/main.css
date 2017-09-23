@@ -541,6 +541,21 @@ h6 {
     font-size: 18px;
     font-size: 1.125rem; } }
 
+.l-container {
+  display: block;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transition: padding 0.2s ease-in-out 0s;
+  width: 100%; }
+  @media (min-width: 41.11111em) {
+    .l-container {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
+
 .l-grid {
   display: flex;
   flex: 0 1 auto;
@@ -927,31 +942,6 @@ h6 {
   display: block;
   overflow: hidden; }
 
-.o-hide-visually {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: circle(1% at 1% 1%);
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-.o-container {
-  display: block;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 55rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  transition: padding 0.2s ease-in-out 0s;
-  width: 100%; }
-  @media (min-width: 41.11111em) {
-    .o-container {
-      padding-left: 2rem;
-      padding-right: 2rem; } }
-
 .o-list-inline {
   list-style-type: none;
   margin: 0;
@@ -1317,3 +1307,17 @@ h6 {
 
 .u-width-full {
   width: 100%; }
+
+.o-hide-visually {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: circle(1% at 1% 1%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.u-prevent-scrolling {
+  height: 100%;
+  overflow: hidden; }

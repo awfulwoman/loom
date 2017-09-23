@@ -1,0 +1,11 @@
+$LOOM-use-utility-classes-prevent-scrolling: $LOOM-use-utility-classes !default;
+
+
+
+// Classes
+@if $LOOM-use-utility-classes-prevent-scrolling {
+  .u-prevent-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+}

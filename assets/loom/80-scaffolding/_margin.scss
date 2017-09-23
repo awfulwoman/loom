@@ -2,9 +2,9 @@
 ///
 /// By default uses global setting.
 /// @group 80-utilities
-$LOOM-use-utility-classes-margin: $LOOM-use-utility-classes !default;
+$LOOM-use-scaffolding-classes-margin: $LOOM-use-scaffolding-classes !default;
 
-@if $LOOM-use-utility-classes-margin {
+@if $LOOM-use-scaffolding-classes-margin {
   // Margins for each spacing unit and position.
 
   // Margins for each breakpoint

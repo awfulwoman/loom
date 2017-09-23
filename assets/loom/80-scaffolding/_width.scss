@@ -2,9 +2,9 @@
 ///
 /// By default uses global setting.
 /// @group 80-utilities
-$LOOM-use-utility-classes-width: $LOOM-use-utility-classes !default;
+$LOOM-use-scaffolding-classes-width: $LOOM-use-scaffolding-classes !default;
 
-@if $LOOM-use-utility-classes-width {
+@if $LOOM-use-scaffolding-classes-width {
   .u-width-full {
     width: 100%;
   }

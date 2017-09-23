@@ -4,32 +4,7 @@
 /// @group 60-objects
 $LOOM-use-object-classes-fixed-ratio: $LOOM-use-object-classes !default;
 
-@mixin fixed-ratio($ratio-percentage-a: 16, $ratio-percentage-b: 9) {
-  $calculated-ratio: percentage($ratio-percentage-b / $ratio-percentage-a);
 
-  display: block;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-
-  &::before {
-    content: '';
-    display: block;
-    padding-top: $calculated-ratio;
-  }
-}
-
-@mixin fixed-ratio__inner($distance: 0) {
-  bottom: $distance;
-  display: block;
-  height: auto;
-  left: $distance;
-  min-height: 100%;
-  position: absolute;
-  right: $distance;
-  top: $distance;
-  width: 100%;
-}
 
 @if $LOOM-use-object-classes-fixed-ratio {
   .o-fixed-ratio {

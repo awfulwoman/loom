@@ -4,14 +4,6 @@
 /// @group 60-objects
 $LOOM-use-object-classes-absolute-cover: $LOOM-use-object-classes !default;
 
-@mixin absolute-cover($distance: 0) {
-  bottom: $distance;
-  left: $distance;
-  position: absolute;
-  right: $distance;
-  top: $distance;
-}
-
 @if $LOOM-use-object-classes-absolute-cover {
   .o-absolute-cover {
     @include absolute-cover();

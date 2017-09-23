@@ -4,22 +4,6 @@
 /// @group 60-objects
 $LOOM-use-object-classes-media: $LOOM-use-object-classes !default;
 
-@mixin media() {
-  @include clearfix();
-
-  display: block;
-}
-
-@mixin media__primary($spacing: get-spacing(xsmall)) {
-  float: left;
-  margin-right: $spacing;
-}
-
-@mixin media__secondary() {
-  display: block;
-  overflow: hidden;
-}
-
 @if $LOOM-use-object-classes-media {
   .o-media {
     @include media();

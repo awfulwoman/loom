@@ -12,11 +12,5 @@
 //
 // .c-example__title {
 //   @include generic-heading();
-//   @include font-size(alpha);
+//   @include font-size('alpha');
 // }
-
-@include mq($from: large) {
-  body {
-    // background-color: pink !important;
-  }
-}

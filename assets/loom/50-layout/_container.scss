@@ -1,0 +1,11 @@
+/// Toggle container class generation.
+///
+/// By default uses global setting.
+/// @group 50-layout
+$LOOM-use-layout-classes-container: $LOOM-use-layout-classes !default;
+
+@if $LOOM-use-layout-classes-container {
+  .l-container {
+    @include container();
+  }
+}

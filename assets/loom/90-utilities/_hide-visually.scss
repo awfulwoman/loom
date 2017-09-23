@@ -1,0 +1,14 @@
+/// Toggle hide-visually class generation.
+///
+/// By default uses global setting.
+/// @group 60-objects
+$LOOM-use-utility-classes-hide-visually: $LOOM-use-utility-classes !default;
+
+
+
+// Classes
+@if $LOOM-use-utility-classes-hide-visually {
+  .o-hide-visually {
+    @include hide-visually();
+  }
+}

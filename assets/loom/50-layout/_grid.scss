@@ -1,42 +1,51 @@
 $LOOM-grid-gutter-value: $LOOM-grid-gutter !default;
 
-.l-grid {
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: -$LOOM-grid-gutter-value;
-  margin-right: -$LOOM-grid-gutter-value;
-}
 
-.l-grid--reverse {
-  flex-direction: row-reverse;
-}
+/// Toggle container class generation.
+///
+/// By default uses global setting.
+/// @group 50-layout
+$LOOM-use-layout-classes-grid: $LOOM-use-layout-classes !default;
 
-.l-grid--align-items-center {
-  align-items: center;
-}
+@if $LOOM-use-layout-classes-grid {
+  .l-grid {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -$LOOM-grid-gutter-value;
+    margin-right: -$LOOM-grid-gutter-value;
+  }
 
-.l-grid__item {
-  padding-left: $LOOM-grid-gutter-value;
-  padding-right: $LOOM-grid-gutter-value;
-  width: 100%;
-}
+  .l-grid--reverse {
+    flex-direction: row-reverse;
+  }
 
-@include grid-columns($LOOM-grid-columns);
+  .l-grid--align-items-center {
+    align-items: center;
+  }
 
-@if variable-exists(LOOM-grid-breakpoints) {
-  @each $grid-breakpoint-alias in $LOOM-grid-breakpoints {
-    $breakpoint-condition: map-get($LOOM-mq-breakpoints, $grid-breakpoint-alias);
+  .l-grid__item {
+    padding-left: $LOOM-grid-gutter-value;
+    padding-right: $LOOM-grid-gutter-value;
+    width: 100%;
+  }
 
-    @if ($breakpoint-condition) {
-      @include mq($from: $grid-breakpoint-alias) {
-        @each $i in $LOOM-grid-columns-responsive {
-          @include grid-columns($i, \@#{$grid-breakpoint-alias});
+  @include grid-columns($LOOM-grid-columns);
+
+  @if variable-exists(LOOM-grid-breakpoints) {
+    @each $grid-breakpoint-alias in $LOOM-grid-breakpoints {
+      $breakpoint-condition: map-get($LOOM-mq-breakpoints, $grid-breakpoint-alias);
+
+      @if ($breakpoint-condition) {
+        @include mq($from: $grid-breakpoint-alias) {
+          @each $i in $LOOM-grid-columns-responsive {
+            @include grid-columns($i, \@#{$grid-breakpoint-alias});
+          }
         }
+      } @else { // stylelint-disable-line
+        @error "It looks like ‘#{$grid-breakpoint-alias}’ does not exist in $LOOM-grid-breakpoints.";
       }
-    } @else { // stylelint-disable-line
-      @error "It looks like ‘#{$grid-breakpoint-alias}’ does not exist in $LOOM-grid-breakpoints.";
     }
   }
 }

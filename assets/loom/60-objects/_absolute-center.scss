@@ -4,13 +4,6 @@
 /// @group 60-objects
 $LOOM-use-object-classes-absolute-center: $LOOM-use-object-classes !default;
 
-@mixin absolute-center {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @if $LOOM-use-object-classes-absolute-center {
   .o-absolute-center {
     @include absolute-center;

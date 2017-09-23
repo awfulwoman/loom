@@ -1,0 +1,8 @@
+$LOOM-use-utility-classes-hide: $LOOM-use-utility-classes !default;
+
+// Classes
+@if $LOOM-use-utility-classes-hide {
+  .u-hide {
+    display: none;
+  }
+}

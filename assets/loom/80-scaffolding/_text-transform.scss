@@ -2,9 +2,9 @@
 ///
 /// By default uses global setting.
 /// @group 80-utilities
-$LOOM-use-utility-classes-text-transform: $LOOM-use-utility-classes !default;
+$LOOM-use-scaffolding-classes-text-transform: $LOOM-use-scaffolding-classes !default;
 
-@if $LOOM-use-utility-classes-text-transform {
+@if $LOOM-use-scaffolding-classes-text-transform {
   .u-text-transform-uppercase {
     text-transform: uppercase;
   }

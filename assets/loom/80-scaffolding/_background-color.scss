@@ -2,9 +2,9 @@
 ///
 /// By default uses global setting.
 /// @group 80-utilities
-$LOOM-use-utility-classes-background-color: $LOOM-use-utility-classes !default;
+$LOOM-use-scaffolding-classes-background-color: $LOOM-use-scaffolding-classes !default;
 
-@if $LOOM-use-utility-classes-background-color {
+@if $LOOM-use-scaffolding-classes-background-color {
   @each $color-name, $color-value in $LOOM-colors {
     .o-background-color-#{$color-name} {
       background-color: $color-value;

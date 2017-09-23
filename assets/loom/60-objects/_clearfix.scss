@@ -4,13 +4,7 @@
 /// @group 60-objects
 $LOOM-use-object-classes-clearfix: $LOOM-use-object-classes !default;
 
-@mixin clearfix() {
-  &::after {
-    clear: both;
-    content: '';
-    display: block;
-  }
-}
+
 
 @if $LOOM-use-object-classes {
   .o-clearfix {
