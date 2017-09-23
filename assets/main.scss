@@ -14,7 +14,11 @@ the path as appropiate.
 // ----->  Add your own custom global settings below here!
 
 // ----->  Overrides of this layer's Loom variables go above here!
-@import 'loom/20-tools';
+@import 'loom/20-functions';
+// ----->  Add your own custom tools below here!
+
+// ----->  Overrides of this layer's Loom variables go above here!
+@import 'loom/25-mixins';
 // ----->  Add your own custom tools below here!
 
 // ----->  Overrides of this layer's Loom variables go above here!
@@ -42,5 +46,5 @@ the path as appropiate.
 // ----->  ADD YOUR OWN MODULES BELOW HERE!
 
 // ----->  Overrides of this layer's Loom variables go above here!
-@import 'loom/90-trumps';
+@import 'loom/100-overrides';
 // ----->  ADD YOUR OWN MODULES BELOW HERE!

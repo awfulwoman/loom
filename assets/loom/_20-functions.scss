@@ -1,0 +1,11 @@
+@import '20-functions/color';
+@import '20-functions/grid-columns';
+@import '20-functions/icons';
+@import '20-functions/misc';
+@import '20-functions/mq';
+@import '20-functions/spacing';
+@import '20-functions/transition';
+@import '20-functions/type-checking';
+@import '20-functions/typography';
+@import '20-functions/z-index';
+@import '20-functions/integrity-tests'; // import last, as it tests previous partials
