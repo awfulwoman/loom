@@ -8,7 +8,7 @@ $LOOM-use-scaffolding-classes-font-size: $LOOM-use-scaffolding-classes !default;
   // for each font size, generate a utility class.
 
   @each $key, $name in $LOOM-font-sizes {
-    .u-font-size-#{$key} {
+    .s-font-size-#{$key} {
       @include font-size($key, smaller-viewport);
     }
   }
@@ -16,7 +16,7 @@ $LOOM-use-scaffolding-classes-font-size: $LOOM-use-scaffolding-classes !default;
   // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
   @include mq($from: $LOOM-typography-breakpoint) {
     @each $key, $name in $LOOM-font-sizes {
-      .u-font-size-#{$key} {
+      .s-font-size-#{$key} {
         @include font-size($key, larger-viewport);
       }
     }

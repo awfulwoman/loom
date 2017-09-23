@@ -5,25 +5,25 @@
 $LOOM-use-scaffolding-classes-display: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-display {
-  .u-display-block {
+  .s-display-block {
     display: block;
   }
 
-  .u-display-inline {
+  .s-display-inline {
     display: inline;
   }
 
-  .u-display-inline-block {
+  .s-display-inline-block {
     display: inline-block;
   }
 
-  .u-display-none {
+  .s-display-none {
     display: none;
   }
 
   @each $key, $value in $LOOM-display-none-breakpoints {
     @include mq($key) {
-      .u-display-none\@#{$key} {
+      .s-display-none\@#{$key} {
         display: none;
       }
     }

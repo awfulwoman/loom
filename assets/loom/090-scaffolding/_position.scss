@@ -5,11 +5,11 @@
 $LOOM-use-scaffolding-classes-position: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-position {
-  .u-position-absolute {
+  .s-position-absolute {
     position: absolute;
   }
 
-  .u-position-relative {
+  .s-position-relative {
     position: relative;
   }
 }

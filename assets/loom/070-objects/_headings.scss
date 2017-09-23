@@ -4,8 +4,6 @@
 /// @group 070-objects
 $LOOM-use-object-classes-headings: $LOOM-use-object-classes !default;
 
-// NOTE: These are one of the only project objects not to define mixins in the source file. To consume header objects, use `@include font-size()`.
-
 // NOTE: The default heading list, `$LOOM-h-object-sizes`, is defined in `10-global-settings/typography`
 
 @if ($LOOM-use-object-classes-headings) {
@@ -14,15 +12,6 @@ $LOOM-use-object-classes-headings: $LOOM-use-object-classes !default;
   @each $name in $heading-list {
     .o-h-#{$name} {
       @include font-size($name, smaller-viewport);
-    }
-  }
-
-  // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typicall want small fonts on mobile. larger on desktop.
-  @include mq($from: $LOOM-typography-breakpoint) {
-    @each $name in $heading-list {
-      .o-h-#{$name} {
-        @include font-size($name, larger-viewport);
-      }
     }
   }
 }

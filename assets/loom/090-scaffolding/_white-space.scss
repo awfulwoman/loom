@@ -5,23 +5,23 @@
 $LOOM-use-scaffolding-classes-white-space: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-white-space {
-  .u-white-space-normal {
+  .s-white-space-normal {
     white-space: normal;
   }
 
-  .u-white-space-nowrap {
+  .s-white-space-nowrap {
     white-space: nowrap;
   }
 
-  .u-white-space-pre {
+  .s-white-space-pre {
     white-space: pre;
   }
 
-  .u-white-space-pre-wrap {
+  .s-white-space-pre-wrap {
     white-space: pre-wrap;
   }
 
-  .u-white-space-pre-line {
+  .s-white-space-pre-line {
     white-space: pre-line;
   }
 }

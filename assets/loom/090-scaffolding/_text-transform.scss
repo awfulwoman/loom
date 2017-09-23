@@ -5,15 +5,15 @@
 $LOOM-use-scaffolding-classes-text-transform: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-text-transform {
-  .u-text-transform-uppercase {
+  .s-text-transform-uppercase {
     text-transform: uppercase;
   }
 
-  .u-text-transform-lowercase {
+  .s-text-transform-lowercase {
     text-transform: lowercase;
   }
 
-  .u-text-transform-capitalize {
+  .s-text-transform-capitalize {
     text-transform: capitalize;
   }
 }

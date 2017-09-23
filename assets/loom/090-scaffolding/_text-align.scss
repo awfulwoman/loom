@@ -5,15 +5,15 @@
 $LOOM-use-scaffolding-classes-text-align: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-text-align {
-  .u-text-align-left {
+  .s-text-align-left {
     text-align: left;
   }
 
-  .u-text-align-right {
+  .s-text-align-right {
     text-align: right;
   }
 
-  .u-text-align-center {
+  .s-text-align-center {
     text-align: center;
   }
 }

@@ -7,7 +7,7 @@ $LOOM-use-scaffolding-classes-font-family: $LOOM-use-scaffolding-classes !defaul
 @if $LOOM-use-scaffolding-classes-font-family {
   // For each in the font-family list, generate a utility class here.
   @each $key, $name in $LOOM-fonts {
-    .u-font-family-#{$key} {
+    .s-font-family-#{$key} {
       font-family: get-font-family($key);
 
       @if $LOOM-fonts-loaded {

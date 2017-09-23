@@ -6,7 +6,7 @@ $LOOM-use-utility-classes-hide-visually: $LOOM-use-utility-classes !default;
 
 
 @if $LOOM-use-utility-classes-hide-visually {
-  .o-hide-visually {
+  .u-hide-visually {
     @include hide-visually();
   }
 }

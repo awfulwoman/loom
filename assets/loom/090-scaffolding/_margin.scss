@@ -9,23 +9,23 @@ $LOOM-use-scaffolding-classes-margin: $LOOM-use-scaffolding-classes !default;
 
   // Margins for each breakpoint
 
-  .u-margin-none {
+  .s-margin-none {
     margin: 0;
   }
 
   @each $position in (left, top, right, bottom) {
-    .u-margin-#{$position}-none {
+    .s-margin-#{$position}-none {
       margin-#{$position}: 0;
     }
   }
 
   @each $key, $value in $LOOM-spacing {
-    .u-margin-#{$key} {
+    .s-margin-#{$key} {
       margin: $value;
     }
 
     @each $position in (left, top, right, bottom) {
-      .u-margin-#{$position}-#{$key} {
+      .s-margin-#{$position}-#{$key} {
         margin-#{$position}: $value;
       }
     }

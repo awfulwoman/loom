@@ -5,11 +5,11 @@
 $LOOM-use-scaffolding-classes-font-style: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-font-style {
-  .u-font-style-italic {
+  .s-font-style-italic {
     font-style: $LOOM-font-style-italic;
   }
 
-  .u-font-style-normal {
+  .s-font-style-normal {
     font-style: $LOOM-font-style-normal;
   }
 }

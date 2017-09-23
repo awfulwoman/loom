@@ -4,8 +4,6 @@
 /// @group 070-objects
 $LOOM-use-object-classes-fixed-ratio: $LOOM-use-object-classes !default;
 
-
-
 @if $LOOM-use-object-classes-fixed-ratio {
   .o-fixed-ratio {
     @include fixed-ratio();

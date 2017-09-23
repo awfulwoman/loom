@@ -8,23 +8,23 @@ $LOOM-use-scaffolding-classes-padding: $LOOM-use-scaffolding-classes !default;
   // Paddings for each spacing unit and position.
   // Paddings for each breakpoint
 
-  .u-padding-none {
+  .s-padding-none {
     padding: 0;
   }
 
   @each $position in (left, top, right, bottom) {
-    .u-padding-#{$position}-none {
+    .s-padding-#{$position}-none {
       padding-#{$position}: 0;
     }
   }
 
   @each $key, $value in $LOOM-spacing {
-    .u-padding-#{$key} {
+    .s-padding-#{$key} {
       padding: $value;
     }
 
     @each $position in (left, top, right, bottom) {
-      .u-padding-#{$position}-#{$key} {
+      .s-padding-#{$position}-#{$key} {
         padding-#{$position}: $value;
       }
     }

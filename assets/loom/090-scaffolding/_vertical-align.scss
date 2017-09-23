@@ -19,7 +19,7 @@ $LOOM-vertical-align: (
 
 @if $LOOM-use-scaffolding-classes-vertical-align {
   @each $item in $LOOM-vertical-align {
-    .u-vertical-align-#{$item} {
+    .s-vertical-align-#{$item} {
       vertical-align: $item;
     }
   }

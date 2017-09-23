@@ -5,11 +5,11 @@
 $LOOM-use-scaffolding-classes-font-weight: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-font-weight {
-  .u-font-weight-bold {
+  .s-font-weight-bold {
     font-weight: $LOOM-font-weight-bold;
   }
 
-  .u-font-weight-normal {
+  .s-font-weight-normal {
     font-weight: $LOOM-font-weight-normal;
   }
 }

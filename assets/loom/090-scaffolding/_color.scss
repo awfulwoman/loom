@@ -6,7 +6,7 @@ $LOOM-use-scaffolding-classes-color: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-color {
   @each $color-name, $color-value in $LOOM-colors {
-    .o-color-#{$color-name} {
+    .s-color-#{$color-name} {
       color: $color-value;
     }
   }

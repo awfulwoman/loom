@@ -4,8 +4,6 @@
 /// @group 070-objects
 $LOOM-use-object-classes-clearfix: $LOOM-use-object-classes !default;
 
-
-
 @if $LOOM-use-object-classes {
   .o-clearfix {
     @include clearfix();
