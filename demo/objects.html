@@ -22,28 +22,8 @@
 
   <section class="o-container">
     <header>
-      <h1>Example - Headings</h1>
+      <h1>Example - Buttons</h1>
     </header>
-
-    <p>Headings receive some light styling by default, but their styling can be removed comletely by flipping the <code class="u-display-inline">$LOOM-generate-sizes-for-base-headings</code> variable. </p>
-    <p>This is useful if you want to add styling manually and retain HTML headings for their semantic value.</p>
-
-
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
-
-
-    <p>Vidit assum prompta mel ex. <a href="http://google.com">Nec lorem volumus detraxit te</a>. Movet dolor quaerendum id eam, no quo ocurreret vulputate. Te quo facer graeci, at est mediocrem evertitur constituam, tempor impedit officiis mei in.</p>
-
-    <p>Dicit similique expetendis mea in, ei mel eleifend dissentiet, epicuri assueverit vim an. Viris maiorum postulant cu sit, mel cu habeo recusabo. Ius liber quaestio at, nam eu stet placerat oporteat. Eos eu dissentias contentiones, nemore feugiat eu
-      qui. Harum dolore vim at, vulputate consectetuer sit et. Eum case eripuit interesset et, eam ad justo expetenda, usu enim quas dissentiet at.</p>
-
-    <p>Vel an solum debet, vis inani percipit ex, cum adhuc possit repudiare ei. Quis mazim mel cu, ei blandit phaedrum duo, accumsan suavitate urbanitas ex nam. Lobortis eleifend ad eum, his oratio nostrud sadipscing ei. Prima eligendi id eos, vel mandamus
-      assueverit ex, duo hinc sensibus ex.</p>
 
     <button class="o-button">
         <svg class="o-icon" width="472" height="472" viewBox="0 0 472 472" xmlns="http://www.w3.org/2000/svg"><title>heart</title><path d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7l-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3 0-27.7 10.7-53.7 30.3-73.2 19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z" fill-rule="evenodd"/></svg>
@@ -57,126 +37,6 @@
     <h1 class="o-h1">Heading 1</h1>
     <p>Lorem ipsum dolor sit amet, sea purto epicuri at. Recusabo voluptaria at vim, magna prompta ne pro. Duis quaestio eu nec. Cum tacimates perpetua no, solet viderer duo ut.</p>
   </section>
-
-  <section class="o-container">
-    <h1>Example - Form items</h1>
-    <form id="register">
-
-      <fieldset>
-        <legend>Personal details</legend>
-        <div>
-          <label>First Name
-              <input id="given-name" name="given-name" type="text" placeholder="First name only" required="" autofocus="">
-      		</label>
-        </div>
-        <div>
-          <label>Last Name
-              <input id="family-name" name="family-name" type="text" placeholder="Last name only" required="" autofocus="">
-      		</label>
-        </div>
-        <div>
-          <label>Date of Birth
-              <input id="dob" name="dob" type="date" required="">
-      		</label>
-        </div>
-        <div>
-          <label>Email
-              <input id="email" name="email" type="email" placeholder="example@domain.com" required="">
-      		</label>
-        </div>
-        <div>
-          <label>URL
-              <input id="url" name="url" type="url" placeholder="http://mysite.com">
-      		</label>
-        </div>
-        <div>
-          <label>Telephone
-              <input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" required="">
-      		</label>
-        </div>
-        <div>
-          <label>Shoesize
-      		<input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
-      		</label>
-        </div>
-        <div>
-          <label>Flying Skill level (1 low - 100 high)
-      		<input id="skill" name="skill" type="range" min="1" max="100" value="0">
-      		<output name="output" onforminput="value=a.value">0</output>
-      		</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>Billing address</legend>
-        <div>
-          <label>Address
-              <textarea id="address" name="address" rows="5" required=""></textarea>
-      		</label>
-        </div>
-        <div>
-          <label>Post code
-              <input id="postCode" name="postCode" type="text" required="">
-      		</label>
-        </div>
-        <div>
-          <label>Country
-              <input id="country" name="country" list="country-names" type="text" required="">
-              <datalist id="country-names">
-              	<option label="England" value="England"></option>
-              	<option label="Northern Ireland" value="Northern Ireland"></option>
-              	<option label="Ireland" value="Ireland"></option>
-              	<option label="Scotland" value="Scotland"></option>
-              	<option label="Wales" value="Wales"></option>
-              </datalist>
-      		</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>Card details</legend>
-        <fieldset>
-          <legend>Card type</legend>
-          <div class="card-type">
-            <input id="visa" name="cardtype" type="radio">
-            <label for="visa">VISA</label>
-            <input id="mastercard" name="cardtype" type="radio">
-            <label for="mastercard">Mastercard</label>
-            <input id="amex" name="cardtype" type="radio">
-            <label for="amex">AMEX</label>
-          </div>
-        </fieldset>
-        <div>
-          <label>Name
-              <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required="">
-      		</label>
-        </div>
-        <div>
-          <label>Card number
-              <input id="cardNo" name="cardNo" type="number" required="" title="The sixteen digit number across the middle of your card.">
-      		</label>
-        </div>
-        <div>
-          <label>Security code
-              <input id="security" name="security" type="number" required="" pattern="[0-9]{3}" title="The last three digits on the back of your card.">
-      		</label>
-        </div>
-        <div>
-          <label>Expiry Date
-              <input id="expiry" name="expiry" type="month">
-      		</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <div>
-          <button type="submit">Place Order</button>
-        </div>
-      </fieldset>
-
-    </form>
-  </section>
-
 
   <section>
     <h1 class="o-h1">Grid system</h1>
