@@ -21,4 +21,4 @@ gulp.task('watch', function() {
   gulp.watch('./assets/loom/**/*.scss', ['sass', 'sassdoc']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['sass', 'sassdoc', 'watch']);
