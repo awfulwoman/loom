@@ -1,7 +1,7 @@
 /// Toggle media class generation.
 ///
 /// By default uses global setting.
-/// @group 70-objects
+/// @group 070-objects
 $LOOM-use-object-classes-media: $LOOM-use-object-classes !default;
 
 @if $LOOM-use-object-classes-media {
