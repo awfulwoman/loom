@@ -7,7 +7,7 @@ var sassdoc = require('sassdoc');
 gulp.task('sass', function () {
   return gulp.src('./assets/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('demo'));
 });
 
 gulp.task('sassdoc', function () {
