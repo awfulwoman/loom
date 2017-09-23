@@ -4,7 +4,7 @@ $LOOM-grid-gutter-value: $LOOM-grid-gutter !default;
 /// Toggle container class generation.
 ///
 /// By default uses global setting.
-/// @group 50-layout
+/// @group 60-layout
 $LOOM-use-layout-classes-grid: $LOOM-use-layout-classes !default;
 
 @if $LOOM-use-layout-classes-grid {

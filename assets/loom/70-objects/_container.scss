@@ -1,7 +1,7 @@
 /// Toggle container class generation.
 ///
 /// By default uses global setting.
-/// @group 60-objects
+/// @group 70-objects
 $LOOM-use-object-classes-container: $LOOM-use-object-classes !default;
 
 @if $LOOM-use-object-classes-container {

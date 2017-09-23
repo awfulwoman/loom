@@ -1,31 +1,31 @@
 /// Toggle button class generation.
 ///
 /// By default uses global setting.
-/// @group 60-objects
+/// @group 70-objects
 $LOOM-use-object-classes-button: $LOOM-use-object-classes !default;
 
 /// Default background-color for buttons
-/// @group 60-objects
+/// @group 70-objects
 $LOOM-button-background-color: $LOOM-color-light-gray !default;
 
 /// Default border-color for buttons
-/// @group 60-objects
+/// @group 70-objects
 $LOOM-button-border-color: transparent !default;
 
 /// Default color for buttons
-/// @group 60-objects
+/// @group 70-objects
 $LOOM-button-color: $LOOM-color-dark-gray !default;
 
 /// Default horizontal padding for buttons
-/// @group 60-objects
+/// @group 70-objects
 $LOOM-button-padding-horizontal: 1rem !default;
 
 /// Default horizontal padding for buttons
-/// @group 60-objects
+/// @group 70-objects
 $LOOM-button-padding-vertical: 0.5rem !default;
 
 /// Default line-height for buttons
-/// @group 60-objects
+/// @group 70-objects
 $LOOM-button-line-height: normal !default;
 
 /// This mixin creates a button, along with some basic styles.
@@ -41,7 +41,7 @@ $LOOM-button-line-height: normal !default;
 /// a project basis, so that new buttons can be generated without supplying
 /// project-specific arguments each time.
 ///
-/// @group 60-objects
+/// @group 70-objects
 /// @require $LOOM-button-background-color
 @mixin button(
   $color: $LOOM-button-color,
@@ -103,7 +103,7 @@ $LOOM-button-line-height: normal !default;
 /// Wrapping the text with this mixin allows icons to be inserted alongside the
 /// text and for them to align sensibly.
 ///
-/// @group 60-objects
+/// @group 70-objects
 @mixin button__inner() {
   display: inline-block;
   position: relative;
