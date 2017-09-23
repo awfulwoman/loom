@@ -4,7 +4,7 @@
 /// across team members. It will improve communication between
 /// stakeholders, designers, developers, and testers.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type map
 $LOOM-mq-breakpoints: (
   small:      320px,
@@ -14,9 +14,7 @@ $LOOM-mq-breakpoints: (
 ) !default;
 
 /// Customize the media type (e.g. `@media screen` or `@media print`)
-/// By default sass-mq uses an "all" media type (`@media all and …`)
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type String
-/// @link https://github.com/sass-mq/sass-mq#changing-media-type Full documentation and examples
 $LOOM-mq-media-type: all !default;

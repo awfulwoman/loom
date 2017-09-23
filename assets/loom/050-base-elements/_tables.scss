@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+  text-align: center;
+}
+
+td,
+th {
+  padding: get-spacing('xxsmall');
+}
+
+th {
+  background-color: get-color('black');
+  color: get-color('white');
+}

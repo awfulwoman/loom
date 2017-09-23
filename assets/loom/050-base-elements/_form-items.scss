@@ -1,17 +1,17 @@
 /// Default color for inputs
-/// @group 50-base-elements
-$LOOM-input-color: $LOOM-color-dark-gray !default;
+/// @group 050-base-elements
+$LOOM-input-color: $LOOM-color-black !default;
 
 /// Default color for inputs (placeholder text)
-/// @group 50-base-elements
-$LOOM-input-placeholder-color: $LOOM-color-medium-gray !default;
+/// @group 050-base-elements
+$LOOM-input-placeholder-color: lighter($LOOM-color-black, 50%) !default;
 
 /// Default color for borders
-/// @group 50-base-elements
-$LOOM-input-border-color: $LOOM-color-medium-gray !default;
+/// @group 050-base-elements
+$LOOM-input-border-color: $LOOM-color-black !default;
 
 /// Default padding for texty inputs
-/// @group 50-base-elements
+/// @group 050-base-elements
 $LOOM-input-padding: get-spacing(xsmall);
 
 input[type=text],

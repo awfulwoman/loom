@@ -1,3 +1,5 @@
+/// Clearfix
+/// @group 030-mixins
 @mixin clearfix() {
   &::after {
     clear: both;

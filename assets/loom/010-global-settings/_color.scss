@@ -2,7 +2,7 @@
 ///
 /// Retrieve theme colours defined here with get-color(name).
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type map
 /// @example scss - Using a colour map
 ///   $LOOM-colors-map-default: (
@@ -12,18 +12,6 @@
 ///     'black': #000,
 ///     'meta': #e4e4e4
 ///   )
-/// @example scss - Using a colour map with predfined variables
-///   $color-pink: #ed3d68;
-///   $color-green: #30bbba;
-///   $color-light-gray: #e4e4e4
-///
-///   $LOOM-colors-map-default: (
-///     'brand-primary': $color-pink,
-///     'brand-secondary': $color-green,
-///     'white': #fff,
-///     'black': #000,
-///     'meta': $color-light-gray
-///   )
 $LOOM-colors-map-default: (
   'black': #000,
   'white': #fff
@@ -31,7 +19,7 @@ $LOOM-colors-map-default: (
 
 /// Use your own colour map as the default global color list for use by the get-color() function.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-colors: $LOOM-colors-map-default !default;
 
 // LOOM COLORS
@@ -49,7 +37,7 @@ $LOOM-colors: $LOOM-colors-map-default !default;
 /// Provide a default colour for some Loom objects.
 ///
 /// @access private
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-color-black: #000 !default;
 
 /// Default color - white
@@ -57,7 +45,7 @@ $LOOM-color-black: #000 !default;
 /// Provide a default colour for some Loom objects.
 ///
 /// @access private
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-color-white: #fff !default;
 
 /// Default color - medium gray
@@ -65,7 +53,7 @@ $LOOM-color-white: #fff !default;
 /// Provide a default colour for some Loom objects.
 ///
 /// @access private
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-color-medium-gray: #999595 !default;
 
 /// Default color - dark gray
@@ -73,7 +61,7 @@ $LOOM-color-medium-gray: #999595 !default;
 /// Provide a default colour for some Loom objects.
 ///
 /// @access private
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-color-dark-gray: #444 !default;
 
 /// Default color - light gray
@@ -81,5 +69,5 @@ $LOOM-color-dark-gray: #444 !default;
 /// Provide a default colour for some Loom objects.
 ///
 /// @access private
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-color-light-gray: #e5e5e5 !default;

@@ -433,17 +433,17 @@ input[type=password],
 input[type=search],
 input[type=week],
 input[type=time] {
-  border: 1px solid #999595;
+  border: 1px solid #000;
   border-radius: 5px;
-  color: #444;
+  color: #000;
   padding: 0.5rem; }
 
 input::placeholder {
-  color: #999595; }
+  color: gray; }
 
 textarea {
-  border: 1px solid #999595;
-  color: #444;
+  border: 1px solid #000;
+  color: #000;
   padding: 0.5rem; }
 
 label {
@@ -454,92 +454,59 @@ img {
   max-width: 100%; }
 
 html {
-  background: #fff;
-  color: #000;
+  font-size: 18px;
+  line-height: 1.5; }
+  @media (min-width: 41.11111em) {
+    html {
+      font-size: 16px; } }
+
+body {
   font-family: sans-serif;
-  line-height: 1.5;
   font-size: 18px;
   font-size: 1rem; }
-  html.fonts-loaded {
+  .fonts-loaded body {
     font-family: sans-serif; }
+  @media (min-width: 41.11111em) {
+    body {
+      font-size: 16px;
+      font-size: 1rem; } }
 
-@media (min-width: 41.11111em) {
-  html {
-    font-size: 16px;
-    font-size: 1rem; } }
+strong {
+  font-weight: bold; }
 
-a {
-  color: initial;
-  transition: color 0.2s ease-in-out 0s; }
-  a:visited {
-    color: initial; }
-  a:hover, a:focus {
-    color: initial; }
+em {
+  font-weight: italic; }
 
-p {
-  margin: 0 0 0.5rem; }
+dt {
+  font-weight: bold; }
 
+address,
+blockquote,
+dl,
+fieldset,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  margin: 0 0; }
-  .fonts-loaded h1, .fonts-loaded
-  h2, .fonts-loaded
-  h3, .fonts-loaded
-  h4, .fonts-loaded
-  h5, .fonts-loaded
-  h6 {
-    font-family: serif; }
+h6,
+noscript,
+ol,
+pre,
+table,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
 
-h1 {
-  font-size: 36px;
-  font-size: 2rem; }
+table {
+  width: 100%;
+  text-align: center; }
 
-h2 {
-  font-size: 30px;
-  font-size: 1.66667rem; }
-
-h3 {
-  font-size: 26px;
-  font-size: 1.44444rem; }
-
-h4 {
-  font-size: 24px;
-  font-size: 1.33333rem; }
-
-h5 {
-  font-size: 22px;
-  font-size: 1.22222rem; }
-
-h6 {
-  font-size: 20px;
-  font-size: 1.11111rem; }
-
-@media (min-width: 41.11111em) {
-  h1 {
-    font-size: 32px;
-    font-size: 2rem; }
-  h2 {
-    font-size: 28px;
-    font-size: 1.75rem; }
-  h3 {
-    font-size: 24px;
-    font-size: 1.5rem; }
-  h4 {
-    font-size: 22px;
-    font-size: 1.375rem; }
-  h5 {
-    font-size: 20px;
-    font-size: 1.25rem; }
-  h6 {
-    font-size: 18px;
-    font-size: 1.125rem; } }
+th {
+  background-color: #000;
+  color: #fff; }
 
 .l-container {
   display: block;
@@ -549,7 +516,7 @@ h6 {
   max-width: 55rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  transition: padding 0.2s ease-in-out 0s;
+  transition: "padding" 0.2s ease-in-out 0s;
   width: 100%; }
   @media (min-width: 41.11111em) {
     .l-container {
@@ -778,46 +745,104 @@ h6 {
 .o-h-alpha {
   font-size: 36px;
   font-size: 2rem; }
+  @media (min-width: 41.11111em) {
+    .o-h-alpha {
+      font-size: 32px;
+      font-size: 2rem; } }
 
 .o-h-beta {
   font-size: 30px;
   font-size: 1.66667rem; }
+  @media (min-width: 41.11111em) {
+    .o-h-beta {
+      font-size: 28px;
+      font-size: 1.75rem; } }
 
 .o-h-gamma {
   font-size: 26px;
   font-size: 1.44444rem; }
+  @media (min-width: 41.11111em) {
+    .o-h-gamma {
+      font-size: 24px;
+      font-size: 1.5rem; } }
 
 .o-h-delta {
   font-size: 24px;
   font-size: 1.33333rem; }
+  @media (min-width: 41.11111em) {
+    .o-h-delta {
+      font-size: 22px;
+      font-size: 1.375rem; } }
 
 .o-h-epsilon {
   font-size: 22px;
   font-size: 1.22222rem; }
+  @media (min-width: 41.11111em) {
+    .o-h-epsilon {
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 .o-h-zeta {
   font-size: 20px;
   font-size: 1.11111rem; }
+  @media (min-width: 41.11111em) {
+    .o-h-zeta {
+      font-size: 18px;
+      font-size: 1.125rem; } }
 
 @media (min-width: 41.11111em) {
   .o-h-alpha {
     font-size: 32px;
-    font-size: 2rem; }
+    font-size: 2rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .o-h-alpha {
+      font-size: 32px;
+      font-size: 2rem; } }
+
+@media (min-width: 41.11111em) {
   .o-h-beta {
     font-size: 28px;
-    font-size: 1.75rem; }
+    font-size: 1.75rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .o-h-beta {
+      font-size: 28px;
+      font-size: 1.75rem; } }
+
+@media (min-width: 41.11111em) {
   .o-h-gamma {
     font-size: 24px;
-    font-size: 1.5rem; }
+    font-size: 1.5rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .o-h-gamma {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+@media (min-width: 41.11111em) {
   .o-h-delta {
     font-size: 22px;
-    font-size: 1.375rem; }
+    font-size: 1.375rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .o-h-delta {
+      font-size: 22px;
+      font-size: 1.375rem; } }
+
+@media (min-width: 41.11111em) {
   .o-h-epsilon {
     font-size: 20px;
-    font-size: 1.25rem; }
+    font-size: 1.25rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .o-h-epsilon {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+@media (min-width: 41.11111em) {
   .o-h-zeta {
     font-size: 18px;
     font-size: 1.125rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .o-h-zeta {
+      font-size: 18px;
+      font-size: 1.125rem; } }
 
 .o-list-reset {
   margin: 0;
@@ -835,26 +860,35 @@ h6 {
   width: 1em; }
 
 .o-button {
-  background-color: #e5e5e5;
+  background-color: #000;
+  color: #fff;
   border: 1px solid transparent;
   border-radius: 5px;
-  color: #444;
   cursor: pointer;
   display: inline-block;
   font: inherit;
   line-height: normal;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   text-align: center;
   text-decoration: none;
-  transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+  transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s, transform 0.2s ease-in-out 0s;
   user-select: none;
-  vertical-align: middle; }
+  vertical-align: middle;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: serif; }
+  .fonts-loaded .o-button {
+    font-family: serif; }
+  .o-button:link {
+    color: #fff; }
   .o-button:visited {
-    color: #444; }
+    color: #fff; }
   .o-button:hover, .o-button:focus {
-    background-color: #b2b2b2;
-    border-color: transparent;
-    color: #111111; }
+    background-color: #333333;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff; }
+  .o-button:active {
+    transform: scale(0.98); }
 
 .o-button__label {
   display: inline-block;
@@ -862,10 +896,10 @@ h6 {
   vertical-align: middle; }
 
 .o-button-icon {
-  background-color: #e5e5e5;
+  background-color: #000;
+  color: #fff;
   border: 1px solid transparent;
   border-radius: 50%;
-  color: #444;
   cursor: pointer;
   display: inline-block;
   font: inherit;
@@ -873,20 +907,29 @@ h6 {
   padding: 0.5rem 0.5rem;
   text-align: center;
   text-decoration: none;
-  transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+  transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s, transform 0.2s ease-in-out 0s;
   user-select: none;
-  vertical-align: middle; }
+  vertical-align: middle;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: serif; }
+  .fonts-loaded .o-button-icon {
+    font-family: serif; }
+  .o-button-icon:link {
+    color: #fff; }
   .o-button-icon:visited {
-    color: #444; }
+    color: #fff; }
   .o-button-icon:hover, .o-button-icon:focus {
-    background-color: #b2b2b2;
-    border-color: transparent;
-    color: #111111; }
+    background-color: #333333;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff; }
+  .o-button-icon:active {
+    transform: scale(0.98); }
 
 .o-absolute-center {
-  left: 50%;
   position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%); }
 
 .o-absolute-cover {
@@ -995,60 +1038,138 @@ h6 {
 .u-font-size-default {
   font-size: 18px;
   font-size: 1rem; }
+  @media (min-width: 41.11111em) {
+    .u-font-size-default {
+      font-size: 16px;
+      font-size: 1rem; } }
 
 .u-font-size-alpha {
   font-size: 36px;
   font-size: 2rem; }
+  @media (min-width: 41.11111em) {
+    .u-font-size-alpha {
+      font-size: 32px;
+      font-size: 2rem; } }
 
 .u-font-size-beta {
   font-size: 30px;
   font-size: 1.66667rem; }
+  @media (min-width: 41.11111em) {
+    .u-font-size-beta {
+      font-size: 28px;
+      font-size: 1.75rem; } }
 
 .u-font-size-gamma {
   font-size: 26px;
   font-size: 1.44444rem; }
+  @media (min-width: 41.11111em) {
+    .u-font-size-gamma {
+      font-size: 24px;
+      font-size: 1.5rem; } }
 
 .u-font-size-delta {
   font-size: 24px;
   font-size: 1.33333rem; }
+  @media (min-width: 41.11111em) {
+    .u-font-size-delta {
+      font-size: 22px;
+      font-size: 1.375rem; } }
 
 .u-font-size-epsilon {
   font-size: 22px;
   font-size: 1.22222rem; }
+  @media (min-width: 41.11111em) {
+    .u-font-size-epsilon {
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 .u-font-size-zeta {
   font-size: 20px;
   font-size: 1.11111rem; }
+  @media (min-width: 41.11111em) {
+    .u-font-size-zeta {
+      font-size: 18px;
+      font-size: 1.125rem; } }
 
 .u-font-size-sub {
   font-size: 14px;
   font-size: 0.77778rem; }
+  @media (min-width: 41.11111em) {
+    .u-font-size-sub {
+      font-size: 12px;
+      font-size: 0.75rem; } }
 
 @media (min-width: 41.11111em) {
   .u-font-size-default {
     font-size: 16px;
-    font-size: 1rem; }
+    font-size: 1rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .u-font-size-default {
+      font-size: 16px;
+      font-size: 1rem; } }
+
+@media (min-width: 41.11111em) {
   .u-font-size-alpha {
     font-size: 32px;
-    font-size: 2rem; }
+    font-size: 2rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .u-font-size-alpha {
+      font-size: 32px;
+      font-size: 2rem; } }
+
+@media (min-width: 41.11111em) {
   .u-font-size-beta {
     font-size: 28px;
-    font-size: 1.75rem; }
+    font-size: 1.75rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .u-font-size-beta {
+      font-size: 28px;
+      font-size: 1.75rem; } }
+
+@media (min-width: 41.11111em) {
   .u-font-size-gamma {
     font-size: 24px;
-    font-size: 1.5rem; }
+    font-size: 1.5rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .u-font-size-gamma {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+@media (min-width: 41.11111em) {
   .u-font-size-delta {
     font-size: 22px;
-    font-size: 1.375rem; }
+    font-size: 1.375rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .u-font-size-delta {
+      font-size: 22px;
+      font-size: 1.375rem; } }
+
+@media (min-width: 41.11111em) {
   .u-font-size-epsilon {
     font-size: 20px;
-    font-size: 1.25rem; }
+    font-size: 1.25rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .u-font-size-epsilon {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+@media (min-width: 41.11111em) {
   .u-font-size-zeta {
     font-size: 18px;
-    font-size: 1.125rem; }
+    font-size: 1.125rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .u-font-size-zeta {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+
+@media (min-width: 41.11111em) {
   .u-font-size-sub {
     font-size: 12px;
     font-size: 0.75rem; } }
+  @media (min-width: 41.11111em) and (min-width: 41.11111em) {
+    .u-font-size-sub {
+      font-size: 12px;
+      font-size: 0.75rem; } }
 
 .u-font-style-italic {
   font-style: italic; }

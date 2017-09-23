@@ -1,0 +1,17 @@
+/// Extract a breakpoint value from a map.
+///
+/// @group 020-functions
+/// @parameter {string} $color-name - The key name for a breakpoint key/value pair.
+/// @parameter {map} $color-list - A map of spacing key/value pairs to use. Defaults to $LOOM-mqbreakpoints.
+@function get-mqbreakpoint($breakpoint-name, $breakpoints-list: $LOOM-mq-breakpoints) {
+  @if map-has-key($breakpoints-list, $breakpoint-name) {
+    $output: map-get($breakpoints-list, $breakpoint-name);
+    @return $output;
+  }
+
+  @else {
+    @error "#{$breakpoint-name} is not in the LOOM breakpoint map.";
+
+    @return null;
+  }
+}

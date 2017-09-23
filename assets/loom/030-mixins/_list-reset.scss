@@ -1,7 +1,5 @@
-// LIST-RESET
-
-// Mixin
-// NOTE: Removes all padding, margin and list-style-type from a list.
+/// Removes all padding, margin and list-style-type from a list.
+/// @group 030-mixins
 @mixin list-reset($list-reset-spacing: true) {
   @if $list-reset-spacing {
     margin: 0;

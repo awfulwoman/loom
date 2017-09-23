@@ -1,28 +1,3 @@
-// Lovingly repurposed from https://github.com/sass-mq/sass-mq
-
-@charset "UTF-8";
-// Fixes an issue where Ruby locale is not set properly
-// See https://github.com/sass-mq/sass-mq/pull/10
-
-/// Get a breakpoint's width
-///
-/// @param {String} $name - Name of the breakpoint. One of $LOOM-mq-breakpoints
-///
-/// @example scss
-///  $tablet-width: get-breakpoint(tablet);
-///  @media (min-width: get-breakpoint(desktop)) {}
-///
-/// @requires {Variable} $LOOM-mq-breakpoints
-/// @group 20-tools
-/// @returns {Number} Value in pixels
-@function get-breakpoint($name, $breakpoints: $LOOM-mq-breakpoints) {
-  @if map-has-key($breakpoints, $name) {
-    @return map-get($breakpoints, $name);
-  } @else { // stylelint-disable-line
-    @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
-  }
-}
-
 /// Media Query mixin
 ///
 /// Lovingly repurposed from https://github.com/sass-mq/sass-mq
@@ -39,7 +14,7 @@
 /// @requires {Variable} $LOOM-mq-media-type
 /// @requires {Variable} $LOOM-mq-breakpoints
 /// @requires {function} convert-px-to-em
-/// @requires {function} get-breakpoint
+/// @requires {function} get-mqbreakpoint
 ///
 /// @example scss
 ///  .element {
@@ -62,7 +37,7 @@
 ///      color: hotpink;
 ///    }
 ///  }
-/// @group 20-tools
+/// @group 030-mixins
 @mixin mq(
   $from: false,
   $until: false,
@@ -79,7 +54,7 @@
     @if type-of($from) == number {
       $min-width: convert-px-to-em($from);
     } @else { // stylelint-disable-line
-      $min-width: convert-px-to-em(get-breakpoint($from, $breakpoints));
+      $min-width: convert-px-to-em(get-mqbreakpoint($from, $breakpoints));
     }
   }
 
@@ -88,7 +63,7 @@
     @if type-of($until) == number {
       $max-width: convert-px-to-em($until);
     } @else { // stylelint-disable-line
-      $max-width: convert-px-to-em(get-breakpoint($until, $breakpoints)) - 0.01em;
+      $max-width: convert-px-to-em(get-mqbreakpoint($until, $breakpoints)) - 0.01em;
     }
   }
 
@@ -107,20 +82,4 @@
   @media #{$media-type + $media-query} {
     @content;
   }
-}
-
-/// Add a breakpoint
-///
-/// @param {String} $name - Name of the breakpoint
-/// @param {Number} $width - Width of the breakpoint
-///
-/// @requires {Variable} $LOOM-mq-breakpoints
-///
-/// @example scss
-///  @include add-breakpoint(tvscreen, 1920px);
-///  @include mq(tvscreen) {}
-/// @group 20-tools
-@mixin add-breakpoint($name, $width) {
-  $new-breakpoint: ($name: $width);
-  $LOOM-mq-breakpoints: map-merge($LOOM-mq-breakpoints, $new-breakpoint) !global;
 }

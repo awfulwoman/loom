@@ -1,7 +1,7 @@
 /// Toggle margin class generation.
 ///
 /// By default uses global setting.
-/// @group 80-utilities
+/// @group 090-scaffolding
 $LOOM-use-scaffolding-classes-margin: $LOOM-use-scaffolding-classes !default;
 
 @if $LOOM-use-scaffolding-classes-margin {

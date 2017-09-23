@@ -1,6 +1,6 @@
 /// Retrieve a z-index value.
 ///
-/// @group 20-tools
+/// @group 020-functions
 /// @parameter {string} $layer - The name of a layer in $LOOM-z-layers
 /// @parameter {map} $z-layers - A map of z-index layers/integer values.
 @function get-z($layer, $z-layers: $LOOM-z-layers) {

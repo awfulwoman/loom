@@ -1,6 +1,6 @@
 /// Retrieve a spacing value.
 ///
-/// @group 20-tools
+/// @group 020-functions
 /// @parameter {string} $spacing-name - The key for a spacing pair. Defaults to "default".
 /// @parameter {map} $spacing-list - A map of spacing key/value pairs to use. Defaults to $LOOM-spacing.
 @function get-spacing($spacing-name: default, $spacing-list: $LOOM-spacing) {

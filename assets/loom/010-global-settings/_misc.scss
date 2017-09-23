@@ -1,42 +1,42 @@
 /// Will object mixins have their own classes generated?
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type boolean
 $LOOM-use-object-classes: true !default;
 
 /// Will utility modules have their own classes generated?
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type boolean
 $LOOM-use-utility-classes: true !default;
 
 /// Will scaffolding modules have their own classes generated?
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type boolean
 $LOOM-use-scaffolding-classes: true !default;
 
 /// Will layout modules have their own classes generated?
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type boolean
 $LOOM-use-layout-classes: true !default;
 
 /// The default border-radius for various objects.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type number
 $LOOM-border-radius: 5px !default;
 
 /// The default border-radius for circular objects.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type number
 $LOOM-border-radius-circle: 50% !default;
 
 /// The default z-index layers used by the get-z() function.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @see {function} get-z
 /// @type map
 $LOOM-z-layers: (
@@ -47,7 +47,7 @@ $LOOM-z-layers: (
 
 /// The default list of breakpoints that is used to generate display-none classes.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type list
 $LOOM-display-none-breakpoints: (
   'small',
@@ -56,33 +56,33 @@ $LOOM-display-none-breakpoints: (
 
 /// The default time that all animations takes to complete.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type time
 $LOOM-transition-duration: 0.2s !default;
 
 /// The default timing/easing function that all animations will use.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type string
 $LOOM-transition-timing-function: ease-in-out !default;
 
 /// Default numbe of columns inside a grid container.
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-grid-columns: (12) !default;
 
 /// Default numbe of columns inside a grid container when combined with breakpoints.
 ///
 /// By default this is the same as $LOOM-grid-columns.
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-grid-columns-responsive: $LOOM-grid-columns !default;
 
 /// Default gutter size for grid elements.
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-grid-gutter: 0.5rem !default;
 
 /// Breakpoints defined here will be used to generate breakpoints in the grid system.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-grid-breakpoints: (
   'small',
   'medium',
@@ -91,13 +91,13 @@ $LOOM-grid-breakpoints: (
 ) !default;
 
 /// Default border width.
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-border-width: 1px !default;
 
 /// Default border style
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-border-style: solid !default;
 
 /// Default width of single-column content
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-single-column-width: 55rem !default;

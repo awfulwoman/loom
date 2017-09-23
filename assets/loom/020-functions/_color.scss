@@ -1,25 +1,46 @@
 /// Extract a color value from a map.
 ///
-/// @group 20-tools
+/// @group 020-functions
 /// @parameter {string} $color-name - The key name for a colour key/value pair.
 /// @parameter {map} $color-list - A map of spacing key/value pairs to use. Defaults to $LOOM-colors.
 @function get-color($color-name, $color-list: $LOOM-colors) {
-  $color-name: inspect($color-name);  // Force value to a string, as if a key value happens to match a CSS colour value, it will be imported as a Sass colour, not a string, causing an error in map-get().
+  $color-name: $color-name + unquote("");  // Force value to a string, as if a key value happens to match a CSS colour value, it will be imported as a Sass colour, not a string, causing an error in map-get().
+
+  @if $color-name == "transparent" {
+    @return transparent;
+  }
 
   @if map-has-key($color-list, $color-name) {
-
     $output: map-get($color-list, $color-name);
 
     @if type-of($output) != color {
-      @error "#{$color-name} could not be found in the global colour list.";
+      @error "#{$color-name} did not return a valid color value.";
     }
 
     @return $output;
   }
 
   @else {
-    @warn "#{$color-name} is not in the global colour map.";
+    @error "#{$color-name} is not in the global colour map.";
 
     @return null;
   }
+}
+
+/// Lighten a color
+/// @group 020-functions
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function lighter($color, $percentage: 20%) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Darken a color
+/// @group 020-functions
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function darker($color, $percentage: 20%) {
+  @return mix(black, $color, $percentage);
 }

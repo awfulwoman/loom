@@ -1,9 +1,25 @@
-$LOOM-container-padding: get-spacing(default) !default;
-$LOOM-container-padding-larger:get-spacing(default) !default;
-$LOOM-container-margin: get-spacing(default) !default;
-$LOOM-container-breakpoint: medium !default;
-$LOOM-container-transition: get-transition(padding) !default;
+/// TODO Fix this
+/// @group 030-mixins
+$LOOM-container-padding: get-spacing('default') !default;
 
+/// TODO Fix this
+/// @group 030-mixins
+$LOOM-container-padding-larger:get-spacing('default') !default;
+
+/// TODO Fix this
+/// @group 030-mixins
+$LOOM-container-margin: get-spacing('default') !default;
+
+/// TODO Fix this
+/// @group 030-mixins
+$LOOM-container-breakpoint: get-mqbreakpoint('medium') !default;
+
+/// TODO Fix this
+/// @group 030-mixins
+$LOOM-container-transition: get-transition('padding') !default;
+
+/// TODO Fix this
+/// @group 030-mixins
 @mixin container(
   $max-width: $LOOM-single-column-width,
   $padding-horizontal: $LOOM-container-padding,

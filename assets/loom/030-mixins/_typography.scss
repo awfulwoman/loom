@@ -1,0 +1,87 @@
+/// Does not include margins or font weights. Set those yourself, or with
+/// generic-heading() or similar mixins.
+///
+/// By default it will grab the "smaller viewport" version of the font-size.
+/// @group 030-mixins
+/// @see generic-heading
+@mixin font-size($size-name, $size-browser-context: 'smaller-viewport', $rems: true) {
+  $font-size: null;
+  $size-name: $size-name + unquote("");
+
+  $font-size: get-font-size($size-name, $size-browser-context);
+  $font-size-context: get-font-size($LOOM-font-size-base, $size-browser-context);
+
+  font-size: $font-size; // NOTE: Fallback to size in pixels
+  @if $rems {
+    font-size: convert-px-to-rem($font-size, $font-size-context); // stylelint-disable-line declaration-block-no-duplicate-properties
+  }
+
+  @include mq(get-mqbreakpoint($LOOM-typography-breakpoint)) {
+    $size-browser-context: 'larger-viewport';
+
+    $font-size: get-font-size($size-name, $size-browser-context);
+    $font-size-context: get-font-size($LOOM-font-size-base, $size-browser-context);
+
+    font-size: $font-size; // NOTE: Fallback to size in pixels
+    @if $rems {
+      font-size: convert-px-to-rem($font-size, $font-size-context); // stylelint-disable-line declaration-block-no-duplicate-properties
+    }
+  }
+}
+
+
+/// Set the font-family, applying default and webfont stacks for both.
+/// Incorporates a webfont-loader by default.
+///
+/// @group 030-mixins
+@mixin font-family(
+  $font-name,
+  $use-webfont: if($LOOM-fonts-loaded, true, false)
+) {
+  font-family: get-font-family($font-name);
+
+  @if $use-webfont {
+    .#{$LOOM-fonts-loaded} & {
+      font-family: get-font-family($font-name, webfont);
+    }
+  }
+}
+
+
+/// Output styling for a generic heading.
+///
+/// A heading typically has some margin below it and is in bolder text.
+///
+/// Combine with the font-size() mixin to get sizing.
+///
+/// @group 030-mixins
+/// @example scss
+///   .o-h1 {
+///     @include generic-heading();
+///   }
+@mixin generic-heading (
+  $margin-size: $LOOM-typography-vertical-spacing,
+  $font: $LOOM-font-family-header,
+  $font-weight: $LOOM-font-weight-bold
+) {
+  font-weight: $font-weight;
+  text-rendering: optimizeLegibility;
+
+  @if $margin-size == 0 or $margin-size == none {
+    margin: 0;
+  }
+
+  @else {
+    margin: 0 0 get-spacing($margin-size);
+  }
+
+  @include font-family($font);
+}
+
+/// Add a standard way of handling vertical spacing for all block-level visual elements
+///
+/// @group 030-mixins
+@mixin basic-vertical-rhythm {
+  margin-top: 0;
+  margin-bottom: get-spacing('small');
+}

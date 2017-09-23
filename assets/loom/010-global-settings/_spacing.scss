@@ -1,6 +1,6 @@
 /// Global list of sizing units.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-spacing-map-default: (
   'xsmall':     0.5rem,
   'small':      1rem,
@@ -12,11 +12,11 @@ $LOOM-spacing-map-default: (
 /// Change this to your own map os spacing units if you wish.
 /// Whatever is defined here will be used by many functions as a default
 /// source of data.
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-spacing: $LOOM-spacing-map-default !default;
 
 /// The default value for the global spacing list.
 ///
 /// Used by many functions as a default value.
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-spacing-default: default !default;

@@ -4,114 +4,6 @@
 /// @group 070-objects
 $LOOM-use-object-classes-button: $LOOM-use-object-classes !default;
 
-/// Default background-color for buttons
-/// @group 070-objects
-$LOOM-button-background-color: $LOOM-color-light-gray !default;
-
-/// Default border-color for buttons
-/// @group 070-objects
-$LOOM-button-border-color: transparent !default;
-
-/// Default color for buttons
-/// @group 070-objects
-$LOOM-button-color: $LOOM-color-dark-gray !default;
-
-/// Default horizontal padding for buttons
-/// @group 070-objects
-$LOOM-button-padding-horizontal: 1rem !default;
-
-/// Default horizontal padding for buttons
-/// @group 070-objects
-$LOOM-button-padding-vertical: 0.5rem !default;
-
-/// Default line-height for buttons
-/// @group 070-objects
-$LOOM-button-line-height: normal !default;
-
-/// This mixin creates a button, along with some basic styles.
-///
-/// It has several arguments, each with basic defaults, that can be used to
-/// customise the button to your needs.
-///
-/// By default the hover state of a button is a slight darkening of the
-/// background-color, color and border-color. If this is not appropiate then
-/// all the hover colours can be overridden.
-///
-/// The defaults for the arguments (the default defaults) can be overridden on
-/// a project basis, so that new buttons can be generated without supplying
-/// project-specific arguments each time.
-///
-/// @group 070-objects
-/// @require $LOOM-button-background-color
-@mixin button(
-  $color: $LOOM-button-color,
-  $background-color: $LOOM-button-background-color,
-  $border-color: $LOOM-button-border-color,
-  $border-thickness: $LOOM-border-width,
-  $border-radius: $LOOM-border-radius,
-  $background-color-hover: null,
-  $border-color-hover: null,
-  $color-hover: null,
-  $padding-horizontal: $LOOM-button-padding-horizontal,
-  $padding-vertical: $LOOM-button-padding-vertical,
-  $line-height: normal
-) {
-  background-color: $background-color;
-  border: $border-thickness solid $border-color;
-  border-radius: $border-radius;
-  color: $color;
-  cursor: pointer;
-  display: inline-block;
-  font: inherit;
-  line-height: $line-height;
-  padding: $padding-vertical $padding-horizontal;
-  text-align: center;
-  text-decoration: none;
-  transition: get-transition(color), get-transition(background-color);
-  user-select: none;
-  vertical-align: middle;
-
-  &:visited {
-    color: $color;
-  }
-
-  &:hover,
-  &:focus {
-    // NOTE: Oh, these are horribly ugly. So sorry. I could have made it a ternary operator, but that involved extra variable to store stuff. Look, I'm sorry, okay?
-    @if ($background-color-hover != null) {
-      background-color: $background-color-hover;
-    } @else { // stylelint-disable-line
-      background-color: darken($background-color, 20%);
-    }
-
-    @if ($border-color-hover != null) {
-      border-color: $border-color-hover;
-    } @else { // stylelint-disable-line
-      border-color: darken($border-color, 20%);
-    }
-
-    @if ($color-hover != null) {
-      color: $color-hover;
-    } @else { // stylelint-disable-line
-      color: darken($color, 20%);
-    }
-  }
-}
-
-/// An optional wrapper for the text inside a button.
-///
-/// Wrapping the text with this mixin allows icons to be inserted alongside the
-/// text and for them to align sensibly.
-///
-/// @group 070-objects
-@mixin button__inner() {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-}
-
-// Optional class implementations of the above mixins.
-
 @if $LOOM-use-object-classes-button {
   .o-button {
     @include button();
@@ -125,8 +17,8 @@ $LOOM-button-line-height: normal !default;
   .o-button-icon {
     @include button(
       $border-radius: $LOOM-border-radius-circle,
-      $padding-horizontal: get-spacing(xsmall),
-      $padding-vertical: get-spacing(xsmall),
+      $padding-horizontal: get-spacing('xsmall'),
+      $padding-vertical: get-spacing('xsmall'),
       $line-height: 1
     );
   }

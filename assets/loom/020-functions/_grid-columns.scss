@@ -1,6 +1,6 @@
 /// Generate grid columns. The column widths will be calculated automatically.
 ///
-/// @group 20-tools
+/// @group 020-functions
 /// @parameter {number} $columns - The number of columns to generate.
 /// @parameter {string} $breakpoint - If defined, each column will have this breakpoint name appended at the end.
 @mixin grid-columns($columns, $breakpoint: null) {

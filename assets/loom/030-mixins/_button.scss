@@ -1,0 +1,128 @@
+/// Default background-color for buttons
+/// @group 030-mixins
+$LOOM-button-background-color: get-color('black');
+
+/// Default border-color for buttons
+/// @group 030-mixins
+$LOOM-button-border-color: transparent;
+
+/// Default color for buttons
+/// @group 030-mixins
+$LOOM-button-color: get-color('white');
+
+/// Default horizontal padding for buttons
+/// @group 030-mixins
+$LOOM-button-padding-horizontal: get-spacing('medium');
+
+/// Default horizontal padding for buttons
+/// @group 030-mixins
+$LOOM-button-padding-vertical: get-spacing('xsmall');
+
+/// Default line-height for buttons
+/// @group 030-mixins
+$LOOM-button-line-height: normal;
+
+/// Border radius
+/// @group 030-mixins
+$LOOM-button-border-radius: 5px;
+
+/// Button transitions
+/// @group 030-mixins
+$LOOM-button-transitions: get-transition(color), get-transition(background-color), get-transition(background), get-transition(transform);
+
+$LOOM-button-font-family: 'secondary';
+
+$LOOM-button-scale-factor: 0.98;
+
+
+/// This mixin creates a button, along with some basic styles.
+///
+/// It has several arguments, each with basic defaults, that can be used to
+/// customise the button to your needs.
+///
+/// By default the hover state of a button is a slight darkening of the
+/// background-color, color and border-color. If this is not appropiate then
+/// all the hover colours can be overridden.
+///
+/// @group 030-mixins
+/// @require $LOOM-button-background-color
+@mixin button(
+  $color: $LOOM-button-color,
+  $background-color: $LOOM-button-background-color,
+  $border-color: $LOOM-button-border-color,
+  $border-thickness: $LOOM-border-width,
+  $border-radius: $LOOM-button-border-radius,
+  $background-color-hover: null,
+  $border-color-hover: null,
+  $color-hover: null,
+  $font-family: $LOOM-button-font-family,
+  $padding-horizontal: $LOOM-button-padding-horizontal,
+  $padding-vertical: $LOOM-button-padding-vertical,
+  $line-height: normal,
+  $transitions: $LOOM-button-transitions,
+  $active-scale: $LOOM-button-scale-factor
+) {
+  background-color: $background-color;
+  color: $color;
+  border: $border-thickness solid $border-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  line-height: $line-height;
+  padding: $padding-vertical $padding-horizontal;
+  text-align: center;
+  text-decoration: none;
+  transition: $transitions;
+  user-select: none;
+  vertical-align: middle;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include font-family($LOOM-button-font-family);
+
+  &:link {
+    color: $color;
+  }
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover,
+  &:focus {
+
+    @if ($background-color-hover != null) {
+      background-color: $background-color-hover;
+    } @else { // stylelint-disable-line
+      background-color: lighter($background-color, 20%);
+    }
+
+    @if ($border-color-hover != null) {
+      border-color: $border-color-hover;
+    } @else { // stylelint-disable-line
+      border-color: lighter($border-color, 20%);
+    }
+
+    @if ($color-hover != null) {
+      color: $color-hover;
+    } @else { // stylelint-disable-line
+      color: $color;
+    }
+  }
+
+  &:active {
+    transform: scale($active-scale);
+  }
+}
+
+/// An optional wrapper for the text inside a button.
+///
+/// Style internal elements with this mixin. This allows items such as button and text to sensibly align.
+///
+/// @group 030-mixins
+@mixin button__inner() {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}

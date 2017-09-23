@@ -3,7 +3,7 @@
 ///
 /// Fonts are called using get-font-family().
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type map
 /// @example scss - Get fonts example
 ///   .class {
@@ -22,34 +22,34 @@ $LOOM-font-family-map-default: (
 
 /// Tell loom which font is used for base body text by default. It should
 /// match one of the values in $LOOM-fonts.
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @require $LOOM-fonts
 $LOOM-font-family-body: primary !default;
 
 /// Tell loom which font is used for headings by default. It should match one
 /// of the values in $LOOM-fonts.
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @require $LOOM-fonts
 $LOOM-font-family-header: secondary !default;
 
 /// Use your own font map as the default global font list for use by the
 /// get-font-family() function.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-fonts: $LOOM-font-family-map-default !default;
 
 /// The classname name to use to place loaded webfonts behind.
 ///
 /// If set to 'false' webfont strategies in Loom will be disabled.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type string | boolean
 /// @link https://fontfaceobserver.com/ See examples of how to use with Fontfaceobserver
 $LOOM-fonts-loaded: 'fonts-loaded' !default;
 
 /// Set the default line-height.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type number
 $LOOM-line-height: 1.5 !default;
 
@@ -62,7 +62,7 @@ $LOOM-line-height: 1.5 !default;
 ///
 /// Fonts are called using get-font-size().
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type map
 $LOOM-font-sizes: (
   'default': (
@@ -100,13 +100,13 @@ $LOOM-font-sizes: (
 ) !default;
 
 /// Tell loom which font size is the default size.
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @require $LOOM-font-sizes
 $LOOM-font-size-base: default !default;
 
 /// Base HTML headings receive the following sizes.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type map
 $LOOM-h-element-sizes: (
   'h1': 'alpha',
@@ -121,7 +121,7 @@ $LOOM-h-element-sizes: (
 /// as "traditional" headings. If FALSE, base headings will receive the same
 /// sizing and styling as the body text.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type boolean
 $LOOM-generate-sizes-for-default-headings: true !default;
 
@@ -130,7 +130,7 @@ $LOOM-generate-sizes-for-default-headings: true !default;
 ///
 /// Objects be also consumed directly with '@include font-size($name)';
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type list
 $LOOM-h-object-sizes: (
   'alpha',
@@ -146,7 +146,7 @@ $LOOM-h-object-sizes: (
 ///
 /// Must match one of the breakpoints in $LOOM-mq-breakpoints.
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type string
 /// @see $LOOM-mq-breakpoints
 $LOOM-typography-breakpoint: medium !default;
@@ -154,29 +154,29 @@ $LOOM-typography-breakpoint: medium !default;
 /// The default vertical spacing value in typography.
 ///
 /// Intended to be overridden by user choices.
-/// @group 10-global-settings
+/// @group 010-global-settings
 $LOOM-typography-vertical-spacing: 0.5rem !default;
 
 /// Set the default bold weight value
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type string
 $LOOM-font-weight-bold: bold !default;
 
 /// Set the default normal weight value
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type string
 $LOOM-font-weight-normal: normal !default;
 
 /// Set the default italic style value
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type string
 $LOOM-font-style-italic: italic !default;
 
 /// Set the default normal style value
 ///
-/// @group 10-global-settings
+/// @group 010-global-settings
 /// @type string
 $LOOM-font-style-normal: normal !default;

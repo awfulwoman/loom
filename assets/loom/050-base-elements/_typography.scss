@@ -1,111 +1,43 @@
-/// Default color for the html root
-/// @group 50-base-elements
-$LOOM-html-color: $LOOM-color-black !default;
-
-/// Default background color for the html root
-/// @group 50-base-elements
-$LOOM-html-background-color: $LOOM-color-white !default;
-
-/// Default link color
-/// @group 50-base-elements
-$LOOM-a-color: initial !default;
-
-/// Default link color, visited
-/// @group 50-base-elements
-$LOOM-a-color-visited: initial !default;
-
-/// Default link color, hover and focus
-/// @group 50-base-elements
-$LOOM-a-color-hoverfocus: initial !default;
-
 html {
-  background: $LOOM-html-background-color;
-  color: $LOOM-html-color;
-  font-family: get-font-family($LOOM-font-family-body);
-  line-height: $LOOM-line-height;
-
-  @include font-size($LOOM-font-size-base, smaller-viewport);
-
-  @if $LOOM-fonts-loaded {
-    &.#{$LOOM-fonts-loaded} { // NOTE: make use of a font loading system here
-      font-family: get-font-family($LOOM-font-family-body, webfont);
-    }
-  }
+  @include font-size($size-name: default, $rems: false);
+  line-height: 1.5;
 }
 
-// At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
-@include mq($from: $LOOM-typography-breakpoint) {
-  html {
-    @include font-size($LOOM-font-size-base, larger-viewport);
-  }
+body {
+  @include font-family('primary');
+  @include font-size('default');
 }
 
-a {
-  color: $LOOM-a-color;
-  transition: get-transition(color);
-
-  &:visited {
-    color: $LOOM-a-color-visited;
-  }
-
-  &:hover,
-  &:focus {
-    color: $LOOM-a-color-hoverfocus;
-  }
+strong {
+  font-weight: $LOOM-font-weight-bold;
 }
 
+em {
+  font-weight: $LOOM-font-style-italic;
+}
+
+dt {
+  font-weight: $LOOM-font-weight-bold;
+}
+
+
+// Vertical rhythm for all block elements
+address,
+blockquote,
+dl,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+noscript,
+ol,
+pre,
+table,
+ul,
 p {
-  margin: 0 0 $LOOM-typography-vertical-spacing;
-}
-
-@if ($LOOM-generate-sizes-for-default-headings) {
-  // Make all headings use a sizing heirarchy.
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include generic-heading;
-  }
-
-  // Give each base element heading a value as described in $LOOM-h-element-sizes.
-  @each $name, $value in $LOOM-h-element-sizes {
-    #{$name} {
-      @include font-size($value, smaller-viewport);
-    }
-  }
-
-  // At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
-  @include mq($from: $LOOM-typography-breakpoint) {
-    @each $name, $value in $LOOM-h-element-sizes {
-      #{$name} {
-        @include font-size($value, larger-viewport);
-      }
-    }
-  }
-} @else { // stylelint-disable-line
-  // Just give each HTML heading the same size.
-  // We equalise the sizes so that semantic values do not interfere with designs. Sizes must be imparted conciously.
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include generic-heading($margin-size: 0, $font-weight: $LOOM-font-weight-normal);
-    @include font-size($LOOM-font-size-base, smaller-viewport);
-  }
-
-  // NOTE: At $LOOM-typography-breakpoint larger fonts will be used. This is because you typically want small fonts on mobile, larger on desktop.
-  @include mq($from: $LOOM-typography-breakpoint) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      @include font-size($LOOM-font-size-base, larger-viewport);
-    }
-  }
+  @include basic-vertical-rhythm;
 }

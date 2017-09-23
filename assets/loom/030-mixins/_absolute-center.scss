@@ -1,6 +1,9 @@
+/// Define a mixin that allows absolute centering.
+///
+/// @group 030-mixins
 @mixin absolute-center {
-  left: 50%;
   position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }

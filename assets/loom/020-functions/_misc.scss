@@ -1,6 +1,6 @@
 /// Get a value from a nested sass map.
 ///
-/// @group 20-tools
+/// @group 020-functions
 /// @parameter {map} $map - A multi-level Sass map.
 /// @parameter {arglist} $keys - A list of keys, representing a traversel of the nested Sass map.
 @function get-map-deep($map, $keys...) {
