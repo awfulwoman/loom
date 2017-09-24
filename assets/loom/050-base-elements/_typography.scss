@@ -41,3 +41,38 @@ ul,
 p {
   @include basic-vertical-rhythm;
 }
+
+
+
+
+@if ($LOOM-generate-sizes-for-default-headings) {
+  // Make all headings use a sizing heirarchy.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include generic-heading;
+  }
+
+  // Give each base element heading a value as described in $LOOM-h-element-sizes.
+  @each $name, $value in $LOOM-h-element-sizes {
+    #{$name} {
+      @include font-size($value);
+    }
+  }
+
+} @else { // stylelint-disable-line
+  // Just give each HTML heading the same size.
+  // We equalise the sizes so that semantic values do not interfere with designs. Sizes must be imparted conciously.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include generic-heading($margin-size: 0, $font-weight: $LOOM-font-weight-normal);
+    @include font-size($LOOM-font-size-base);
+  }
+}

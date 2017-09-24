@@ -500,6 +500,72 @@ p {
   margin-top: 0;
   margin-bottom: 1rem; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  margin: 0 0;
+  font-family: serif; }
+  .fonts-loaded h1, .fonts-loaded
+  h2, .fonts-loaded
+  h3, .fonts-loaded
+  h4, .fonts-loaded
+  h5, .fonts-loaded
+  h6 {
+    font-family: serif; }
+
+h1 {
+  font-size: 36px;
+  font-size: 2rem; }
+  @media (min-width: 41.11111em) {
+    h1 {
+      font-size: 32px;
+      font-size: 2rem; } }
+
+h2 {
+  font-size: 30px;
+  font-size: 1.66667rem; }
+  @media (min-width: 41.11111em) {
+    h2 {
+      font-size: 28px;
+      font-size: 1.75rem; } }
+
+h3 {
+  font-size: 26px;
+  font-size: 1.44444rem; }
+  @media (min-width: 41.11111em) {
+    h3 {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h4 {
+  font-size: 24px;
+  font-size: 1.33333rem; }
+  @media (min-width: 41.11111em) {
+    h4 {
+      font-size: 22px;
+      font-size: 1.375rem; } }
+
+h5 {
+  font-size: 22px;
+  font-size: 1.22222rem; }
+  @media (min-width: 41.11111em) {
+    h5 {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+h6 {
+  font-size: 20px;
+  font-size: 1.11111rem; }
+  @media (min-width: 41.11111em) {
+    h6 {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+
 table {
   width: 100%;
   text-align: center; }
